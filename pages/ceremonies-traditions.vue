@@ -28,7 +28,7 @@ const closeMenu = () => { menuOpen.value = false }
       <section class="occasion-detail-content section-pad">
         <div class="occasion-detail-heading">
           <span class="section-eyebrow">UNE CRÉATION PENSÉE POUR VOUS</span>
-          <h2>Une création respectueuse de votre histoire</h2>
+          <h2>Une création respectueuse<br><em>de votre histoire</em></h2>
           <p>Nous prenons le temps de comprendre le sens de votre célébration, vos habitudes et les informations à transmettre à vos invités.</p>
         </div>
         <div class="occasion-orbit" aria-hidden="true">
