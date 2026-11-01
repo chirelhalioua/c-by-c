@@ -8144,3 +8144,29 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .occasion-detail-page .site-footer .footer-bottom nav a { color:inherit !important; }
 .occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#e8c8a0 !important; }
 .occasion-detail-page .site-footer .footer-contact { color:#e8c8a0 !important; }
+
+
+/* Pied de page identique au modèle de la page d'accueil */
+.site-footer,
+.occasion-detail-page .site-footer {
+  background:#e7d6ca !important;
+  color:#624b40 !important;
+  border-top:1px solid #d8c1b3 !important;
+}
+.site-footer::before,
+.occasion-detail-page .site-footer::before { content:none !important; }
+.site-footer .footer-main > p,
+.occasion-detail-page .site-footer .footer-main > p { color:#624b40 !important; }
+.site-footer .footer-main > p span,
+.occasion-detail-page .site-footer .footer-main > p span { color:#a18d7e !important; }
+.site-footer .footer-bottom,
+.occasion-detail-page .site-footer .footer-bottom {
+  border-top:1px solid rgba(105,78,62,.12) !important;
+  color:#79665d !important;
+}
+.site-footer .footer-bottom nav a,
+.occasion-detail-page .site-footer .footer-bottom nav a { color:#705c50 !important; }
+.site-footer .footer-bottom nav a:hover,
+.occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#a9824d !important; }
+.site-footer .footer-contact,
+.occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
