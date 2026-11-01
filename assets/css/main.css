@@ -8040,3 +8040,89 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   color:#38291e !important;
   -webkit-text-fill-color:#38291e !important;
 }
+
+
+/* Pages occasions : CTA plus lumineux, avec un décor subtil et chaleureux */
+.occasion-detail-page .occasion-detail-cta {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(255,255,255,.72) 0%, rgba(255,255,255,0) 34%),
+    radial-gradient(ellipse at 88% 82%, rgba(221,190,157,.34) 0%, rgba(221,190,157,0) 38%),
+    linear-gradient(135deg,#f7eee8 0%,#f2e5df 48%,#f8f1e9 100%) !important;
+  color:#38291e !important;
+}
+.occasion-detail-page .occasion-detail-cta::before,
+.occasion-detail-page .occasion-detail-cta::after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  border:1px solid rgba(169,130,77,.18);
+  border-radius:50%;
+}
+.occasion-detail-page .occasion-detail-cta::before {
+  width:310px;
+  height:310px;
+  top:-205px;
+  right:-75px;
+  box-shadow:0 0 0 18px rgba(169,130,77,.035),0 0 0 38px rgba(169,130,77,.025);
+}
+.occasion-detail-page .occasion-detail-cta::after {
+  width:220px;
+  height:220px;
+  bottom:-160px;
+  left:-70px;
+  box-shadow:0 0 0 16px rgba(169,130,77,.035),0 0 0 34px rgba(169,130,77,.025);
+}
+.occasion-detail-page .occasion-detail-cta .section-eyebrow {
+  color:#a9824d !important;
+}
+.occasion-detail-page .occasion-detail-cta h2 {
+  color:#49362e !important;
+}
+.occasion-detail-page .occasion-detail-cta h2 em {
+  color:#a9824d !important;
+}
+.occasion-detail-page .occasion-detail-cta > p {
+  color:#78685d !important;
+}
+.occasion-detail-page .occasion-detail-cta .occasion-detail-return {
+  color:#806b5d !important;
+}
+
+/* Pied de page des pages occasions : ivoire lumineux, reliefs très discrets */
+.occasion-detail-page .site-footer {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 15% 25%,rgba(255,255,255,.72),transparent 38%),
+    radial-gradient(ellipse at 88% 75%,rgba(211,177,139,.25),transparent 42%),
+    linear-gradient(115deg,#f0e2d6 0%,#f6ece4 52%,#eee0d4 100%) !important;
+  color:#59463c !important;
+  border-top:1px solid rgba(137,100,77,.12);
+}
+.occasion-detail-page .site-footer::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:250px;
+  height:250px;
+  right:-95px;
+  top:-155px;
+  border:1px solid rgba(169,130,77,.18);
+  border-radius:50%;
+  box-shadow:0 0 0 18px rgba(169,130,77,.035),0 0 0 38px rgba(169,130,77,.025);
+  pointer-events:none;
+}
+.occasion-detail-page .site-footer .footer-main > p { color:#624b40 !important; }
+.occasion-detail-page .site-footer .footer-main > p span { color:#907d6d !important; }
+.occasion-detail-page .site-footer .footer-bottom {
+  border-top-color:rgba(105,78,62,.18) !important;
+  color:#887667 !important;
+}
+.occasion-detail-page .site-footer .footer-bottom nav a { color:#705c50; }
+.occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#a9824d !important; }
+.occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
