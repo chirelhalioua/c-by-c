@@ -28,7 +28,7 @@ const closeMenu = () => { menuOpen.value = false }
       <section class="occasion-detail-content section-pad">
         <div class="occasion-detail-heading">
           <span class="section-eyebrow">UNE CRÉATION PENSÉE POUR VOUS</span>
-          <h2>Le ton de votre fête, dès l’invitation</h2>
+          <h2>Le ton de votre fête,<br><em>dès l’invitation</em></h2>
           <p>Graphique, chic, colorée ou minimaliste : imaginons une création qui correspond à votre thème et à votre personnalité.</p>
         </div>
         <div class="occasion-orbit" aria-hidden="true">
