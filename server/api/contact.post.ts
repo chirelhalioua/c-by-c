@@ -10,6 +10,27 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Votre demande n’a pas pu être vérifiée. Merci de réessayer.' })
   }
 
+  const turnstileToken = text(body?.turnstileToken, 4096)
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY
+  if (!turnstileToken || !turnstileSecret) {
+    throw createError({ statusCode: 400, message: 'La vérification anti-robot est nécessaire. Merci de réessayer.' })
+  }
+
+  try {
+    const verification = await $fetch<{ success: boolean; hostname?: string; action?: string }>('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      body: new URLSearchParams({ secret: turnstileSecret, response: turnstileToken })
+    })
+    const allowedHosts = ['cbyc-invitations.fr', 'www.cbyc-invitations.fr']
+    if (!verification.success || (verification.hostname && !allowedHosts.includes(verification.hostname))) {
+      throw createError({ statusCode: 400, message: 'La vérification anti-robot a échoué. Merci de réessayer.' })
+    }
+  } catch (error: any) {
+    if (error?.statusCode === 400) throw error
+    console.error('Cloudflare Turnstile verification failed.', { statusCode: error?.statusCode })
+    throw createError({ statusCode: 503, message: 'La vérification anti-robot est momentanément indisponible. Réessayez.' })
+  }
+
   const prenom = text(body?.prenom, 100)
   const nom = text(body?.nom, 100)
   const email = text(body?.email, 254)
