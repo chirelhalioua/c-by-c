@@ -1,5 +1,60 @@
 <script setup lang="ts">
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue'
+
+const config = useRuntimeConfig()
+const turnstileSiteKey = config.public.turnstileSiteKey as string
+const turnstileToken = ref('')
+const turnstileContainer = ref<HTMLElement | null>(null)
+const turnstileError = ref('')
+let turnstileWidgetId: string | undefined
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (element: HTMLElement, options: Record<string, unknown>) => string
+      reset: (widgetId?: string) => void
+      remove: (widgetId: string) => void
+    }
+  }
+}
+
+const renderTurnstile = async () => {
+  await nextTick()
+  if (!turnstileSiteKey || !turnstileContainer.value || !window.turnstile) return
+  if (turnstileWidgetId) window.turnstile.remove(turnstileWidgetId)
+  turnstileToken.value = ''
+  turnstileWidgetId = window.turnstile.render(turnstileContainer.value, {
+    sitekey: turnstileSiteKey,
+    theme: 'light',
+    callback: (token: string) => { turnstileToken.value = token; turnstileError.value = '' },
+    'expired-callback': () => { turnstileToken.value = ''; turnstileError.value = 'La vérification a expiré. Merci de recommencer.' },
+    'error-callback': () => { turnstileToken.value = ''; turnstileError.value = 'La vérification anti-robot est indisponible. Réessayez.' }
+  })
+}
+
+const loadTurnstile = () => {
+  if (window.turnstile) { renderTurnstile(); return }
+  const existing = document.querySelector<HTMLScriptElement>('script[data-turnstile-script]')
+  if (existing) {
+    existing.addEventListener('load', () => renderTurnstile(), { once: true })
+    return
+  }
+  const script = document.createElement('script')
+  script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+  script.async = true
+  script.defer = true
+  script.dataset.turnstileScript = 'true'
+  script.onload = () => renderTurnstile()
+  script.onerror = () => { turnstileError.value = 'Impossible de charger la vérification anti-robot. Actualisez la page.' }
+  document.head.appendChild(script)
+}
+
+watch(currentStep, (step) => {
+  if (step === 5) loadTurnstile()
+  else if (turnstileWidgetId && window.turnstile) window.turnstile.remove(turnstileWidgetId)
+  turnstileWidgetId = undefined
+  turnstileToken.value = ''
+})
 
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
@@ -99,6 +154,10 @@ const submitForm = async () => {
     stepError.value = 'Ajoutez quelques mots sur votre projet pour continuer.'
     return
   }
+  if (!turnstileToken.value) {
+    stepError.value = 'Merci de valider la vérification anti-robot avant l’envoi.'
+    return
+  }
   if (!form.consentement) {
     stepError.value = 'Merci de confirmer votre accord pour le traitement des informations.'
     return
@@ -114,7 +173,8 @@ const submitForm = async () => {
         ...form,
         options: [...form.options],
         website: form.website,
-        formStartedAt: formStartedAt.value
+        formStartedAt: formStartedAt.value,
+        turnstileToken: turnstileToken.value
       }
     })
 
@@ -235,6 +295,7 @@ const submitForm = async () => {
 
             <div v-else class="wizard-fields">
               <label class="wizard-field-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" rows="5" placeholder="L’ambiance souhaitée, le nombre d’invités, vos idées ou les détails importants…"></textarea></label>
+              <div class="wizard-field-full turnstile-wrap"><div ref="turnstileContainer"></div><p v-if="turnstileError" class="wizard-error" role="alert">{{ turnstileError }}</p></div>
               <div class="contact-honeypot" aria-hidden="true"><label for="contact-website">Ne pas remplir ce champ</label><input id="contact-website" v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
               <label class="project-consent wizard-field-full"><input v-model="form.consentement" type="checkbox"><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
               <p class="project-form-privacy wizard-field-full">Vos informations sont utilisées pour répondre à votre demande. Consultez la page Confidentialité pour en savoir plus sur le traitement de vos données.</p>
