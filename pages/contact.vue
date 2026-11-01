@@ -49,13 +49,6 @@ const loadTurnstile = () => {
   document.head.appendChild(script)
 }
 
-watch(currentStep, (step) => {
-  if (step === 5) loadTurnstile()
-  else if (turnstileWidgetId && window.turnstile) window.turnstile.remove(turnstileWidgetId)
-  turnstileWidgetId = undefined
-  turnstileToken.value = ''
-})
-
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const openDropdown = ref('')
@@ -95,6 +88,13 @@ onMounted(() => {
 })
 const errorMessage = ref('')
 const currentStep = ref(1)
+
+watch(currentStep, (step) => {
+  if (step === 5) loadTurnstile()
+  else if (turnstileWidgetId && window.turnstile) window.turnstile.remove(turnstileWidgetId)
+  turnstileWidgetId = undefined
+  turnstileToken.value = ''
+})
 const stepError = ref('')
 const stepTitles = ['Faisons connaissance', 'Quelle occasion ?', 'Votre projet', 'Les petits détails', 'Votre message']
 const stepCount = stepTitles.length
