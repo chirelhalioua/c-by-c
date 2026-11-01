@@ -8002,3 +8002,41 @@ textarea:focus-visible {
   .turnstile-heading p { font-size:11px; }
   .turnstile-symbol { width:32px; height:32px; flex-basis:32px; }
 }
+
+
+/* Cohérence des boutons bruns : texte noir, blanc uniquement sur les héros */
+a.button-gold, button.button-gold, .nav-cta, .project-submit,
+.offers-page a.button, .offers-page button.button, .contact-copy .button-gold {
+  color:#17120f !important;
+  -webkit-text-fill-color:#17120f !important;
+}
+.hero a.button-gold, .hero button.button-gold, .hero .button,
+.occasion-detail-hero a.button, .occasion-detail-hero button.button,
+.occasion-detail-cta a.button, .occasion-detail-cta button.button {
+  color:#fffdfb !important;
+  -webkit-text-fill-color:#fffdfb !important;
+}
+
+/* Au clic ou au toucher : le bouton passe en ivoire */
+a.button-gold:active, a.button-gold:focus, a.button-gold:focus-visible,
+button.button-gold:active, button.button-gold:focus, button.button-gold:focus-visible,
+.nav-cta:active, .nav-cta:focus, .nav-cta:focus-visible,
+.project-submit:active, .project-submit:focus, .project-submit:focus-visible,
+.offers-page a.button:active, .offers-page a.button:focus, .offers-page a.button:focus-visible,
+.offers-page button.button:active, .offers-page button.button:focus, .offers-page button.button:focus-visible {
+  background:#fffdfb !important;
+  border-color:#fffdfb !important;
+  color:#38291e !important;
+  -webkit-text-fill-color:#38291e !important;
+  box-shadow:0 0 0 3px rgba(181,138,75,.18) !important;
+}
+.hero a.button-gold:active, .hero a.button-gold:focus, .hero a.button-gold:focus-visible,
+.hero button.button-gold:active, .hero button.button-gold:focus, .hero button.button-gold:focus-visible,
+.hero .button:active, .hero .button:focus, .hero .button:focus-visible,
+.occasion-detail-hero a.button:active, .occasion-detail-hero a.button:focus, .occasion-detail-hero a.button:focus-visible,
+.occasion-detail-cta a.button:active, .occasion-detail-cta a.button:focus, .occasion-detail-cta a.button:focus-visible {
+  background:#fffdfb !important;
+  border-color:#fffdfb !important;
+  color:#38291e !important;
+  -webkit-text-fill-color:#38291e !important;
+}
