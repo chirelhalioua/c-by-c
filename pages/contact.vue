@@ -265,7 +265,28 @@ const submitForm = async () => {
                   <button v-for="item in occasions" :key="item" type="button" class="wizard-choice" :class="{ 'is-selected': form.occasion === item }" @click="form.occasion = item">{{ item }}<span v-if="form.occasion === item">✓</span></button>
                 </div>
               </div>
-              <label class="wizard-field-full">Date de l’événement *<input v-model="form.date" type="date" required></label>
+              <div class="wizard-field-full contact-date-field">
+                <span class="project-field-label">Date de l’événement *</span>
+                <button type="button" class="contact-date-trigger" :class="{ 'is-selected': form.date }" :aria-expanded="calendarOpen" @click="calendarOpen = !calendarOpen">
+                  <span><span class="contact-date-icon">▦</span>{{ displayDate }}</span><span class="contact-date-chevron">{{ calendarOpen ? '−' : '+' }}</span>
+                </button>
+                <div v-if="calendarOpen" class="contact-calendar" aria-label="Choisir la date de l’événement">
+                  <div class="contact-calendar-heading">
+                    <button type="button" aria-label="Mois précédent" @click="changeMonth(-1)">‹</button>
+                    <strong>{{ monthLabel }}</strong>
+                    <button type="button" aria-label="Mois suivant" @click="changeMonth(1)">›</button>
+                  </div>
+                  <div class="contact-calendar-grid contact-calendar-weekdays">
+                    <span v-for="day in ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']" :key="day">{{ day }}</span>
+                  </div>
+                  <div class="contact-calendar-grid">
+                    <span v-for="day in calendarDays" :key="day.key" class="contact-calendar-cell">
+                      <button v-if="day.day" type="button" :class="{ 'is-picked': form.date === day.value }" @click="chooseDate(day.value)">{{ day.day }}</button>
+                    </span>
+                  </div>
+                  <p class="contact-calendar-note">Sélectionnez la date de votre célébration.</p>
+                </div>
+              </div>
             </div>
 
             <div v-else-if="currentStep === 3" class="wizard-fields">
