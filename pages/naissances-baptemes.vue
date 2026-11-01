@@ -18,7 +18,7 @@ const closeMenu = () => { menuOpen.value = false }
     </header>
     <main>
       <section class="occasion-detail-hero">
-        <div class="occasion-detail-hero-photo" aria-hidden="true" style="background-image: url('https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/bebe-couverture.jpg')"></div>
+        <div class="occasion-detail-hero-photo baby-hero-photo" aria-hidden="true" style="background-image: url('https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/bebe-couverture.jpg')"></div>
         <a class="occasion-detail-back" href="/occasions">← Toutes les occasions</a>
         <span class="section-eyebrow">LES PREMIÈRES ÉMOTIONS</span>
         <h1>Une jolie nouvelle,<br><em>un souvenir à partager.</em></h1>
