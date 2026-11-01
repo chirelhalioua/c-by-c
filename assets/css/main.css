@@ -7933,3 +7933,72 @@ textarea:focus-visible {
   .contact-calendar { padding:13px 9px; }
   .contact-calendar-cell button { width:31px; height:31px; }
 }
+
+
+/* Icône calendrier dessinée et panneau de vérification assorti à C by C */
+.contact-date-icon {
+  display:block;
+  width:21px;
+  height:21px;
+  flex:0 0 21px;
+  color:#a9824d;
+}
+.turnstile-wrap {
+  display:block;
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+  border:1px solid #e8ddcf;
+  border-radius:16px;
+  background:#fffdfb;
+  box-shadow:0 8px 24px rgba(73,52,46,.055);
+}
+.turnstile-heading {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px 17px;
+  background:linear-gradient(110deg,#f8f1e8 0%,#fbf7f1 58%,#f5ebe7 100%);
+  border-bottom:1px solid #eee4d8;
+}
+.turnstile-symbol {
+  display:grid;
+  place-items:center;
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  border-radius:50%;
+  background:#eee2d2;
+  color:#a9824d;
+  font-size:23px;
+}
+.turnstile-heading strong {
+  display:block;
+  color:#59463e;
+  font-family:var(--display, Georgia, serif);
+  font-size:15px;
+  font-weight:600;
+}
+.turnstile-heading p {
+  margin:3px 0 0;
+  color:#95877a;
+  font-size:12px;
+  line-height:1.45;
+}
+.turnstile-lock { margin-left:auto; color:#b18a50; font-size:23px; }
+.turnstile-widget-surface {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:82px;
+  padding:12px 8px;
+  background:#fffdfb;
+}
+.turnstile-widget-surface > div,
+.turnstile-widget-surface iframe { max-width:100%; }
+@media (max-width:420px) {
+  .turnstile-heading { padding:13px 12px; gap:9px; }
+  .turnstile-heading strong { font-size:14px; }
+  .turnstile-heading p { font-size:11px; }
+  .turnstile-symbol { width:32px; height:32px; flex-basis:32px; }
+}
