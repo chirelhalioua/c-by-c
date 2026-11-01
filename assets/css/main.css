@@ -8178,3 +8178,13 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
     background-position: 68% center !important;
   }
 }
+
+
+/* Deuxième partie des titres des pages occasions : doré et italique */
+.occasion-detail-page .occasion-detail-heading h2 em {
+  display:inline-block;
+  color:#b18a50 !important;
+  font-family:var(--serif) !important;
+  font-style:italic !important;
+  font-weight:500 !important;
+}
