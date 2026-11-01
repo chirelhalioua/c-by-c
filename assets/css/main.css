@@ -8170,3 +8170,11 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#a9824d !important; }
 .site-footer .footer-contact,
 .occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
+
+
+/* Page naissance : décaler légèrement la photo pour mieux dégager le visage */
+@media (max-width:760px) {
+  .occasion-detail-page .baby-hero-photo {
+    background-position: 68% center !important;
+  }
+}
