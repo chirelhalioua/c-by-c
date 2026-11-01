@@ -8126,3 +8126,21 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .occasion-detail-page .site-footer .footer-bottom nav a { color:#705c50; }
 .occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#a9824d !important; }
 .occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
+
+
+/* Le pied de page conserve son apparence d'origine */
+.occasion-detail-page .site-footer {
+  background:#241a13 !important;
+  color:#d8caba !important;
+  border-top:0 !important;
+}
+.occasion-detail-page .site-footer::before { content:none !important; }
+.occasion-detail-page .site-footer .footer-main > p { color:inherit !important; }
+.occasion-detail-page .site-footer .footer-main > p span { color:#a99a89 !important; }
+.occasion-detail-page .site-footer .footer-bottom {
+  border-top-color:#ffffff20 !important;
+  color:#a99a89 !important;
+}
+.occasion-detail-page .site-footer .footer-bottom nav a { color:inherit !important; }
+.occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#e8c8a0 !important; }
+.occasion-detail-page .site-footer .footer-contact { color:#e8c8a0 !important; }
