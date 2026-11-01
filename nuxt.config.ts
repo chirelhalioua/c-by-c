@@ -17,5 +17,10 @@ export default defineNuxtConfig({
       ]
     }
   },
+  runtimeConfig: {
+    public: {
+      turnstileSiteKey: ''
+    }
+  },
   compatibilityDate: '2025-07-15'
 })
