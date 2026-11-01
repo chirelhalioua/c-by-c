@@ -4,6 +4,12 @@ export default defineEventHandler(async (event) => {
   const text = (value: unknown, max = 2000) =>
     typeof value === 'string' ? value.trim().slice(0, max) : ''
 
+  const honeypot = text(body?.website, 200)
+  const formStartedAt = Number(body?.formStartedAt)
+  if (honeypot || !Number.isFinite(formStartedAt) || Date.now() - formStartedAt < 3000 || Date.now() - formStartedAt > 24 * 60 * 60 * 1000) {
+    throw createError({ statusCode: 400, message: 'Votre demande n’a pas pu être vérifiée. Merci de réessayer.' })
+  }
+
   const prenom = text(body?.prenom, 100)
   const nom = text(body?.nom, 100)
   const email = text(body?.email, 254)
