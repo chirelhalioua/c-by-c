@@ -31,6 +31,7 @@ const chooseDate = (value: string) => {
 }
 const displayDate = computed(() => form.date ? new Date(form.date + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : 'Choisir une date')
 
+const formStartedAt = ref(Date.now())
 const sending = ref(false)
 const successMessage = ref('')
 const submitted = ref(false)
@@ -82,7 +83,8 @@ const form = reactive({
   options: [] as string[],
   budget: '',
   message: '',
-  consentement: false
+  consentement: false,
+  website: ''
 })
 
 const toggleOption = (option: string) => {
@@ -110,7 +112,9 @@ const submitForm = async () => {
       method: 'POST',
       body: {
         ...form,
-        options: [...form.options]
+        options: [...form.options],
+        website: form.website,
+        formStartedAt: formStartedAt.value
       }
     })
 
@@ -128,7 +132,8 @@ const submitForm = async () => {
       options: [],
       budget: '',
       message: '',
-      consentement: false
+      consentement: false,
+      website: ''
     })
     openDropdown.value = ''
     calendarOpen.value = false
@@ -230,6 +235,7 @@ const submitForm = async () => {
 
             <div v-else class="wizard-fields">
               <label class="wizard-field-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" rows="5" placeholder="L’ambiance souhaitée, le nombre d’invités, vos idées ou les détails importants…"></textarea></label>
+              <div class="contact-honeypot" aria-hidden="true"><label for="contact-website">Ne pas remplir ce champ</label><input id="contact-website" v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
               <label class="project-consent wizard-field-full"><input v-model="form.consentement" type="checkbox"><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
               <p class="project-form-privacy wizard-field-full">Vos informations sont utilisées pour répondre à votre demande. Consultez la page Confidentialité pour en savoir plus sur le traitement de vos données.</p>
             </div>
