@@ -8188,3 +8188,20 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   font-style:italic !important;
   font-weight:500 !important;
 }
+
+
+/* Bouton Contact du menu : texte blanc sur le fond brun */
+.main-nav .nav-cta,
+.main-nav .nav-cta span,
+.main-nav .nav-cta svg {
+  color:#fffdfb !important;
+  -webkit-text-fill-color:#fffdfb !important;
+}
+.main-nav .nav-cta:active,
+.main-nav .nav-cta:focus,
+.main-nav .nav-cta:focus-visible {
+  background:#fffdfb !important;
+  border-color:#fffdfb !important;
+  color:#38291e !important;
+  -webkit-text-fill-color:#38291e !important;
+}
