@@ -7824,3 +7824,17 @@ textarea:focus-visible {
     border-radius: 3px 18px 3px 18px !important;
   }
 }
+
+
+/* Cartes ivoire : contour plus doux et halo diffus */
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    border: 1px solid rgba(137,100,91,.10) !important;
+    box-shadow:
+      0 10px 28px rgba(73,52,46,.075),
+      0 2px 8px rgba(73,52,46,.035) !important;
+  }
+}
