@@ -268,7 +268,7 @@ const submitForm = async () => {
               <div class="wizard-field-full contact-date-field">
                 <span class="project-field-label">Date de l’événement *</span>
                 <button type="button" class="contact-date-trigger" :class="{ 'is-selected': form.date }" :aria-expanded="calendarOpen" @click="calendarOpen = !calendarOpen">
-                  <span><span class="contact-date-icon">▦</span>{{ displayDate }}</span><span class="contact-date-chevron">{{ calendarOpen ? '−' : '+' }}</span>
+                  <span><svg class="contact-date-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M7.5 3v4M16.5 3v4M3.5 9.5h17"/></svg>{{ displayDate }}</span><span class="contact-date-chevron">{{ calendarOpen ? '−' : '+' }}</span>
                 </button>
                 <div v-if="calendarOpen" class="contact-calendar" aria-label="Choisir la date de l’événement">
                   <div class="contact-calendar-heading">
@@ -316,7 +316,13 @@ const submitForm = async () => {
 
             <div v-else class="wizard-fields">
               <label class="wizard-field-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" rows="5" placeholder="L’ambiance souhaitée, le nombre d’invités, vos idées ou les détails importants…"></textarea></label>
-              <div class="wizard-field-full turnstile-wrap"><div ref="turnstileContainer"></div><p v-if="turnstileError" class="wizard-error" role="alert">{{ turnstileError }}</p></div>
+              <section class="wizard-field-full turnstile-wrap" aria-label="Vérification de sécurité">
+                <div class="turnstile-heading">
+                  <span class="turnstile-symbol" aria-hidden="true">✧</span>
+                  <div><strong>Un petit contrôle de sécurité</strong><p>Pour protéger votre demande des messages automatisés.</p></div>
+                  <span class="turnstile-lock" aria-hidden="true">⌑</span>
+                </div>
+                <div class="turnstile-widget-surface"><div ref="turnstileContainer"></div></div><p v-if="turnstileError" class="wizard-error" role="alert">{{ turnstileError }}</p></section>
               <div class="contact-honeypot" aria-hidden="true"><label for="contact-website">Ne pas remplir ce champ</label><input id="contact-website" v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
               <label class="project-consent wizard-field-full"><input v-model="form.consentement" type="checkbox"><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
               <p class="project-form-privacy wizard-field-full">Vos informations sont utilisées pour répondre à votre demande. Consultez la page Confidentialité pour en savoir plus sur le traitement de vos données.</p>
