@@ -28,7 +28,7 @@ const closeMenu = () => { menuOpen.value = false }
       <section class="occasion-detail-content section-pad">
         <div class="occasion-detail-heading">
           <span class="section-eyebrow">UNE CRÉATION PENSÉE POUR VOUS</span>
-          <h2>Une annonce pleine de douceur</h2>
+          <h2>Une annonce pleine<br><em>de douceur</em></h2>
           <p>Un faire-part digital ou une invitation pour réunir famille et amis autour de ce nouveau chapitre.</p>
         </div>
         <div class="occasion-orbit" aria-hidden="true">
