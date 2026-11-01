@@ -7811,3 +7811,16 @@ textarea:focus-visible {
   .occasion-detail-page .occasion-detail-feature:nth-child(2) { background: #f3e8e5 !important; }
   .occasion-detail-page .occasion-detail-feature:nth-child(3) { background: #eee9df !important; }
 }
+
+
+/* Cartes des pages occasions : même ivoire sur les trois blocs, forme conservée */
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    background: #fffdfb !important;
+    border: 1px solid rgba(137,100,91,.16) !important;
+    border-radius: 3px 18px 3px 18px !important;
+  }
+}
