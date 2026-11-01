@@ -7787,3 +7787,27 @@ textarea:focus-visible {
     background: linear-gradient(180deg, rgba(73,52,46,.56), rgba(73,52,46,.44));
   }
 }
+
+
+/* Ajustement mobile : hiérarchie cohérente et cartes mieux différenciées */
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-feature h3,
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) h3 {
+    font-family: var(--display) !important;
+    font-size: 19px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.03em !important;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    border: 1px solid rgba(137,100,91,.16) !important;
+    border-radius: 3px 18px 3px 18px !important;
+    box-shadow: 0 7px 18px rgba(73,52,46,.045) !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(1) { background: #fffdfb !important; }
+  .occasion-detail-page .occasion-detail-feature:nth-child(2) { background: #f3e8e5 !important; }
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) { background: #eee9df !important; }
+}
