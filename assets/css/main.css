@@ -8340,3 +8340,30 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
     max-width: none !important;
   }
 }
+
+
+/* Centrage réel des titres des quatre héros : le h1 est centré dans sa largeur maximale */
+.occasion-detail-page .occasion-detail-hero h1 {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  align-self: center !important;
+}
+.occasion-detail-page .occasion-detail-hero .section-eyebrow {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+.occasion-detail-page .occasion-detail-hero > p {
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 26px auto 28px !important;
+  text-align: center !important;
+}
+.occasion-detail-page .occasion-detail-hero > a.button {
+  align-self: center !important;
+  margin: 0 auto !important;
+}
