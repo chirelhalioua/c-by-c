@@ -234,3 +234,12 @@
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
+
+
+/* Menu Contact : flèche foncée lorsque le bouton est activé */
+.main-nav .nav-cta:active span,
+.main-nav .nav-cta:focus span,
+.main-nav .nav-cta:focus-visible span {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
