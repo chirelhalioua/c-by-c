@@ -216,3 +216,14 @@
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
+
+
+/* Formulaire de contact uniquement : texte foncé sur les boutons dorés */
+.contact-page .project-form .wizard-actions .button-gold,
+.contact-page .project-form .wizard-actions .button-gold *,
+.contact-page .project-form .wizard-actions .button-gold:hover,
+.contact-page .project-form .wizard-actions .button-gold:focus-visible,
+.contact-page .project-form .wizard-actions .button-gold:active {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
