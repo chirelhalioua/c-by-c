@@ -5,7 +5,7 @@ const closeMenu = () => { menuOpen.value = false }
 </script>
 
 <template>
-  <div class="site-shell occasion-detail-page">
+  <div class="site-shell occasion-detail-page occasion-anniversaires-page">
     <header class="site-header">
       <a class="brand" href="/" aria-label="C by C, accueil" @click="closeMenu"><img class="brand-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel"></a>
       <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen"><span></span><span></span></button>
