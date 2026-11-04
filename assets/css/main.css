@@ -15,81 +15,25 @@
 
 /* Photos réelles dans les sections hors hero */
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media(max-width:760px){}
-
 /* À propos : remplacer le portrait générique par un emblème de marque */
-
-
-
-
-
-
-
-
-@media(max-width:760px){}
 
 /* La section histoire privilégie la photographie plutôt que les formes vectorielles */
 
-
-
-
-@media(max-width:760px){}
-
-
 /* Ajustements photo : naissance et histoire de la marque */
-
-
-
-
-@media (max-width: 760px){
-  
-}
-
 
 /* Photo naissance : cadrage paysage, sans déformation */
 
-
-
-
 /* Encadrement raffiné de la photo de la petite histoire */
-
-
-
-
-
-@media (max-width: 760px){
-  
-  
-  
-}
-
 
 /* Logo officiel C by C : intégration discrète aux emplacements du monogramme */
 .invite-logo { justify-content: center; width: 100%; }
 .invite-logo img { display: block; width: 92px; height: 62px; object-fit: contain; }
 
-
-
-
 .footer-brand img { display: block; width: 180px; max-width: 42vw; height: auto; object-fit: contain; }
 @media(max-width:760px){
   .invite-logo img { width: 78px; height: 52px; }
-  
-  
-}
 
+}
 
 /* Logo officiel dans la navigation : présence discrète et lisible */
 .brand { width: 108px; }
@@ -99,91 +43,20 @@
   .brand-logo { height: 48px; max-height: 48px; }
 }
 
-
 /* La section contact devient un bloc unique, sans panneau marron vide */
 .contact-panel { display: block; }
 .contact-copy { width: 100%; }
 
-
 /* Section « Chaque détail compte » */
 .details-section { background: #f8f3e9; }
 
-
-
-
-
-
-
-
-
-
-
-@media(max-width: 900px){
- 
- 
- 
- 
- 
-}
-@media(max-width: 520px){
- 
- 
- 
- 
- 
- 
-}
-
-
 /* Présentation plus éditoriale : quatre lignes aérées plutôt qu'une grille */
 
-
-
-
-
-
-@media(max-width: 760px){
- 
- 
- 
- 
- 
-}
-
-
 /* Personnalisation : composition libre, sans grille rigide ni séparateurs */
-
-
-
-
-
-
-@media(max-width:760px){
- 
- 
- 
- 
- 
-}
-
 
 /* Personnalisation simplifiée : moins de texte, aucun symbole décoratif */
 
 .details-heading .section-eyebrow { display: none; }
-
-
-
-
-
-
-@media(max-width:760px){
-  
-  
-  
-  
-  
-}
-
 
 /* Présentation originale de la personnalisation : photo éditoriale + textes courts */
 .details-section { background: #f5efe4; }
@@ -193,37 +66,14 @@
 .details-editorial-head h2 em { color: #b18b51; font-family: var(--serif); font-weight: 500; }
 .details-editorial-head p { max-width: 440px; margin: 18px auto 0; color: #81776b; font-size: 14px; line-height: 1.8; }
 
-
-
-
-
-
-
-
-
-
 @media(max-width:760px){
  .details-editorial-head { margin-bottom: 30px; text-align: left; }
  .details-editorial-head h2 { font-size: 39px; }
  .details-editorial-head p { margin: 15px 0 0; font-size: 13px; }
- 
- 
- 
- 
- 
-}
 
+}
 
 /* Remplacer les numéros et pictogrammes des blocs par des repères typographiques */
-
-
-
-
-@media(max-width:760px){
-  
-  
-}
-
 
 /* Nouvelle direction visuelle C by C : moderne, claire et chaleureuse, sans effet magazine */
 :root { --card-radius: 14px; }
@@ -242,68 +92,36 @@
 .contact-copy h2 span { font-style: normal; }
 .occasion-grid { gap: 18px; }
 
-
-
-
-
 .details-section { background: var(--cream); }
 .details-editorial-head { text-align: left; max-width: 100%; margin: 0 0 32px; }
 .details-editorial-head h2 { font-family: var(--display); font-weight: 700; letter-spacing: -.05em; }
 .details-editorial-head h2 em { font-family: var(--display); font-style: normal; font-weight: 500; color: var(--gold); }
 .details-editorial-head p { margin: 16px 0 0; max-width: 560px; }
 
-
-
-
-
-
-
 .story-section { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: clamp(32px,6vw,80px); }
-
-
-
 
 .process-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin: 28px 0 32px; }
 .process-heading p { max-width: 420px; color: var(--muted); font-size: 13px; line-height: 1.8; }
-
-
-
-
-
 
 .contact-section { border-radius: var(--card-radius); overflow: hidden; }
 .button, .nav-cta { border-radius: 7px; }
 @media(max-width:760px){
  .section-pad { padding-top: 52px; padding-bottom: 52px; }
  .occasion-grid { grid-template-columns: 1fr; gap: 14px; }
- 
- 
+
  .story-section { grid-template-columns: 1fr; gap: 28px; }
  .process-heading { display: block; }
  .process-heading p { margin-top: 18px; }
- 
-}
 
+}
 
 /* Photo de la section personnalisation : cadrage mobile moins coupé */
 
-@media(max-width:760px){
-  
-}
-
-
 /* Photo du couple : cadrage portrait et ancré en haut pour garder les visages visibles */
 
-@media(max-width:760px){
-  
-}
 /* Masquer les repères chiffrés restants dans les cartes */
 
-
-
 /* Repositionner la photo du mariage pour montrer les visages */
-
-
 
 /* Page Contact — formulaire de demande */
 .contact-form-hero {
@@ -337,8 +155,6 @@
 .project-form-heading h2 { font-family: var(--display); font-size: clamp(25px, 3vw, 34px); margin: 12px 0 8px; letter-spacing: -.035em; }
 .project-form-heading p { color: var(--muted, #7c7065); font-size: 13px; }
 
-
-
 .project-form input:not([type="checkbox"]), .project-form select, .project-form textarea {
   width: 100%; min-width: 0; border: 1px solid #e2d6c7; border-radius: 8px;
   background: #fffefa; color: #35271f; padding: 13px 14px; font: inherit; font-weight: 400;
@@ -359,11 +175,9 @@
   .contact-form-intro { position: static; padding-top: 0; }
   .contact-form-intro h1 { font-size: clamp(36px, 10vw, 52px); }
   .project-form { padding: 22px 18px; border-radius: 14px; }
-  
-  
+
   .contact-page-nav { gap: 18px; }
 }
-
 
 /* Navigation dédiée à la page Contact : liens en ligne, sans menu déroulant mobile */
 .contact-page .site-header { position: relative; }
@@ -397,7 +211,6 @@
   .contact-page .contact-page-nav .nav-cta { padding: 10px 12px; font-size: 11px; }
 }
 
-
 /* Page Nos formules — devis personnalisé */
 .offers-page .site-header { position: relative; }
 .offers-page .offers-page-nav {
@@ -412,9 +225,7 @@
 .offers-hero>p { max-width:690px; margin:0 auto; color:var(--muted,#7c7065); line-height:1.9; }
 .offers-list { display:flex; flex-direction:column; gap:28px; background:var(--cream); padding-top:28px; }
 
-
 .offer-card-reverse .offer-copy { order:1; }
-
 
 .offer-copy { align-self:center; padding:clamp(24px,4vw,54px); }
 .offer-label { color:var(--gold,#9b7945); font-size:10px; font-weight:700; letter-spacing:.18em; }
@@ -436,14 +247,13 @@
   .offers-hero h1 { font-size:clamp(35px,9vw,49px); }
   .offers-hero>p { font-size:14px; }
   .offers-list { gap:18px; padding-top:18px; }
-  
+
   .offer-card-reverse .offer-image,.offer-card-reverse .offer-copy { order:initial; }
-  
+
   .offer-copy { padding:24px 21px 27px; }
   .offer-copy h2 { font-size:29px; }
   .offers-note { padding-top:50px; padding-bottom:54px; }
 }
-
 
 /* Menu hamburger cohérent sur Contact et Nos formules */
 @media(min-width:761px){
@@ -487,7 +297,6 @@
   }
 }
 
-
 /* Bloc options complémentaires — page Nos formules */
 .options-section { background:var(--paper,#fffdf8); text-align:center; }
 .options-heading { max-width:720px; margin:0 auto 34px; }
@@ -498,15 +307,13 @@
 
 .option-symbol { display:flex; align-items:center; justify-content:center; width:36px; height:36px; margin-bottom:20px; border:1px solid #d6c09c; border-radius:50%; color:var(--gold,#a7834c); font-size:18px; }
 
-
 .options-footnote { margin:24px auto 20px; color:var(--muted,#7c7065); font-size:12px; line-height:1.7; }
 @media(max-width:760px){
   .options-grid { grid-template-columns:1fr; gap:11px; }
-  
+
   .option-symbol { margin-bottom:13px; }
   .options-heading { margin-bottom:24px; }
 }
-
 
 /* Contraste des boutons et liens au survol, clic et focus */
 .button:active,
@@ -528,7 +335,6 @@
   background-color: #34251d !important;
   border-color: #34251d !important;
 }
-
 
 /* Garder le texte blanc sur les boutons de contact, y compris au clic */
 .project-submit,
@@ -554,7 +360,6 @@
   background-color: #34251d !important;
 }
 
-
 /* Page Nos formules : cartes plus compactes et options mieux rythmées */
 .offers-list {
   max-width: 1240px;
@@ -563,8 +368,6 @@
   padding-bottom: 58px;
   gap: 22px;
 }
-
-
 
 .offer-copy {
   padding: clamp(22px, 3vw, 38px);
@@ -583,20 +386,16 @@
   gap: 12px;
 }
 
-
 .option-symbol { margin-bottom: 14px; }
 
-
 @media(max-width:900px){
-  
-  
+
   .offer-copy { padding: 22px; }
   .options-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media(max-width:760px){
   .offers-list { padding: 14px 18px 42px; gap: 16px; }
-  
-  
+
   .offer-copy { padding: 20px 19px 22px; }
   .offer-label { font-size: 9px; }
   .offer-copy h2 { font-size: 25px; margin: 8px 0 10px; }
@@ -607,10 +406,9 @@
   .options-section { padding: 46px 18px; }
   .options-heading { margin-bottom: 22px; }
   .options-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  
+
   .option-symbol { width: 30px; height: 30px; font-size: 15px; margin-bottom: 11px; }
-  
-  
+
   .options-footnote { font-size: 11px; margin: 20px auto 16px; }
   .options-section>.button { width: 100%; }
 }
@@ -618,12 +416,10 @@
   .options-grid { grid-template-columns: 1fr; }
 }
 
-
 /* Ajustement final page formules : cartes homogènes, options moins massives */
 @media(min-width:761px){
   .offers-list { max-width: 1160px; gap: 18px; }
-  
-  
+
   .offer-copy {
     padding: 25px 30px;
     overflow: hidden;
@@ -641,19 +437,16 @@
     max-width: 1040px;
     margin: 0 auto;
   }
-  
+
   .option-symbol { grid-row: span 2; margin: 1px 0 0; width: 32px; height: 32px; }
-  
-  
+
 }
 @media(max-width:760px){
   /* Conserver la grille appréciée sur mobile, mais réduire la hauteur des cartes */
-  
-  .option-symbol { margin-bottom: 9px; }
-  
-  
-}
 
+  .option-symbol { margin-bottom: 9px; }
+
+}
 
 /* Nos formules : largeur complète, images toujours à gauche, cartes homogènes */
 .offers-list {
@@ -663,18 +456,16 @@
   padding-right: clamp(20px, 4vw, 64px);
 }
 
-
 .offer-card-reverse .offer-copy { order: 0; }
 
 .offer-copy { min-width: 0; overflow: auto; }
 @media(max-width:1000px) and (min-width:761px){
-  
+
   .offer-copy { padding: 20px; }
 }
 @media(max-width:760px){
   .offers-list { padding-left: 18px; padding-right: 18px; }
-  
-  
+
   .offer-copy { overflow:visible; }
 }
 
@@ -749,7 +540,6 @@
   .option-toggle { width: 25px; height: 25px; font-size: 19px; }
   .option-item>p { padding: 0 34px 15px 42px; font-size: 11px; line-height: 1.65; }
 }
-
 
 /* Formules : liste éditoriale compacte, détails au clic sur + */
 .offers-list {
@@ -845,7 +635,6 @@
   .offer-copy .button { width: 100%; font-size: 10px; }
 }
 
-
 /* Corriger le cadrage vertical des images dans les formules ouvertes */
 .offer-expanded-image {
   object-position: center 35%;
@@ -855,7 +644,6 @@
     object-position: center 25%;
   }
 }
-
 
 /* Forcer le texte blanc des boutons de devis, y compris après clic/tap */
 .offers-page .button,
@@ -875,7 +663,6 @@
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
 }
-
 
 /* Boutons devis : texte blanc au toucher sur mobile (règles à haute priorité) */
 .offers-page a.button.button-gold,
@@ -897,7 +684,6 @@
   background: #34251d !important;
   border-color: #34251d !important;
 }
-
 
 /* Animations discrètes et légères — C by C */
 @keyframes cbc-fade-up {
@@ -946,7 +732,6 @@
     transition-duration: .01ms !important;
   }
 }
-
 
 /* Animations plus visibles, tout en gardant un rendu élégant */
 @keyframes cbc-hero-reveal {
@@ -1008,7 +793,6 @@
   }
 }
 
-
 /* Mobile : placer la signature sous l'invitation, sans chevauchement */
 @media (max-width:760px){
   .hero-visual { padding-bottom: 42px; }
@@ -1023,7 +807,6 @@
   }
 }
 
-
 /* Mobile hero: garder l'étiquette à l'écart du texte « AVEC TOUT NOTRE AMOUR » */
 @media (max-width:760px){
   .invite-front { overflow: hidden; }
@@ -1035,7 +818,6 @@
   }
   .invite-divider-bottom { margin-bottom: 9px; }
 }
-
 
 /* Identité plus festive : champagne, rose poudré et ivoire */
 .hero {
@@ -1049,7 +831,6 @@
 @media(max-width:760px){
   .hero { background: radial-gradient(ellipse at 50% 30%, #815e57 0%, #674a45 58%, #563d39 100%); }
 }
-
 
 /* Harmoniser les fonds entre les sections : palette ivoire, blush et champagne */
 body, .site-shell { background: #fff8f2; }
@@ -1069,13 +850,11 @@ body, .site-shell { background: #fff8f2; }
   background: radial-gradient(circle, #a98075 0%, #8a645b 46%, #704e4a 78%);
 }
 
-
 .contact-panel { background: #fffdfb; }
 @media(max-width:760px){
   .hero { background: linear-gradient(160deg, #805d59 0%, #704e4a 56%, #634744 100%); }
-  
-}
 
+}
 
 /* Rééquilibrage doux des fonds : limiter les contrastes entre sections */
 :root {
@@ -1103,9 +882,8 @@ body, .site-shell { background: #fbf7f2 !important; }
 
 @media (max-width:760px){
   .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
-  
-}
 
+}
 
 /* Pied de page intégré à la palette : ivoire chaud, sans blanc froid */
 .site-footer {
@@ -1131,14 +909,12 @@ body, .site-shell { background: #fbf7f2 !important; }
   .site-footer { background: #f5e9e5 !important; }
 }
 
-
 /* Alternance explicite des fonds : aucune section voisine de même teinte */
 .site-header { background: #fffdfb !important; }
 .hero { background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important; }
 .occasions-section { background: #fbf7f2 !important; }
 .story-section { background: #f5e9e5 !important; }
 .process-section { background: #f2e4d3 !important; }
-
 
 .contact-section { background: #f5e9e5 !important; }
 .site-footer { background: #e7d6ca !important; border-top: 1px solid #d8c1b3 !important; }
@@ -1155,12 +931,10 @@ body, .site-shell { background: #fbf7f2 !important; }
   .occasions-section { background: #fbf7f2 !important; }
   .story-section { background: #f5e9e5 !important; }
   .process-section { background: #f2e4d3 !important; }
-  
-  
+
   .contact-section { background: #f5e9e5 !important; }
   .site-footer { background: #e7d6ca !important; }
 }
-
 
 /* Lisibilité de la section « Derrière C by C » sur son fond clair */
 .story-section .story-copy h2 {
@@ -1175,7 +949,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .story-section .story-copy > p:not(.story-lead) {
   color: #756455 !important;
 }
-
 
 /* Correctif ciblé : forcer le texte de « Derrière C by C » en brun lisible */
 .story-section .story-copy h2,
@@ -1201,15 +974,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   -webkit-text-fill-color: #59483e !important;
 }
 
-
 /* Correctif réel : le bloc « Derrière C by C » est .about-section */
-
-
-
-
-
-
-
 
 /* Lisibilité de la section « Un projet particulier ? » dans les formules */
 .offers-note h2,
@@ -1235,7 +1000,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   -webkit-text-fill-color: #a97935 !important;
 }
 
-
 /* Lisibilité de la section « Un projet particulier ? » sur la page Formules */
 .offers-page .offers-note {
   background: #fbf7f2 !important;
@@ -1255,7 +1019,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   -webkit-text-fill-color: #a97935 !important;
 }
 
-
 /* Distinguer les sections consécutives de la page d'accueil */
 .details-section { background: #f2e4d3 !important; }
 .story-section { background: #f5e9e5 !important; }
@@ -1265,9 +1028,8 @@ body, .site-shell { background: #fbf7f2 !important; }
   .details-section { background: #f2e4d3 !important; }
   .story-section { background: #f5e9e5 !important; }
   .process-section { background: #fffdfb !important; }
-  
-}
 
+}
 
 /* Cartes du concept : rose poudré très léger pour les distinguer du fond ivoire */
 .process-section .step-card {
@@ -1277,7 +1039,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (max-width:760px){
   .process-section .step-card { background: #f8e9e5 !important; }
 }
-
 
 /* Harmoniser les grands titres des pages Formules et Contact avec l'accueil */
 .offers-page .offers-hero h1,
@@ -1295,7 +1056,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: var(--gold) !important;
   -webkit-text-fill-color: var(--gold) !important;
 }
-
 
 /* Harmoniser aussi les sous-titres des pages Formules et Contact */
 .offers-page .options-heading h2,
@@ -1321,7 +1081,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .offers-page .offers-note h2 {
   font-size: clamp(38px, 4.7vw, 60px) !important;
 }
-
 
 /* Champs select et calendrier : finition assortie à l'identité C by C */
 .project-form select {
@@ -1368,9 +1127,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Menus déroulants et calendrier personnalisés — C by C */
-
 
 .project-form .custom-select-trigger {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -1386,35 +1143,15 @@ body, .site-shell { background: #fbf7f2 !important; }
   box-shadow: 0 0 0 3px rgba(181,138,75,.12);
 }
 
-
-
-
-
-
 .custom-select-option.is-selected { background: #f2e4d3; color: #674a45; font-weight: 700; }
-
-
-
-
-
-
-
-
-
-
-
 
 .calendar-day.is-today { border-color: #b58a4b; color: #89612c; font-weight: 700; }
 .calendar-day.is-selected { background: #785750; border-color: #785750; color: #fffdfb; font-weight: 700; }
 
-
 @media(max-width:760px){
   .project-form .custom-select-trigger { min-height: 50px; font-size: 16px; }
-  
-  
-  
-}
 
+}
 
 /* Calendar icon and month navigation alignment refinement */
 .project-form .calendar-trigger-icon {
@@ -1425,15 +1162,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #a97935;
 }
 
-
-
-
-
-
 /* Fine-tune calendar month arrows: center precisely on the month label */
-
-
-
 
 /* Contraste des boutons au survol et au clic */
 .button-gold,
@@ -1450,11 +1179,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #fffdfb !important;
 }
 
-
 /* Bouton flottant de retour en haut */
-
-
-
 
 .back-to-top-enter-active,
 .back-to-top-leave-active {
@@ -1465,10 +1190,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   opacity: 0;
   transform: translateY(8px);
 }
-@media (max-width: 760px){
-  
-}
-
 
 /* Hero plus lumineux : garder le contraste sans l'ambiance trop sombre */
 .hero {
@@ -1486,7 +1207,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .hero-kicker {
   color: #f7dfb9 !important;
 }
-
 
 /* Hero harmonisé : fond uni brun rosé avec une photo très discrète en transparence */
 .hero {
@@ -1510,7 +1230,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   background: radial-gradient(circle, rgba(217,182,154,.78) 0%, rgba(185,141,119,.5) 48%, rgba(146,107,98,.15) 74%) !important;
 }
 
-
 /* Photo d'ambiance plus légère dans le hero */
 .hero::before {
   background:
@@ -1518,7 +1237,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
   opacity: .24;
 }
-
 
 /* Photo du hero davantage visible : voile coloré moins opaque */
 .hero::before {
@@ -1528,7 +1246,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   opacity: .72;
 }
 
-
 /* Ajustement subtil du voile photo dans le hero */
 .hero::before {
   background:
@@ -1536,7 +1253,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
   opacity: .76;
 }
-
 
 /* Bouton secondaire du hero : bordure plus visible sur le fond photo */
 .hero .button-quiet {
@@ -1551,7 +1267,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   background: rgba(255, 248, 242, .14) !important;
   color: #fffdfb !important;
 }
-
 
 /* Section histoire harmonisée : laisser respirer après la grande photo précédente */
 .story-section {
@@ -1586,7 +1301,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   line-height: 1.9;
 }
 
-
 /* Alignement à droite du texte de présentation sur la section histoire */
 .story-section .story-copy {
   text-align: right !important;
@@ -1600,7 +1314,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   margin-right: 0 !important;
 }
 
-
 /* Alignement à gauche du texte de présentation sur la section histoire */
 .story-section .story-copy {
   text-align: left !important;
@@ -1613,7 +1326,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   margin-left: 0 !important;
   margin-right: auto !important;
 }
-
 
 /* Interaction tactile : léger zoom des cartes étapes au clic */
 .process-section .step-card {
@@ -1638,7 +1350,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (prefers-reduced-motion: reduce){
   .process-section .step-card { transition: none; }
 }
-
 
 /* Pied de page mobile : logo et signature alignés à gauche sur une même ligne */
 @media (max-width: 760px){
@@ -1687,7 +1398,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Footer : logo correctement centré sur sa ligne et aligné au texte sur mobile */
 .site-footer .footer-main {
   align-items: center;
@@ -1718,7 +1428,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Desktop: garder les paragraphes de la section histoire alignés sur la même colonne */
 @media (min-width: 761px){
   .story-section .story-copy {
@@ -1746,7 +1455,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Mobile footer: center the navigation links */
 @media (max-width: 760px){
   .site-footer .footer-bottom nav {
@@ -1755,10 +1463,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Voile chaud et fondu subtil sur les photos, sauf le hero */
-
-
 
 .occasion-card:hover .occasion-image img,
 .details-photo:hover img,
@@ -1766,10 +1471,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .offer-item:hover .offer-card-image img {
   transform: scale(1.025);
 }
-@media (prefers-reduced-motion: reduce){
-  
-}
-
 
 /* Fondu réellement visible sur les images éditoriales (hors hero et logo) */
 
@@ -1782,10 +1483,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   border-radius: 10px;
 }
 
-
 /* Fondu plus perceptible sur les cartes d'occasions : voile crème visible mais doux */
-
-
 
 .details-photo img,
 .story-visual img,
@@ -1793,9 +1491,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .offer-expanded-image {
   filter: saturate(.80) brightness(1.03) sepia(.04) !important;
 }
-
-
-
 
 /* Accueil plus fluide : réduire les espaces verticaux sans perdre le rythme premium */
 @media (min-width: 761px){
@@ -1829,11 +1524,11 @@ body, .site-shell { background: #fbf7f2 !important; }
   .details-editorial-head {
     margin-bottom: 26px;
   }
-  
+
   .process-heading {
     margin-bottom: 24px;
   }
-  
+
   .process-section .step-card {
     padding: 24px;
   }
@@ -1847,7 +1542,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-bottom: 14px;
   }
 }
-
 
 /* Chevron net et régulier pour les listes déroulantes du formulaire */
 .project-form .custom-chevron {
@@ -1867,7 +1561,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   margin-top: 5px;
   transform: rotate(225deg);
 }
-
 
 /* Page Les occasions : présentation éditoriale cohérente avec C by C */
 .occasions-page-hero {
@@ -1916,13 +1609,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   background: #fbf7f2;
 }
 
-
-
-
-
-
-
-
 .occasion-collection-copy .section-eyebrow {
   margin-bottom: 12px;
   color: #a77d42;
@@ -1930,10 +1616,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-weight: 700;
   letter-spacing: .16em;
 }
-
-
-
-
 
 .occasion-page-cta {
   padding: clamp(64px, 8vw, 104px) 24px;
@@ -1967,21 +1649,13 @@ body, .site-shell { background: #fbf7f2 !important; }
     padding-top: 28px;
     padding-bottom: 48px;
   }
-  
-  
-  
+
   .occasion-page-cta {
     padding: 58px 24px 64px;
   }
 }
-@media (prefers-reduced-motion: reduce){
-  
-}
-
 
 /* Repère digital discret sur les visuels de la page occasions */
-
-
 
 /* Icônes temporaires à la place des grandes photos d'invitations */
 .occasions-page .occasion-icon-panel {
@@ -2005,8 +1679,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 .occasions-page .occasion-digital-tag { display: none !important; }
 
-
-
 .offer-thumb.offer-icon {
   display: grid;
   place-items: center;
@@ -2024,7 +1696,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-family: var(--serif);
   font-size: 72px;
 }
-
 
 /* Icônes d'occasion en attendant les visuels définitifs : cartes plus compactes */
 .occasion-collections {
@@ -2098,12 +1769,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Présentation éditoriale des occasions : typographie, lignes fines, aucun bloc ni visuel */
-
-
-
-
 
 .occasion-editorial-title .section-eyebrow {
   display: block;
@@ -2115,28 +1781,11 @@ body, .site-shell { background: #fbf7f2 !important; }
   line-height: 1.5;
 }
 
-
-
-
-
-
-
-
 @media (max-width: 760px){
-  
-  
-  
-  
-  .occasion-editorial-title .section-eyebrow { font-size: 8px; }
-  
-  
-  
-  
-}
-@media (prefers-reduced-motion: reduce){
-  
-}
 
+  .occasion-editorial-title .section-eyebrow { font-size: 8px; }
+
+}
 
 /* Les occasions en composition typographique libre : sans cartes, icônes ni filets */
 .occasion-word-garden {
@@ -2162,9 +1811,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   overflow: hidden;
   transition: transform .25s ease;
 }
-
-
-
 
 .occasion-word-item:hover { transform: translateY(-4px); }
 .occasion-word-number {
@@ -2235,10 +1881,7 @@ body, .site-shell { background: #fbf7f2 !important; }
     gap: 24px 22px !important;
     padding: 26px 22px 52px;
   }
-  
-  
-  
-  
+
   .occasion-word-item { padding-bottom: 12px; }
   .occasion-word-number { top: -8px; right: 0; font-size: clamp(76px, 17vw, 112px); }
   .occasion-word-eyebrow { font-size: 7px; letter-spacing: .12em; line-height: 1.5; }
@@ -2255,7 +1898,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (prefers-reduced-motion: reduce){
   .occasion-word-item, .occasion-word-link span { transition: none; }
 }
-
 
 /* Version finale des occasions : une par ligne, numéros botaniques plus discrets */
 .occasion-word-garden {
@@ -2350,7 +1992,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .occasion-word-item p { font-size: 12px; line-height: 1.7; }
 }
 
-
 /* Motifs botaniques délicats intégrés à l'intérieur des chiffres */
 .occasion-word-number {
   color: transparent !important;
@@ -2366,57 +2007,11 @@ body, .site-shell { background: #fbf7f2 !important; }
   .occasion-word-number { background-size: 120% 100%; }
 }
 
-
 /* Section détails sans photo, plus légère et typographique */
-
-
-
-
-
-@media (max-width: 760px){
-  
-  
-}
-
 
 /* L'art du détail : composition en trois panneaux plutôt qu'une liste verticale */
 
-
-
-
-
-
-
-
-
-@media (max-width: 760px){
-  
-  
-  
-  
-  
-  
-}
-
-
 /* Version compacte des trois éléments de l'art du détail */
-
-
-
-
-
-
-
-@media (max-width: 760px){
-  
-  
-  
-  
-  
-  
-  
-}
-
 
 /* Présentation simple en puces pour la section L'art du détail */
 .details-simple-list {
@@ -2462,7 +2057,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .details-simple-list small { font-size: 12px; }
 }
 
-
 /* Harmoniser la police du titre « L'art du détail » avec les autres titres */
 .details-editorial-head h2,
 .details-editorial-head h2 em {
@@ -2473,7 +2067,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .details-editorial-head h2 em {
   font-style: italic;
 }
-
 
 /* Harmoniser le titre « L'art du détail » avec les autres titres de section */
 .details-editorial-head h2 {
@@ -2489,7 +2082,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: var(--gold) !important;
 }
 
-
 /* Reprendre exactement le traitement typographique des autres titres de section */
 .details-editorial-head h2 {
   font-family: var(--display) !important;
@@ -2504,7 +2096,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: var(--gold) !important;
 }
 
-
 /* Titres des occasions : même duo typographique que les titres principaux */
 .occasion-word-item h2,
 .occasion-word-item h3 {
@@ -2513,7 +2104,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   letter-spacing: -.055em !important;
   line-height: 1.08 !important;
 }
-
 
 /* Harmoniser le grand titre de la page Occasions avec les titres principaux de l’accueil */
 .occasions-page-hero h1 {
@@ -2529,7 +2119,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   letter-spacing: -.04em !important;
 }
 
-
 /* Même traitement typographique pour « Votre histoire est unique » */
 .occasion-page-cta h2 {
   font-family: var(--display) !important;
@@ -2544,7 +2133,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   letter-spacing: -.04em !important;
 }
 
-
 /* Accueil : conserver l’italique sur la seconde partie de chaque grand titre */
 .hero h1 span,
 .occasions-heading h2 span,
@@ -2556,7 +2144,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-style: italic !important;
   font-weight: 500 !important;
 }
-
 
 /* Histoire : le visuel ayant été retiré, replacer le texte dans la première colonne */
 .story-section {
@@ -2570,7 +2157,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   margin-left: 0;
 }
 
-
 /* Section « La petite histoire » : aligner le contenu sur le bord gauche des autres sections */
 .story-section {
   grid-template-columns: minmax(0, 1fr) !important;
@@ -2581,7 +2167,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   max-width: none;
   justify-self: stretch;
 }
-
 
 /* Correction définitive : aligner le contenu de « La petite histoire » à gauche */
 .story-section .story-copy {
@@ -2604,7 +2189,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .story-section .story-copy > p {
   max-width: 900px;
 }
-
 
 /* Accueil uniquement : compacter la section des occasions sur ordinateur */
 @media (min-width: 761px){
@@ -2640,7 +2224,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Accueil : réduire la hauteur de la section occasions sur ordinateur */
 @media (min-width: 761px){
   .occasions-section.section-pad {
@@ -2662,7 +2245,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .occasions-section .occasion-word-item h3 { margin-bottom: 6px !important; }
   .occasions-section .occasion-word-item p { margin-bottom: 8px !important; }
 }
-
 
 /* Accueil desktop : aligner le titre et les occasions sur le même bord gauche */
 @media (min-width: 761px){
@@ -2692,7 +2274,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-left: 0 !important;
   }
 }
-
 
 /* Mobile : réduire la hauteur du hero sans sacrifier le visuel */
 @media (max-width: 760px){
@@ -2748,7 +2329,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     transform: scale(.66) rotate(-4deg) !important;
   }
 }
-
 
 /* Accueil mobile : hero plus compact, y compris le bloc d’introduction */
 @media (max-width: 760px){
@@ -2816,7 +2396,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     transform: scale(.62) rotate(-4deg) !important;
   }
 }
-
 
 /* Correctif mobile accueil : réduire les dimensions réelles du visuel (pas seulement son échelle) */
 @media screen and (max-width: 760px){
@@ -2894,7 +2473,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Mobile accueil : vraie version courte du hero, sans la grande scène d’illustration */
 @media (max-width: 760px){
   #accueil.hero {
@@ -2958,7 +2536,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     font-size: clamp(36px, 9.5vw, 44px) !important;
   }
 }
-
 
 /* Mobile accueil : réafficher la carte d’invitation en version compacte */
 @media (max-width: 760px){
@@ -3030,7 +2607,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Retour à la version mobile compacte du hero : carte masquée, composition épurée */
 @media (max-width: 760px){
   #accueil.hero .hero-visual {
@@ -3038,14 +2614,12 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Mobile : descendre légèrement le libellé « Célébrations by Chirel » */
 @media (max-width: 760px){
   #accueil.hero .hero-kicker {
     margin-top: 8px !important;
   }
 }
-
 
 /* Mobile : rapprocher la section contact de la présentation « La petite histoire » */
 @media (max-width: 760px){
@@ -3062,29 +2636,13 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Formulaire contact : options facultatives multiples */
-
 
 .project-field-label { color: var(--dark); font-size: 13px; font-weight: 600; }
 
-
-
-
-
-
-
-
 /* Liste déroulante à choix multiples pour les options du formulaire */
 
-
-
-
 .project-option-checkbox.is-checked { border-color: var(--bronze, #a77d42); background: var(--bronze, #a77d42); }
-
-
-
-
 
 /* Expérience signature C by C : une invitation qui se dévoile au clic */
 .signature-moment {
@@ -3140,7 +2698,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-envelope, .signature-letter, .signature-envelope-flap, .signature-seal, .signature-reveal-button { transition: none !important; }
 }
 
-
 /* Invitation signature : logo discret et typographie plus raffinée */
 .signature-letter {
   gap: 9px !important;
@@ -3178,7 +2735,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-letter-script { font-size: 23px !important; }
   .signature-letter-title { font-size: 25px !important; }
 }
-
 
 /* Carte signature : logo discret et typographie d’invitation plus raffinée */
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&display=swap');
@@ -3221,7 +2777,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-letter-script { font-size: 27px !important; }
   .signature-letter-title { font-size: 24px !important; }
 }
-
 
 /* Invitation signature plus ornée, et enveloppe cliquable pour ouvrir/fermer */
 .signature-envelope {
@@ -3319,7 +2874,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-letter::after { font-size: 14px; }
 }
 
-
 /* Ajustements demandés : motifs sur le papier intérieur, sans bordure décorative */
 .signature-letter {
   outline: none !important;
@@ -3391,7 +2945,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* Affiner les ornements : motifs sur la carte intérieure, sans bordure encadrée */
 .signature-letter {
   outline: none !important;
@@ -3438,7 +2991,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-stage.is-revealed .signature-letter { transform: translateY(-86px) !important; }
 }
 
-
 /* Carte d’invitation : papier ivoire texturé, sans motifs décoratifs répétitifs */
 .signature-letter {
   outline: none !important;
@@ -3465,7 +3017,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 .signature-letter-script { color: #96776a !important; }
 .signature-letter-rule { background: rgba(177,142,94,.7) !important; }
 
-
 /* Papier d’invitation haut de gamme : ivoire satiné avec un léger éclat */
 .signature-letter {
   background-color: #fffaf0 !important;
@@ -3475,7 +3026,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     repeating-linear-gradient(0deg, rgba(126,101,72,.025) 0px, rgba(126,101,72,.025) 1px, transparent 1px, transparent 4px) !important;
   box-shadow: inset 0 0 0 1px rgba(190,157,108,.20), inset 0 1px 8px rgba(255,255,255,.78), 0 2px 9px rgba(100,75,48,.08) !important;
 }
-
 
 /* Typographie de la carte : titre plus net et raffiné, sans effet trop classique */
 .signature-letter-title {
@@ -3488,7 +3038,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #5e453b !important;
 }
 
-
 /* Typographie élégante pour le titre de la carte d’invitation */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 .signature-letter-title {
@@ -3500,7 +3049,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   text-transform: none !important;
   color: #5e453b !important;
 }
-
 
 /* Accueil mobile : donner un peu plus d’ampleur au hero sans le rendre trop long */
 @media (max-width: 760px){
@@ -3515,7 +3063,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     padding-bottom: 60px !important;
   }
 }
-
 
 /* Accueil mobile : hauteur minimale légèrement augmentée pour que le changement soit visible */
 @media (max-width: 760px){
@@ -3533,7 +3080,6 @@ body, .site-shell { background: #fbf7f2 !important; }
     padding-bottom: 60px !important;
   }
 }
-
 
 /* Hero mobile : aérer la composition et les espaces entre chaque élément */
 @media (max-width: 760px){
@@ -3605,7 +3151,6 @@ body, .site-shell { background: #fbf7f2 !important; }
   }
 }
 
-
 /* C by C — reliefs subtils et blocs arrondis, dans la continuité de Chirel Dev */
 :root {
   --cbc-card-radius: 22px;
@@ -3672,8 +3217,6 @@ body, .site-shell { background: #fbf7f2 !important; }
 
 /* Étapes : relief doux sans alourdir la lecture */
 
-
-
 /* Liste des attentions : chaque point devient une petite surface lisible */
 .details-simple-list {
   gap: 12px !important;
@@ -3734,7 +3277,6 @@ textarea:focus-visible {
   .contact-panel { border-radius: 22px !important; }
 }
 
-
 /* Mobile : espace net entre les cartes de la section « L’art du détail » */
 @media (max-width: 760px){
   .details-simple-list {
@@ -3747,7 +3289,6 @@ textarea:focus-visible {
     margin: 0 !important;
   }
 }
-
 
 /* Correction renforcée : l'espacement est porté par chaque carte, même si le layout parent est surchargé */
 @media (max-width: 760px){
@@ -3767,7 +3308,6 @@ textarea:focus-visible {
     margin-top: 0 !important;
   }
 }
-
 
 /* Occasions sur mobile : de vraies cartes indépendantes, espacées et arrondies */
 @media (max-width: 760px){
@@ -3830,7 +3370,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Pages occasions : espacement régulier entre les cartes sur mobile */
 @media (max-width: 760px){
   .occasion-grid,
@@ -3867,7 +3406,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Pages occasions sur mobile : éloigner les numéros de la bordure des cartes */
 @media (max-width: 760px){
   .occasion-card,
@@ -3900,7 +3438,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Accueil mobile : aligner les numéros d'occasion sur la ligne des titres */
 @media (max-width: 760px){
   .occasions-section .occasion-word-garden-home > .occasion-word-item {
@@ -3931,7 +3468,6 @@ textarea:focus-visible {
     margin-top: 1.15em !important;
   }
 }
-
 
 /* Accueil : reprendre exactement le placement latéral des numéros des pages occasions */
 @media (max-width: 760px){
@@ -3972,7 +3508,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Accueil mobile : numéro sur la même ligne que le titre, comme sur /occasions */
 @media (max-width: 760px){
   .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
@@ -4001,7 +3536,6 @@ textarea:focus-visible {
     grid-row: 4 !important;
   }
 }
-
 
 /* Accueil : reprendre le même style de cartes que la page /occasions */
 @media (max-width: 760px){
@@ -4062,7 +3596,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Accueil mobile : rapprocher visuellement le numéro du titre de l’occasion */
 @media (max-width: 760px){
   .occasions-section .occasion-word-garden-home > .occasion-word-item {
@@ -4076,7 +3609,6 @@ textarea:focus-visible {
     column-gap: 8px !important;
   }
 }
-
 
 /* C by C contact form — progressive question wizard */
 .project-form .wizard-heading {
@@ -4308,7 +3840,6 @@ textarea:focus-visible {
   .wizard-progress-track span { transition: none; }
 }
 
-
 /* Contact mobile : réduire le scroll et rendre les options plus compactes */
 @media (max-width: 760px){
   .contact-form-hero {
@@ -4391,7 +3922,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Contact mobile : réduire la hauteur du bloc de titre d’étape */
 @media (max-width: 760px){
   .project-form .wizard-heading {
@@ -4414,7 +3944,6 @@ textarea:focus-visible {
     line-height: 1.4 !important;
   }
 }
-
 
 /* Contact page: compact mobile introduction and shorter wizard flow */
 @media (max-width: 760px){
@@ -4440,7 +3969,6 @@ textarea:focus-visible {
   .wizard-actions { margin-top: 13px !important; }
 }
 
-
 /* Contact submission success state */
 .project-success-card { position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; min-height:360px; padding:clamp(28px,5vw,54px) !important; border:1px solid rgba(181,138,75,.28) !important; border-radius:28px !important; background:linear-gradient(145deg,#fffdfb 0%,#f8e9e5 100%) !important; box-shadow:0 18px 48px rgba(79,52,43,.10),inset 0 1px 0 rgba(255,255,255,.95) !important; text-align:left; }
 .project-success-card .success-icon { display:grid; place-items:center; width:56px; height:56px; margin-bottom:24px; border:1px solid rgba(181,138,75,.45); border-radius:50%; background:#fffaf4; color:#9b7844; font-size:28px; }
@@ -4450,7 +3978,6 @@ textarea:focus-visible {
 .project-success-card .success-decoration { align-self:flex-end; margin-top:22px; color:#b58a4b; font-size:28px; }
 .project-success-card .success-new-request { margin-top:24px; border:1px solid #b58a4b; border-radius:999px; padding:12px 18px; background:#674a45; color:#fffdfb; font:inherit; font-size:12px; font-weight:700; cursor:pointer; }
 @media (max-width:760px){ .project-success-card { min-height:280px; padding:28px 22px !important; border-radius:22px !important; } .project-success-card .success-icon { width:48px; height:48px; margin-bottom:20px; } .project-success-card h2 { font-size:30px; } .project-success-card p { font-size:14px; line-height:1.6; } }
-
 
 /* Contact wizard: bouton Continuer plus sobre et élégant */
 .project-form .wizard-actions .wizard-next {
@@ -4480,7 +4007,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Desktop : rapprocher et alléger le bloc de contact de la page d’accueil */
 @media (min-width: 761px){
   .contact-section {
@@ -4502,7 +4028,6 @@ textarea:focus-visible {
     margin-bottom: 20px !important;
   }
 }
-
 
 /* Desktop : réduire encore le bloc final et supprimer le grand vide avant celui-ci */
 @media (min-width: 761px){
@@ -4535,7 +4060,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Accueil desktop : créer une séparation nette entre les blocs de la section détails */
 @media (min-width: 761px){
   #details .details-simple-list {
@@ -4559,7 +4083,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Accueil desktop : les cartes de détail occupent toute la largeur de la section */
 @media (min-width: 761px){
   #details .details-simple-list {
@@ -4576,7 +4099,6 @@ textarea:focus-visible {
     box-sizing: border-box !important;
   }
 }
-
 
 /* Accueil : léger zoom élégant au survol des cartes de détail */
 @media (hover: hover) and (pointer: fine){
@@ -4601,7 +4123,6 @@ textarea:focus-visible {
     transform: none !important;
   }
 }
-
 
 /* Accueil desktop : harmoniser les cartes d’occasions avec la présentation mobile */
 @media (min-width: 761px){
@@ -4677,7 +4198,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Page Occasions desktop : cartes aussi larges que le contenu des autres sections */
 @media (min-width: 761px){
   .occasions-page .occasion-word-garden,
@@ -4701,7 +4221,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Page Occasions desktop : largeur équilibrée, sans étirer les cartes jusqu’aux bords */
 @media (min-width: 761px){
   main .occasion-word-garden:not(.occasion-word-garden-home) {
@@ -4718,7 +4237,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Icônes des options : tracés fins, élégants et assortis à la charte C by C */
 .option-item .option-symbol {
   color: var(--gold, #a7834c);
@@ -4731,7 +4249,6 @@ textarea:focus-visible {
   stroke: currentColor;
 }
 
-
 /* Options : éloigner légèrement les icônes du contour circulaire */
 .option-item .option-symbol {
   padding: 5px !important;
@@ -4741,7 +4258,6 @@ textarea:focus-visible {
   width: 19px !important;
   height: 19px !important;
 }
-
 
 /* Formules : élargir la section des options comme la liste principale des formules */
 .options-section {
@@ -4761,7 +4277,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Options : aligner la largeur sur les sections précédentes, sans débordement */
 .options-section {
   padding-left: clamp(20px, 8vw, 120px) !important;
@@ -4780,7 +4295,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Alignement exact des options avec les lignes « Nos formules » */
 .options-section {
   padding-left: clamp(20px, 8vw, 120px) !important;
@@ -4798,7 +4312,6 @@ textarea:focus-visible {
     padding-right: 18px !important;
   }
 }
-
 
 /* Frise éditoriale animée des étapes — élégante, légère et responsive */
 .process-timeline {
@@ -4969,7 +4482,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Frise horizontale sur ordinateur ; conservation de la frise verticale sur mobile */
 @media (min-width: 761px){
   .process-timeline {
@@ -5025,7 +4537,6 @@ textarea:focus-visible {
     font-size: 13px;
   }
 }
-
 
 /* Contact : formulaire et FAQ compacts côte à côte */
 .contact-page .contact-form-hero {
@@ -5135,7 +4646,6 @@ textarea:focus-visible {
   .contact-faq-item summary { padding-top: 12px; padding-bottom: 12px; }
 }
 
-
 /* Pages réglementaires : lecture confortable et cohérence avec l'identité C by C */
 .legal-main {
   max-width: 1100px;
@@ -5222,7 +4732,6 @@ textarea:focus-visible {
   .footer-legal-links { gap: 10px 13px; }
 }
 
-
 /* C by C — formulaire mobile plus léger et moins imposant */
 @media (max-width: 600px){
   .contact-form-layout {
@@ -5279,7 +4788,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Mobile : retrouver le léger zoom au toucher sur les trois encadrés */
 @media (hover: none) and (pointer: coarse){
   #details .details-simple-list > li {
@@ -5303,7 +4811,6 @@ textarea:focus-visible {
     transition: none !important;
   }
 }
-
 
 /* Pages dédiées aux quatre occasions — continuité de l'identité C by C */
 .occasion-detail-page { background: var(--ivory); }
@@ -5364,10 +4871,9 @@ textarea:focus-visible {
   .occasion-detail-content { padding: 58px 22px; }
   .occasion-detail-features { grid-template-columns: 1fr; gap: 13px; }
   .occasion-detail-feature { min-height: 0; padding: 22px; }
-  
+
   .occasion-detail-cta { padding: 58px 22px; }
 }
-
 
 /* Pages occasions : présentation éditoriale, sans accumulation de cartes */
 .occasion-detail-page .site-header {
@@ -5418,11 +4924,10 @@ textarea:focus-visible {
     gap: 7px 14px;
     padding: 19px 0;
   }
-  
+
   .occasion-detail-feature h3 { grid-column: 2; grid-row: 1; font-size: 17px; }
   .occasion-detail-feature p { grid-column: 2; grid-row: 2; font-size: 12px; }
 }
-
 
 /* Pages occasions — version éditoriale sans numéros ni séparateurs */
 .occasion-detail-features {
@@ -5503,7 +5008,6 @@ textarea:focus-visible {
   .occasion-detail-closing { margin-top: 38px !important; }
 }
 
-
 /* Hero des pages occasions : crème ivoire, distinct du menu rose poudré */
 .occasion-detail-page .occasion-detail-hero {
   background: #fbf6ed !important;
@@ -5517,7 +5021,6 @@ textarea:focus-visible {
 .occasion-detail-page .occasion-detail-hero h1 { color: #49342e !important; }
 .occasion-detail-page .occasion-detail-hero h1 em { color: #a7834c !important; }
 .occasion-detail-page .occasion-detail-hero > p { color: #81766c !important; }
-
 
 /* Pages occasions — composition éditoriale originale, sans cartes ni liste */
 .occasion-detail-page .occasion-detail-heading {
@@ -5685,7 +5188,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Pages occasions — épuration complète de la composition des points forts */
 .occasion-detail-page .occasion-detail-features {
   display: grid !important;
@@ -5786,7 +5288,6 @@ textarea:focus-visible {
     font-size: 23px !important;
   }
 }
-
 
 /* Pages occasions — composition créative façon éditorial de studio */
 .occasion-detail-page .occasion-detail-content {
@@ -5999,7 +5500,6 @@ textarea:focus-visible {
   .occasion-detail-page .occasion-detail-closing::before { font-size: 7px; }
 }
 
-
 /* Correctif mobile — composition créative sans colonnes étroites */
 @media (max-width: 760px){
   .occasion-detail-page .occasion-detail-features {
@@ -6080,7 +5580,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Relief subtil et profondeur pour les points forts des pages occasions */
 .occasion-detail-page .occasion-detail-feature,
 .occasion-detail-page .occasion-detail-feature:nth-child(1),
@@ -6137,7 +5636,6 @@ textarea:focus-visible {
     border-radius: 0 16px 0 0 !important;
   }
 }
-
 
 /* Refonte finale des blocs occasions : couleurs douces, relief et respiration */
 .occasion-detail-page .occasion-detail-features {
@@ -6227,7 +5725,6 @@ textarea:focus-visible {
     margin-top: 44px !important;
   }
 }
-
 
 /* Nouvelle direction artistique des pages occasions : composition en rubans éditoriaux */
 .occasion-detail-page .occasion-detail-content {
@@ -6410,7 +5907,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Direction 5 — typographie circulaire, médaillon central */
 .occasion-detail-page .occasion-detail-content {
   background: #fffaf7 !important;
@@ -6573,7 +6069,6 @@ textarea:focus-visible {
  .occasion-detail-page .occasion-detail-closing { margin-top: 36px !important; font-size: 25px !important; }
 }
 
-
 /* Palette définitive : rose poudré, prune et doré — médaillon circulaire */
 .occasion-detail-page .occasion-detail-content {
   background:
@@ -6717,7 +6212,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Ajustements validés : marron chaleureux, cercle sans étoiles, blocs discrets */
 .occasion-detail-page .occasion-detail-content {
   background: #fffdfb !important;
@@ -6808,7 +6302,6 @@ textarea:focus-visible {
   .occasion-detail-page .occasion-detail-feature h3 { font-size: 23px !important; }
 }
 
-
 /* Monogramme C by C : centrage et proportions dans le médaillon */
 .occasion-detail-page .occasion-orbit-center {
   display: flex !important;
@@ -6852,7 +6345,6 @@ textarea:focus-visible {
     margin: 2px 0 !important;
   }
 }
-
 
 /* Titres et boutons des pages occasions : reprendre exactement les codes du site */
 .occasion-detail-page .occasion-detail-hero h1,
@@ -6931,7 +6423,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Boutons pages occasions : reprendre l'arrondi des boutons du site */
 .occasion-detail-page a.button,
 .occasion-detail-page a.button.button-gold,
@@ -6939,7 +6430,6 @@ textarea:focus-visible {
 .occasion-detail-page .occasion-detail-cta .button {
   border-radius: 999px !important;
 }
-
 
 /* Centrer les titres principaux des pages occasions */
 .occasion-detail-page .occasion-detail-hero h1,
@@ -6957,7 +6447,6 @@ textarea:focus-visible {
   margin-right: auto !important;
   text-align: center !important;
 }
-
 
 /* Harmonisation typographique des pages occasions avec les pages principales */
 .occasion-detail-page .occasion-detail-hero h1,
@@ -7020,7 +6509,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Pages occasions : bouton CTA centré et suppression du trait de soulignement */
 .occasion-detail-page .occasion-detail-cta > a.button {
   display: flex !important;
@@ -7035,14 +6523,12 @@ textarea:focus-visible {
   color: #d1c3b3 !important;
 }
 
-
 /* Centrer également le bouton principal en haut des quatre pages occasions */
 .occasion-detail-page .occasion-detail-hero > a.button {
   display: flex !important;
   width: fit-content !important;
   margin: 28px auto 0 !important;
 }
-
 
 /* Hero photographique des pages occasions : photo douce sous un voile brun */
 .occasion-detail-page .occasion-detail-hero {
@@ -7088,7 +6574,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Ajustement mobile : hiérarchie cohérente et cartes mieux différenciées */
 @media (max-width: 760px){
   .occasion-detail-page .occasion-detail-feature h3,
@@ -7112,7 +6597,6 @@ textarea:focus-visible {
   .occasion-detail-page .occasion-detail-feature:nth-child(3) { background: #eee9df !important; }
 }
 
-
 /* Cartes des pages occasions : même ivoire sur les trois blocs, forme conservée */
 @media (max-width: 760px){
   .occasion-detail-page .occasion-detail-feature,
@@ -7124,7 +6608,6 @@ textarea:focus-visible {
     border-radius: 3px 18px 3px 18px !important;
   }
 }
-
 
 /* Cartes ivoire : contour plus doux et halo diffus */
 @media (max-width: 760px){
@@ -7139,7 +6622,6 @@ textarea:focus-visible {
   }
 }
 
-
 /* Champ piège anti-robots du formulaire de contact */
 .contact-honeypot {
   position: absolute !important;
@@ -7152,7 +6634,6 @@ textarea:focus-visible {
   white-space: nowrap !important;
   border: 0 !important;
 }
-
 
 /* Calendrier personnalisé et widget Turnstile — identité C by C */
 .contact-date-field { position: relative; }
@@ -7234,7 +6715,6 @@ textarea:focus-visible {
   .contact-calendar-cell button { width:31px; height:31px; }
 }
 
-
 /* Icône calendrier dessinée et panneau de vérification assorti à C by C */
 .contact-date-icon {
   display:block;
@@ -7303,7 +6783,6 @@ textarea:focus-visible {
   .turnstile-symbol { width:32px; height:32px; flex-basis:32px; }
 }
 
-
 /* Cohérence des boutons bruns : texte noir, blanc uniquement sur les héros */
 a.button-gold, button.button-gold, .nav-cta, .project-submit,
 .offers-page a.button, .offers-page button.button, .contact-copy .button-gold {
@@ -7340,7 +6819,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   color:#38291e !important;
   -webkit-text-fill-color:#38291e !important;
 }
-
 
 /* Pages occasions : CTA plus lumineux, avec un décor subtil et chaleureux */
 .occasion-detail-page .occasion-detail-cta {
@@ -7427,7 +6905,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#a9824d !important; }
 .occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
 
-
 /* Le pied de page conserve son apparence d'origine */
 .occasion-detail-page .site-footer {
   background:#241a13 !important;
@@ -7444,7 +6921,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .occasion-detail-page .site-footer .footer-bottom nav a { color:inherit !important; }
 .occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#e8c8a0 !important; }
 .occasion-detail-page .site-footer .footer-contact { color:#e8c8a0 !important; }
-
 
 /* Pied de page identique au modèle de la page d'accueil */
 .site-footer,
@@ -7471,14 +6947,12 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .site-footer .footer-contact,
 .occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
 
-
 /* Page naissance : décaler légèrement la photo pour mieux dégager le visage */
 @media (max-width:760px){
   .occasion-detail-page .baby-hero-photo {
     background-position: 68% center !important;
   }
 }
-
 
 /* Deuxième partie des titres des pages occasions : doré et italique */
 .occasion-detail-page .occasion-detail-heading h2 em {
@@ -7488,7 +6962,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   font-style:italic !important;
   font-weight:500 !important;
 }
-
 
 /* Bouton Contact du menu : texte blanc sur le fond brun */
 .main-nav .nav-cta,
@@ -7505,7 +6978,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   color:#38291e !important;
   -webkit-text-fill-color:#38291e !important;
 }
-
 
 /* Mariages — trois cartes alignées sur une seule ligne sur ordinateur */
 @media (min-width: 761px){
@@ -7551,7 +7023,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
     line-height: 1.7 !important;
   }
 }
-
 
 /* Toutes les pages occasions — trois cartes sur une ligne sur ordinateur */
 @media (min-width: 761px){
@@ -7640,7 +7111,6 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
     max-width: none !important;
   }
 }
-
 
 /* Centrage réel des titres des quatre héros : le h1 est centré dans sa largeur maximale */
 .occasion-detail-page .occasion-detail-hero h1 {
