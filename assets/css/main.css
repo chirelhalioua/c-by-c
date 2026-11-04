@@ -5,7 +5,7 @@
 .section-pad{padding:90px clamp(24px,8vw,120px)}.section-topline{display:flex;justify-content:space-between;color:var(--gold);font-size:9px;border-bottom:1px solid var(--line);padding-bottom:17px}.occasions-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin:36px 0 38px}.occasions-heading h2,.story-copy h2,.process-heading h2,.about-copy h2,.contact-copy h2{font-size:clamp(38px,4.7vw,60px)}.occasions-heading h2 span,.story-copy h2 span,.process-heading h2 span,.about-copy h2 span,.contact-copy h2 span{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--gold)}.occasions-heading>p{max-width:380px;color:var(--muted);font-size:13px;margin:0 0 5px}.occasion-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .story-section{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,8vw,120px);align-items:center;background:#eee3d2}.section-eyebrow{color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:25px}.section-eyebrow span{border:1px solid var(--sand);border-radius:50%;width:26px;height:26px;display:grid;place-items:center;font-size:8px}.story-copy h2{margin-bottom:25px}.story-lead,.about-lead{font-size:19px;font-family:var(--serif);line-height:1.5;color:var(--bronze);max-width:430px}.story-copy>p:not(.story-lead),.about-copy>p:not(.about-lead){font-size:13px;line-height:1.9;color:#756455;max-width:500px}.story-copy strong{color:var(--ink)}
 .process-section{background:var(--paper)}.process-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:35px;margin:35px 0 40px}.process-heading>p{max-width:370px;color:var(--muted);font-size:13px;margin:0 0 5px}
-.about-copy .section-eyebrow{color:var(--gold-bright)}.about-copy .section-eyebrow span{border-color:#8d7153}
+.about-copy .section-eyebrow.about-copy .section-eyebrow span{border-color:#8d7153}
 
 .contact-section{background:var(--ivory)}.contact-panel{display:grid;grid-template-columns:1.3fr .7fr;background:var(--paper);border:1px solid var(--line);min-height:390px}.contact-copy{padding:clamp(30px,5vw,68px)}.contact-copy h2{margin-bottom:20px}.contact-copy>p{max-width:450px;font-size:13px;color:var(--muted);margin:0 0 25px}.contact-copy .button-gold{color:white}
 .site-footer{background:#241a13;color:#d8caba;padding:34px clamp(24px,8vw,120px) 20px}.footer-main{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-bottom:28px}.footer-brand{width:120px;display:block;flex-shrink:0}.footer-brand img{width:100%;max-height:65px;object-fit:contain}.footer-main>p{font-family:var(--serif);font-size:16px;line-height:1.55;margin:0}.footer-main>p span{font-family:var(--sans);font-size:10px;color:#a99a89}.footer-bottom{border-top:1px solid #ffffff20;padding-top:17px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:9px;color:#a99a89}.footer-bottom nav{display:flex;gap:20px}.footer-bottom nav a:hover{color:var(--gold-bright)}.footer-bottom>span:last-child{font-size:8px}
@@ -56,7 +56,7 @@
 
 /* Personnalisation simplifiée : moins de texte, aucun symbole décoratif */
 
-.details-heading .section-eyebrow { display: none; }
+.details-heading .section-eyebrow 
 
 /* Présentation originale de la personnalisation : photo éditoriale + textes courts */
 .details-section { background: #f5efe4; }
@@ -77,7 +77,7 @@
 
 /* Nouvelle direction visuelle C by C : moderne, claire et chaleureuse, sans effet magazine */
 :root { --card-radius: 14px; }
-.section-pad { padding-top: clamp(58px, 7vw, 88px); padding-bottom: clamp(58px, 7vw, 88px); }
+.section-pad 
 .section-topline { border-bottom: 0; padding-bottom: 0; letter-spacing: .13em; }
 .occasions-heading { align-items: flex-start; margin: 28px 0 30px; }
 .occasions-heading h2,
@@ -151,7 +151,7 @@
   padding: clamp(22px, 4vw, 42px);
   box-shadow: 0 16px 45px rgba(48,35,25,.045);
 }
-.project-form-heading { margin-bottom: 26px; }
+.project-form-heading 
 .project-form-heading h2 { font-family: var(--display); font-size: clamp(25px, 3vw, 34px); margin: 12px 0 8px; letter-spacing: -.035em; }
 .project-form-heading p { color: var(--muted, #7c7065); font-size: 13px; }
 
@@ -180,7 +180,7 @@
 }
 
 /* Navigation dédiée à la page Contact : liens en ligne, sans menu déroulant mobile */
-.contact-page .site-header { position: relative; }
+.contact-page .site-header 
 .contact-page .contact-page-nav {
   display: flex !important;
   position: static;
@@ -203,7 +203,7 @@
   justify-content: center;
   white-space: nowrap;
 }
-.contact-page .menu-toggle { display: none !important; }
+.contact-page .menu-toggle 
 @media(max-width:760px){
   .contact-page .site-header { height: 72px; padding: 10px 20px; }
   .contact-page .contact-page-nav { gap: 12px; }
@@ -212,7 +212,7 @@
 }
 
 /* Page Nos formules — devis personnalisé */
-.offers-page .site-header { position: relative; }
+.offers-page .site-header 
 .offers-page .offers-page-nav {
   display:flex !important; position:static; padding:0; border:0; box-shadow:none;
   background:transparent; flex-direction:row; align-items:center; gap:clamp(14px,2.5vw,30px);
@@ -230,7 +230,7 @@
 .offer-copy { align-self:center; padding:clamp(24px,4vw,54px); }
 .offer-label { color:var(--gold,#9b7945); font-size:10px; font-weight:700; letter-spacing:.18em; }
 .offer-copy h2,.offers-note h2 { margin:13px 0 16px; font-family:var(--display); font-size:clamp(27px,3vw,39px); line-height:1.15; letter-spacing:-.035em; }
-.offer-copy>p,.offers-note>p { color:var(--muted,#7c7065); line-height:1.85; }
+.offer-copy>p,.offers-note>p 
 .offer-copy ul { padding:0; margin:22px 0 28px; list-style:none; }
 .offer-copy li { position:relative; padding:9px 0 9px 22px; border-bottom:1px solid rgba(110,74,46,.12); font-size:13px; color:#5f5145; }
 .offer-copy li::before { content:'✳'; position:absolute; left:0; color:var(--gold,#b18c51); }
@@ -323,9 +323,7 @@
 .nav-cta:focus,
 .nav-cta:focus-visible,
 .offer-card a:active,
-.offer-card a:focus-visible {
-  color: #fff !important;
-}
+.offer-card a:focus-visible 
 .button-gold:active,
 .button-gold:focus,
 .button-gold:focus-visible,
@@ -492,7 +490,7 @@
   cursor: pointer;
   list-style: none;
 }
-.option-item summary::-webkit-details-marker { display: none; }
+.option-item summary::-webkit-details-marker 
 .option-item .option-symbol {
   width: 34px;
   height: 34px;
@@ -565,7 +563,7 @@
   cursor: pointer;
   list-style: none;
 }
-.offer-item>summary::-webkit-details-marker { display: none; }
+.offer-item>summary::-webkit-details-marker 
 .offer-thumb {
   display: block;
   width: 104px;
@@ -659,10 +657,7 @@
 .offers-page .button-gold:hover,
 .offers-page .button-gold:active,
 .offers-page .button-gold:focus,
-.offers-page .button-gold:focus-visible {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-}
+.offers-page .button-gold:focus-visible 
 
 /* Boutons devis : texte blanc au toucher sur mobile (règles à haute priorité) */
 .offers-page a.button.button-gold,
@@ -833,8 +828,8 @@
 }
 
 /* Harmoniser les fonds entre les sections : palette ivoire, blush et champagne */
-body, .site-shell { background: #fff8f2; }
-.site-header, .site-footer { background: #fffdfb; }
+body, .site-shell 
+.site-header, .site-footer 
 .occasions-section, .process-section, .about-section, .offers-note {
   background: #fff8f2;
 }
@@ -842,7 +837,7 @@ body, .site-shell { background: #fff8f2; }
   background: #f8e9e5;
 }
 .offers-hero { background: #fff8f2; }
-.offers-list { background: #fffdfb; }
+.offers-list 
 .hero {
   background: linear-gradient(135deg, #805d59 0%, #704e4a 48%, #634744 100%);
 }
@@ -867,11 +862,11 @@ body, .site-shell { background: #fff8f2; }
   --dark-2: #785750;
   --line: #eaded8;
 }
-body, .site-shell { background: #fbf7f2 !important; }
-.site-header, .site-footer, .offers-list { background: #fffdfb !important; }
+body, .site-shell 
+.site-header, .site-footer, .offers-list 
 .occasions-section, .process-section, .about-section, .offers-note,
-.offers-hero { background: #fbf7f2 !important; }
-.story-section, .options-section, .contact-section { background: #f5e9e5 !important; }
+.offers-hero 
+.story-section, .options-section, .contact-section 
 .occasion-card, .step-card, .contact-panel { background: #fffdfb !important; border-color: #eaded8 !important; }
 .hero {
   background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important;
@@ -891,9 +886,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   border-top: 1px solid #ead8d2 !important;
 }
 .site-footer .footer-inner,
-.site-footer .footer-bottom {
-  background: transparent !important;
-}
+.site-footer .footer-bottom 
 .site-footer,
 .site-footer p,
 .site-footer a,
@@ -910,17 +903,17 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 
 /* Alternance explicite des fonds : aucune section voisine de même teinte */
-.site-header { background: #fffdfb !important; }
+.site-header 
 .hero { background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important; }
-.occasions-section { background: #fbf7f2 !important; }
-.story-section { background: #f5e9e5 !important; }
-.process-section { background: #f2e4d3 !important; }
+.occasions-section 
+.story-section 
+.process-section 
 
-.contact-section { background: #f5e9e5 !important; }
+.contact-section 
 .site-footer { background: #e7d6ca !important; border-top: 1px solid #d8c1b3 !important; }
-.offers-hero { background: #fbf7f2 !important; }
-.offers-list { background: #f5e9e5 !important; }
-.options-section { background: #f2e4d3 !important; }
+.offers-hero 
+.offers-list 
+.options-section 
 .offers-note { background: #fbf7f2 !important; }
 .site-footer .footer-inner,
 .site-footer .footer-bottom { background: transparent !important; }
@@ -956,23 +949,13 @@ body, .site-shell { background: #fbf7f2 !important; }
 .story-section .story-copy .story-lead,
 .story-section .story-copy p,
 .story-section .story-copy p:not(.story-lead),
-.story-section .story-copy strong {
-  color: #38291e !important;
-  -webkit-text-fill-color: #38291e !important;
-  opacity: 1 !important;
-}
-.story-section .story-copy h2 span {
-  color: #a97935 !important;
-  -webkit-text-fill-color: #a97935 !important;
-}
+.story-section .story-copy strong 
+.story-section .story-copy h2 span 
 .story-section .story-copy .story-lead {
   color: #765148 !important;
   -webkit-text-fill-color: #765148 !important;
 }
-.story-section .story-copy p:not(.story-lead) {
-  color: #59483e !important;
-  -webkit-text-fill-color: #59483e !important;
-}
+.story-section .story-copy p:not(.story-lead) 
 
 /* Correctif réel : le bloc « Derrière C by C » est .about-section */
 
@@ -995,10 +978,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #59483e !important;
   -webkit-text-fill-color: #59483e !important;
 }
-.offers-note h2 span {
-  color: #a97935 !important;
-  -webkit-text-fill-color: #a97935 !important;
-}
+.offers-note h2 span 
 
 /* Lisibilité de la section « Un projet particulier ? » sur la page Formules */
 .offers-page .offers-note {
@@ -1042,30 +1022,14 @@ body, .site-shell { background: #fbf7f2 !important; }
 
 /* Harmoniser les grands titres des pages Formules et Contact avec l'accueil */
 .offers-page .offers-hero h1,
-.contact-page .contact-form-intro h1 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
+.contact-page .contact-form-intro h1 
 .offers-page .offers-hero h1 em,
-.contact-page .contact-form-intro h1 em {
-  font-family: var(--serif) !important;
-  font-weight: 500 !important;
-  font-style: italic !important;
-  color: var(--gold) !important;
-  -webkit-text-fill-color: var(--gold) !important;
-}
+.contact-page .contact-form-intro h1 em 
 
 /* Harmoniser aussi les sous-titres des pages Formules et Contact */
 .offers-page .options-heading h2,
 .offers-page .offers-note h2,
-.contact-page .contact-form-intro h1 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
+.contact-page .contact-form-intro h1 
 .offers-page .options-heading h2 em,
 .offers-page .offers-note h2 em,
 .contact-page .contact-form-intro h1 em {
@@ -1075,9 +1039,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: var(--gold) !important;
   -webkit-text-fill-color: var(--gold) !important;
 }
-.offers-page .options-heading h2 {
-  font-size: clamp(38px, 4.7vw, 60px) !important;
-}
+.offers-page .options-heading h2 
 .offers-page .offers-note h2 {
   font-size: clamp(38px, 4.7vw, 60px) !important;
 }
@@ -1665,7 +1627,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   aspect-ratio: 1.65 / 1;
   background: linear-gradient(135deg, #f8eee8, #ead8d2);
 }
-.occasions-page .occasion-icon-panel::after { display: none; }
+.occasions-page .occasion-icon-panel::after 
 .occasions-page .occasion-icon-panel .occasion-symbol {
   color: #b58a4b;
   font-family: var(--serif);
@@ -1702,9 +1664,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   gap: clamp(12px, 2vw, 22px) !important;
 }
-.occasions-page .occasion-collection-card {
-  border-radius: 14px;
-}
+.occasions-page .occasion-collection-card 
 .occasions-page .occasion-icon-panel {
   min-height: 108px;
   aspect-ratio: 1.35 / 1;
@@ -2069,12 +2029,7 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 
 /* Harmoniser le titre « L'art du détail » avec les autres titres de section */
-.details-editorial-head h2 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
+.details-editorial-head h2 
 .details-editorial-head h2 em {
   font-family: var(--display) !important;
   font-style: normal !important;
@@ -2083,12 +2038,7 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 
 /* Reprendre exactement le traitement typographique des autres titres de section */
-.details-editorial-head h2 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
+.details-editorial-head h2 
 .details-editorial-head h2 em {
   font-family: var(--serif) !important;
   font-style: italic !important;
@@ -2106,26 +2056,11 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 
 /* Harmoniser le grand titre de la page Occasions avec les titres principaux de l’accueil */
-.occasions-page-hero h1 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
-.occasions-page-hero h1 em {
-  font-family: var(--serif) !important;
-  font-style: italic !important;
-  font-weight: 500 !important;
-  letter-spacing: -.04em !important;
-}
+.occasions-page-hero h1 
+.occasions-page-hero h1 em 
 
 /* Même traitement typographique pour « Votre histoire est unique » */
-.occasion-page-cta h2 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
+.occasion-page-cta h2 
 .occasion-page-cta h2 em {
   font-family: var(--serif) !important;
   font-style: italic !important;
@@ -2146,9 +2081,7 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 
 /* Histoire : le visuel ayant été retiré, replacer le texte dans la première colonne */
-.story-section {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
+.story-section 
 .story-copy {
   grid-column: 1 !important;
   width: 100%;
@@ -2699,10 +2632,7 @@ body, .site-shell { background: #fbf7f2 !important; }
 }
 
 /* Invitation signature : logo discret et typographie plus raffinée */
-.signature-letter {
-  gap: 9px !important;
-  padding: 14px 18px !important;
-}
+.signature-letter 
 .signature-letter-logo {
   display: block;
   width: 42px;
@@ -2813,7 +2743,7 @@ body, .site-shell { background: #fbf7f2 !important; }
   opacity: .85;
   pointer-events: none;
 }
-.signature-letter::before { top: 9px; }
+.signature-letter::before 
 .signature-letter::after { bottom: 8px; transform: rotate(180deg); }
 .signature-letter-logo {
   width: 39px !important;
@@ -2901,18 +2831,12 @@ body, .site-shell { background: #fbf7f2 !important; }
 .signature-letter-title::after {
   content: none !important;
 }
-.signature-letter-logo {
-  position: relative;
-  z-index: 1;
-}
+.signature-letter-logo 
 .signature-letter-script,
 .signature-letter-title,
 .signature-letter-kicker,
 .signature-letter-date,
-.signature-letter-rule {
-  position: relative;
-  z-index: 1;
-}
+.signature-letter-rule 
 /* Agrandir légèrement le bloc signature pour donner plus de présence à l'expérience */
 .signature-moment {
   padding-top: 104px !important;
@@ -3004,15 +2928,9 @@ body, .site-shell { background: #fbf7f2 !important; }
     repeating-linear-gradient(91deg, rgba(255,255,255,.22) 0px, rgba(255,255,255,.22) 1px, transparent 1px, transparent 5px) !important;
 }
 .signature-letter::before,
-.signature-letter::after {
-  content: none !important;
-  display: none !important;
-}
+.signature-letter::after 
 .signature-letter-title::before,
-.signature-letter-title::after {
-  content: none !important;
-  display: none !important;
-}
+.signature-letter-title::after 
 .signature-letter-logo { opacity: .62 !important; }
 .signature-letter-script { color: #96776a !important; }
 .signature-letter-rule { background: rgba(177,142,94,.7) !important; }
@@ -3180,10 +3098,7 @@ body, .site-shell { background: #fbf7f2 !important; }
 .process-section::before { bottom: 3%; right: -65px; }
 .occasions-section > *,
 .details-section > *,
-.process-section > * {
-  position: relative;
-  z-index: 1;
-}
+.process-section > * 
 
 /* Cartes d’occasions : effet papier, bord fin et survol discret */
 .occasion-word-item {
@@ -4264,36 +4179,18 @@ textarea:focus-visible {
   padding-left: clamp(20px, 4vw, 64px) !important;
   padding-right: clamp(20px, 4vw, 64px) !important;
 }
-.options-section .options-grid {
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-@media (max-width: 760px){
-  .options-section {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-}
+.options-section .options-grid 
+@media (max-width: 760px)
 
 /* Options : aligner la largeur sur les sections précédentes, sans débordement */
-.options-section {
-  padding-left: clamp(20px, 8vw, 120px) !important;
-  padding-right: clamp(20px, 8vw, 120px) !important;
-}
+.options-section 
 .options-section .options-grid {
   width: 100% !important;
   max-width: 900px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-@media (max-width: 760px){
-  .options-section {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-}
+@media (max-width: 760px)
 
 /* Alignement exact des options avec les lignes « Nos formules » */
 .options-section {
@@ -4993,11 +4890,11 @@ textarea:focus-visible {
   content: "✳";
   color: rgba(181,138,75,.10) !important;
 }
-.occasion-detail-back { color: #89645b !important; }
-.occasion-detail-hero .section-eyebrow { color: #a7834c !important; }
-.occasion-detail-hero h1 { color: #49342e !important; }
+.occasion-detail-back 
+.occasion-detail-hero .section-eyebrow 
+.occasion-detail-hero h1 
 .occasion-detail-hero h1 em { color: #9a7168 !important; }
-.occasion-detail-hero > p { color: #81766c !important; }
+.occasion-detail-hero > p 
 .occasion-detail-hero .button { box-shadow: 0 8px 20px rgba(73,52,46,.10); }
 @media (max-width: 760px){
   .occasion-detail-hero { padding: 42px 22px 54px !important; }
@@ -5017,7 +4914,7 @@ textarea:focus-visible {
   color: rgba(181,138,75,.13) !important;
 }
 .occasion-detail-page .occasion-detail-back { color: #89645b !important; }
-.occasion-detail-page .occasion-detail-hero .section-eyebrow { color: #a7834c !important; }
+.occasion-detail-page .occasion-detail-hero .section-eyebrow 
 .occasion-detail-page .occasion-detail-hero h1 { color: #49342e !important; }
 .occasion-detail-page .occasion-detail-hero h1 em { color: #a7834c !important; }
 .occasion-detail-page .occasion-detail-hero > p { color: #81766c !important; }
@@ -5211,10 +5108,7 @@ textarea:focus-visible {
   position: relative;
 }
 .occasion-detail-page .occasion-detail-feature::before,
-.occasion-detail-page .occasion-detail-feature::after {
-  content: none !important;
-  display: none !important;
-}
+.occasion-detail-page .occasion-detail-feature::after 
 .occasion-detail-page .occasion-detail-feature h3 {
   max-width: 290px;
   margin: 0 0 12px !important;
@@ -5312,7 +5206,7 @@ textarea:focus-visible {
   font-size: 9px;
   letter-spacing: .2em;
 }
-.occasion-detail-page .occasion-detail-heading .section-eyebrow::after { content: none !important; }
+.occasion-detail-page .occasion-detail-heading .section-eyebrow::after 
 .occasion-detail-page .occasion-detail-heading h2 {
   max-width: 760px;
   margin: 22px auto 0 !important;
@@ -5673,7 +5567,7 @@ textarea:focus-visible {
   line-height: 1 !important;
   transform: none !important;
 }
-.occasion-detail-page .occasion-detail-feature:nth-child(2)::before { content: "✧" !important; }
+.occasion-detail-page .occasion-detail-feature:nth-child(2)::before 
 .occasion-detail-page .occasion-detail-feature:nth-child(3)::before { content: "✳" !important; }
 .occasion-detail-page .occasion-detail-feature::after {
   content: none !important;
@@ -5856,7 +5750,7 @@ textarea:focus-visible {
   line-height: 1.2 !important;
   text-align: center !important;
 }
-.occasion-detail-page .occasion-detail-closing::before { content: none !important; }
+.occasion-detail-page .occasion-detail-closing::before 
 @media (max-width: 760px){
   .occasion-detail-page .occasion-detail-content { padding: 52px 20px !important; }
   .occasion-detail-page .occasion-detail-heading { margin-bottom: 38px !important; }
@@ -6078,12 +5972,8 @@ textarea:focus-visible {
 .occasion-detail-page .occasion-detail-heading .section-eyebrow {
   color: #a77b88 !important;
 }
-.occasion-detail-page .occasion-detail-heading h2 {
-  color: #56364c !important;
-}
-.occasion-detail-page .occasion-detail-heading > p {
-  color: #806f79 !important;
-}
+.occasion-detail-page .occasion-detail-heading h2 
+.occasion-detail-page .occasion-detail-heading > p 
 .occasion-detail-page .occasion-orbit {
   filter: drop-shadow(0 16px 22px rgba(86,54,76,.10));
 }
@@ -6118,12 +6008,8 @@ textarea:focus-visible {
 .occasion-detail-page .occasion-detail-feature:nth-child(3) {
   border-top-color: rgba(167,123,136,.48) !important;
 }
-.occasion-detail-page .occasion-detail-feature h3 {
-  color: #56364c !important;
-}
-.occasion-detail-page .occasion-detail-feature p {
-  color: #806f79 !important;
-}
+.occasion-detail-page .occasion-detail-feature h3 
+.occasion-detail-page .occasion-detail-feature p 
 .occasion-detail-page .occasion-detail-closing {
   color: #795267 !important;
 }
@@ -6131,9 +6017,7 @@ textarea:focus-visible {
   background: linear-gradient(120deg, #f1dfe4 0%, #ead5df 52%, #e4d4e4 100%) !important;
 }
 .occasion-detail-page .occasion-detail-cta h2,
-.occasion-detail-page .occasion-detail-cta h2 em {
-  color: #56364c !important;
-}
+.occasion-detail-page .occasion-detail-cta h2 em 
 .occasion-detail-page .occasion-detail-cta .section-eyebrow {
   color: #a7834c !important;
 }
@@ -6219,16 +6103,10 @@ textarea:focus-visible {
 }
 .occasion-detail-page .occasion-detail-heading h2,
 .occasion-detail-page .occasion-detail-feature h3,
-.occasion-detail-page .occasion-detail-closing {
-  color: #49342e !important;
-}
-.occasion-detail-page .occasion-detail-heading .section-eyebrow {
-  color: #987b70 !important;
-}
+.occasion-detail-page .occasion-detail-closing 
+.occasion-detail-page .occasion-detail-heading .section-eyebrow 
 .occasion-detail-page .occasion-detail-heading > p,
-.occasion-detail-page .occasion-detail-feature p {
-  color: #81766c !important;
-}
+.occasion-detail-page .occasion-detail-feature p 
 .occasion-detail-page .occasion-orbit-line {
   stroke: rgba(137,100,91,.36) !important;
 }
@@ -6392,10 +6270,7 @@ textarea:focus-visible {
   color: var(--paper) !important;
   transform: translateY(-2px) !important;
 }
-.occasion-detail-page .occasion-detail-hero {
-  background: var(--dark) !important;
-  color: var(--paper) !important;
-}
+.occasion-detail-page .occasion-detail-hero 
 .occasion-detail-page .occasion-detail-cta {
   background: var(--dark) !important;
   color: var(--paper) !important;
@@ -6708,8 +6583,8 @@ textarea:focus-visible {
   border-radius:14px;
   background:linear-gradient(135deg,#fffdfb 0%,#faf6f0 100%);
 }
-.turnstile-wrap > div { max-width:100%; }
-.turnstile-wrap iframe { max-width:100%; }
+.turnstile-wrap > div 
+.turnstile-wrap iframe 
 @media (max-width: 420px){
   .contact-calendar { padding:13px 9px; }
   .contact-calendar-cell button { width:31px; height:31px; }
@@ -6791,10 +6666,7 @@ a.button-gold, button.button-gold, .nav-cta, .project-submit,
 }
 .hero a.button-gold, .hero button.button-gold, .hero .button,
 .occasion-detail-hero a.button, .occasion-detail-hero button.button,
-.occasion-detail-cta a.button, .occasion-detail-cta button.button {
-  color:#fffdfb !important;
-  -webkit-text-fill-color:#fffdfb !important;
-}
+.occasion-detail-cta a.button, .occasion-detail-cta button.button 
 
 /* Au clic ou au toucher : le bouton passe en ivoire */
 a.button-gold:active, a.button-gold:focus, a.button-gold:focus-visible,
@@ -6813,12 +6685,7 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
 .hero button.button-gold:active, .hero button.button-gold:focus, .hero button.button-gold:focus-visible,
 .hero .button:active, .hero .button:focus, .hero .button:focus-visible,
 .occasion-detail-hero a.button:active, .occasion-detail-hero a.button:focus, .occasion-detail-hero a.button:focus-visible,
-.occasion-detail-cta a.button:active, .occasion-detail-cta a.button:focus, .occasion-detail-cta a.button:focus-visible {
-  background:#fffdfb !important;
-  border-color:#fffdfb !important;
-  color:#38291e !important;
-  -webkit-text-fill-color:#38291e !important;
-}
+.occasion-detail-cta a.button:active, .occasion-detail-cta a.button:focus, .occasion-detail-cta a.button:focus-visible 
 
 /* Pages occasions : CTA plus lumineux, avec un décor subtil et chaleureux */
 .occasion-detail-page .occasion-detail-cta {
@@ -6854,9 +6721,7 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   left:-70px;
   box-shadow:0 0 0 16px rgba(169,130,77,.035),0 0 0 34px rgba(169,130,77,.025);
 }
-.occasion-detail-page .occasion-detail-cta .section-eyebrow {
-  color:#a9824d !important;
-}
+.occasion-detail-page .occasion-detail-cta .section-eyebrow 
 .occasion-detail-page .occasion-detail-cta h2 {
   color:#49362e !important;
 }
@@ -6895,15 +6760,15 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   box-shadow:0 0 0 18px rgba(169,130,77,.035),0 0 0 38px rgba(169,130,77,.025);
   pointer-events:none;
 }
-.occasion-detail-page .site-footer .footer-main > p { color:#624b40 !important; }
+.occasion-detail-page .site-footer .footer-main > p 
 .occasion-detail-page .site-footer .footer-main > p span { color:#907d6d !important; }
 .occasion-detail-page .site-footer .footer-bottom {
   border-top-color:rgba(105,78,62,.18) !important;
   color:#887667 !important;
 }
 .occasion-detail-page .site-footer .footer-bottom nav a { color:#705c50; }
-.occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#a9824d !important; }
-.occasion-detail-page .site-footer .footer-contact { color:#987344 !important; }
+.occasion-detail-page .site-footer .footer-bottom nav a:hover 
+.occasion-detail-page .site-footer .footer-contact 
 
 /* Le pied de page conserve son apparence d'origine */
 .occasion-detail-page .site-footer {
@@ -6911,15 +6776,15 @@ button.button-gold:active, button.button-gold:focus, button.button-gold:focus-vi
   color:#d8caba !important;
   border-top:0 !important;
 }
-.occasion-detail-page .site-footer::before { content:none !important; }
-.occasion-detail-page .site-footer .footer-main > p { color:inherit !important; }
+.occasion-detail-page .site-footer::before 
+.occasion-detail-page .site-footer .footer-main > p 
 .occasion-detail-page .site-footer .footer-main > p span { color:#a99a89 !important; }
 .occasion-detail-page .site-footer .footer-bottom {
   border-top-color:#ffffff20 !important;
   color:#a99a89 !important;
 }
 .occasion-detail-page .site-footer .footer-bottom nav a { color:inherit !important; }
-.occasion-detail-page .site-footer .footer-bottom nav a:hover { color:#e8c8a0 !important; }
+.occasion-detail-page .site-footer .footer-bottom nav a:hover 
 .occasion-detail-page .site-footer .footer-contact { color:#e8c8a0 !important; }
 
 /* Pied de page identique au modèle de la page d'accueil */
