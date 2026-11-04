@@ -1,0 +1,815 @@
+
+/* Mobile hero: garder l'étiquette à l'écart du texte « AVEC TOUT NOTRE AMOUR » */
+@media (max-width:760px){
+  .invite-front { overflow: hidden; }
+  .invite-tag {
+    right: -8px;
+    bottom: 18px;
+    transform: rotate(4deg) scale(.88);
+    transform-origin: bottom right;
+  }
+  .invite-divider-bottom { margin-bottom: 9px; }
+}
+
+/* Identité plus festive : champagne, rose poudré et ivoire */
+.hero {
+  background: radial-gradient(ellipse at 78% 30%, #815e57 0%, #674a45 43%, #563d39 100%);
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #b58b79 0%, #946e61 43%, #674a45 76%);
+}
+.invite-back { background: linear-gradient(135deg,#e8c8a0,#d8b77c); }
+
+@media(max-width:760px){
+  .hero { background: radial-gradient(ellipse at 50% 30%, #815e57 0%, #674a45 58%, #563d39 100%); }
+}
+
+/* Harmoniser les fonds entre les sections : palette ivoire, blush et champagne */
+body, .site-shell 
+.site-header, .site-footer 
+.occasions-section, .process-section, .about-section, .offers-note {
+  background: #fff8f2;
+}
+.story-section, .options-section, .contact-section {
+  background: #f8e9e5;
+}
+.offers-hero { background: #fff8f2; }
+.offers-list 
+.hero {
+  background: linear-gradient(135deg, #805d59 0%, #704e4a 48%, #634744 100%);
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #a98075 0%, #8a645b 46%, #704e4a 78%);
+}
+
+.contact-panel { background: #fffdfb; }
+@media(max-width:760px){
+  .hero { background: linear-gradient(160deg, #805d59 0%, #704e4a 56%, #634744 100%); }
+
+}
+
+/* Rééquilibrage doux des fonds : limiter les contrastes entre sections */
+:root {
+  --ivory: #fbf7f2;
+  --paper: #fffdfb;
+  --cream: #f5e9e5;
+  --sand: #e8d4cc;
+  --bronze: #89645b;
+  --dark: #674a45;
+  --dark-2: #785750;
+  --line: #eaded8;
+}
+body, .site-shell 
+.site-header, .site-footer, .offers-list 
+.occasions-section, .process-section, .about-section, .offers-note,
+.offers-hero 
+.story-section, .options-section, .contact-section 
+.occasion-card, .step-card, .contact-panel { background: #fffdfb !important; border-color: #eaded8 !important; }
+.hero {
+  background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important;
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #b99588 0%, #9a756b 52%, #785750 100%) !important;
+}
+
+@media (max-width:760px){
+  .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
+
+}
+
+/* Pied de page intégré à la palette : ivoire chaud, sans blanc froid */
+.site-footer {
+  background: #f5e9e5 !important;
+  border-top: 1px solid #ead8d2 !important;
+}
+.site-footer .footer-inner,
+.site-footer .footer-bottom 
+.site-footer,
+.site-footer p,
+.site-footer a,
+.site-footer .footer-tagline,
+.site-footer .footer-bottom {
+  color: #79665d !important;
+}
+.site-footer .footer-brand,
+.site-footer .footer-logo {
+  background: transparent !important;
+}
+@media (max-width:760px){
+  .site-footer { background: #f5e9e5 !important; }
+}
+
+/* Alternance explicite des fonds : aucune section voisine de même teinte */
+.site-header 
+.hero { background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important; }
+.occasions-section 
+.story-section 
+.process-section 
+
+.contact-section 
+.site-footer { background: #e7d6ca !important; border-top: 1px solid #d8c1b3 !important; }
+.offers-hero 
+.offers-list 
+.options-section 
+.offers-note { background: #fbf7f2 !important; }
+.site-footer .footer-inner,
+.site-footer .footer-bottom { background: transparent !important; }
+.site-footer, .site-footer p, .site-footer a,
+.site-footer .footer-tagline, .site-footer .footer-bottom { color: #6d5148 !important; }
+@media (max-width:760px){
+  .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
+  .occasions-section { background: #fbf7f2 !important; }
+  .story-section { background: #f5e9e5 !important; }
+  .process-section { background: #f2e4d3 !important; }
+
+  .contact-section { background: #f5e9e5 !important; }
+  .site-footer { background: #e7d6ca !important; }
+}
+
+/* Lisibilité de la section « Derrière C by C » sur son fond clair */
+.story-section .story-copy h2 {
+  color: #38291e !important;
+}
+.story-section .story-copy h2 span {
+  color: #b58a4b !important;
+}
+.story-section .story-copy .story-lead {
+  color: #89645b !important;
+}
+.story-section .story-copy > p:not(.story-lead) {
+  color: #756455 !important;
+}
+
+/* Correctif ciblé : forcer le texte de « Derrière C by C » en brun lisible */
+.story-section .story-copy h2,
+.story-section .story-copy h2 span,
+.story-section .story-copy .story-lead,
+.story-section .story-copy p,
+.story-section .story-copy p:not(.story-lead),
+.story-section .story-copy strong 
+.story-section .story-copy h2 span 
+.story-section .story-copy .story-lead {
+  color: #765148 !important;
+  -webkit-text-fill-color: #765148 !important;
+}
+.story-section .story-copy p:not(.story-lead) 
+
+/* Correctif réel : le bloc « Derrière C by C » est .about-section */
+
+/* Lisibilité de la section « Un projet particulier ? » dans les formules */
+.offers-note h2,
+.offers-note h2 span,
+.offers-note p,
+.offers-note .section-eyebrow,
+.offers-note .offer-note-title,
+.offers-note .offer-note-copy {
+  opacity: 1 !important;
+}
+.offers-note h2,
+.offers-note h2 span {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
+.offers-note p,
+.offers-note .offer-note-copy {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+}
+.offers-note h2 span 
+
+/* Lisibilité de la section « Un projet particulier ? » sur la page Formules */
+.offers-page .offers-note {
+  background: #fbf7f2 !important;
+}
+.offers-page .offers-note h2 {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+  opacity: 1 !important;
+}
+.offers-page .offers-note p {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+  opacity: 1 !important;
+}
+.offers-page .offers-note .section-eyebrow {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
+
+/* Distinguer les sections consécutives de la page d'accueil */
+.details-section { background: #f2e4d3 !important; }
+.story-section { background: #f5e9e5 !important; }
+.process-section { background: #fffdfb !important; }
+
+@media (max-width:760px){
+  .details-section { background: #f2e4d3 !important; }
+  .story-section { background: #f5e9e5 !important; }
+  .process-section { background: #fffdfb !important; }
+
+}
+
+/* Cartes du concept : rose poudré très léger pour les distinguer du fond ivoire */
+.process-section .step-card {
+  background: #f8e9e5 !important;
+  border-color: #ead8d2 !important;
+}
+@media (max-width:760px){
+  .process-section .step-card { background: #f8e9e5 !important; }
+}
+
+/* Harmoniser les grands titres des pages Formules et Contact avec l'accueil */
+.offers-page .offers-hero h1,
+.contact-page .contact-form-intro h1 
+.offers-page .offers-hero h1 em,
+.contact-page .contact-form-intro h1 em 
+
+/* Harmoniser aussi les sous-titres des pages Formules et Contact */
+.offers-page .options-heading h2,
+.offers-page .offers-note h2,
+.contact-page .contact-form-intro h1 
+.offers-page .options-heading h2 em,
+.offers-page .offers-note h2 em,
+.contact-page .contact-form-intro h1 em {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+}
+.offers-page .options-heading h2 
+.offers-page .offers-note h2 {
+  font-size: clamp(38px, 4.7vw, 60px) !important;
+}
+
+/* Champs select et calendrier : finition assortie à l'identité C by C */
+.project-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 46px !important;
+  background-color: #fff8f2 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23987948' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 15px center !important;
+  cursor: pointer;
+}
+.project-form select:hover,
+.project-form input[type="date"]:hover {
+  border-color: #b58a4b !important;
+  background-color: #fffdfb !important;
+}
+.project-form input[type="date"] {
+  min-height: 48px;
+  color-scheme: light;
+  background-color: #fff8f2 !important;
+  cursor: pointer;
+}
+.project-form input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: .82;
+  filter: sepia(.35) saturate(.8);
+  padding: 3px;
+}
+.project-form select option {
+  background: #fffdfb;
+  color: #38291e;
+}
+.project-form select:focus,
+.project-form input[type="date"]:focus {
+  border-color: #b58a4b !important;
+  box-shadow: 0 0 0 3px rgba(181,138,75,.16) !important;
+}
+@media(max-width:760px){
+  .project-form select,
+  .project-form input[type="date"] {
+    min-height: 50px;
+    font-size: 16px;
+  }
+}
+
+/* Menus déroulants et calendrier personnalisés — C by C */
+
+.project-form .custom-select-trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; min-height: 49px; padding: 12px 15px;
+  border: 1px solid #e2d6c7; border-radius: 9px;
+  background: #fff8f2; color: #59483e; text-align: left;
+  font: inherit; font-weight: 400; cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.project-form .custom-select-trigger:hover,
+.project-form .custom-select-trigger[aria-expanded="true"] {
+  border-color: #b58a4b; background: #fffdfb;
+  box-shadow: 0 0 0 3px rgba(181,138,75,.12);
+}
+
+.custom-select-option.is-selected { background: #f2e4d3; color: #674a45; font-weight: 700; }
+
+.calendar-day.is-today { border-color: #b58a4b; color: #89612c; font-weight: 700; }
+.calendar-day.is-selected { background: #785750; border-color: #785750; color: #fffdfb; font-weight: 700; }
+
+@media(max-width:760px){
+  .project-form .custom-select-trigger { min-height: 50px; font-size: 16px; }
+
+}
+
+/* Calendar icon and month navigation alignment refinement */
+.project-form .calendar-trigger-icon {
+  display: block;
+  flex: 0 0 21px;
+  width: 21px;
+  height: 21px;
+  color: #a97935;
+}
+
+/* Fine-tune calendar month arrows: center precisely on the month label */
+
+/* Contraste des boutons au survol et au clic */
+.button-gold,
+.button-gold:visited {
+  color: #241a12;
+}
+.button-gold:hover,
+.button-gold:focus,
+.button-gold:focus-visible,
+.button-gold:active,
+.hero .button-gold:hover,
+.hero .button-gold:focus-visible,
+.hero .button-gold:active {
+  color: #fffdfb !important;
+}
+
+/* Bouton flottant de retour en haut */
+
+.back-to-top-enter-active,
+.back-to-top-leave-active {
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top-enter-from,
+.back-to-top-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* Hero plus lumineux : garder le contraste sans l'ambiance trop sombre */
+.hero {
+  background: linear-gradient(135deg, #a77d72 0%, #926b62 52%, #805d55 100%) !important;
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #d9b69a 0%, #b98d77 48%, #926b62 74%) !important;
+}
+.hero-description {
+  color: #fff4eb !important;
+}
+.hero-proof {
+  color: #fff0e5 !important;
+}
+.hero-kicker {
+  color: #f7dfb9 !important;
+}
+
+/* Hero harmonisé : fond uni brun rosé avec une photo très discrète en transparence */
+.hero {
+  position: relative;
+  isolation: isolate;
+  background: #927168 !important;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(117, 82, 75, .86), rgba(117, 82, 75, .86)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .48;
+}
+.hero-visual:before {
+  background: radial-gradient(circle, rgba(217,182,154,.78) 0%, rgba(185,141,119,.5) 48%, rgba(146,107,98,.15) 74%) !important;
+}
+
+/* Photo d'ambiance plus légère dans le hero */
+.hero::before {
+  background:
+    linear-gradient(rgba(117, 82, 75, .93), rgba(117, 82, 75, .93)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .24;
+}
+
+/* Photo du hero davantage visible : voile coloré moins opaque */
+.hero::before {
+  background:
+    linear-gradient(rgba(117, 82, 75, .58), rgba(117, 82, 75, .58)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .72;
+}
+
+/* Ajustement subtil du voile photo dans le hero */
+.hero::before {
+  background:
+    linear-gradient(rgba(117, 82, 75, .53), rgba(117, 82, 75, .53)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .76;
+}
+
+/* Bouton secondaire du hero : bordure plus visible sur le fond photo */
+.hero .button-quiet {
+  border: 1px solid rgba(255, 248, 242, .78) !important;
+  color: #fff8f2 !important;
+  background: rgba(255, 248, 242, .06) !important;
+  box-shadow: 0 0 0 1px rgba(56, 41, 30, .08);
+}
+.hero .button-quiet:hover,
+.hero .button-quiet:focus-visible {
+  border-color: #f7dfb9 !important;
+  background: rgba(255, 248, 242, .14) !important;
+  color: #fffdfb !important;
+}
+
+/* Section histoire harmonisée : laisser respirer après la grande photo précédente */
+.story-section {
+  display: block !important;
+  padding-top: clamp(64px, 8vw, 110px);
+  padding-bottom: clamp(64px, 8vw, 110px);
+  background: #f5e9e5 !important;
+}
+.story-section .story-copy {
+  width: min(100%, 850px);
+  margin: 0 auto;
+  text-align: center;
+}
+.story-section .section-eyebrow {
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.story-section .story-copy h2 {
+  margin-bottom: 22px;
+}
+.story-section .story-lead,
+.story-section .story-copy > p:not(.story-lead) {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.story-section .story-lead {
+  font-size: clamp(19px, 2.2vw, 23px);
+}
+.story-section .story-copy > p:not(.story-lead) {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Alignement à droite du texte de présentation sur la section histoire */
+.story-section .story-copy {
+  text-align: right !important;
+}
+.story-section .section-eyebrow {
+  justify-content: flex-end !important;
+}
+.story-section .story-lead,
+.story-section .story-copy > p:not(.story-lead) {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* Alignement à gauche du texte de présentation sur la section histoire */
+.story-section .story-copy {
+  text-align: left !important;
+}
+.story-section .section-eyebrow {
+  justify-content: flex-start !important;
+}
+.story-section .story-lead,
+.story-section .story-copy > p:not(.story-lead) {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Interaction tactile : léger zoom des cartes étapes au clic */
+.process-section .step-card {
+  cursor: pointer;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.process-section .step-card:active {
+  transform: scale(1.025);
+  border-color: #d7b7a8 !important;
+  box-shadow: 0 12px 28px rgba(103, 74, 69, .12);
+}
+@media (hover: hover) and (pointer: fine){
+  .process-section .step-card:hover {
+    transform: scale(1.018);
+    border-color: #d7b7a8 !important;
+    box-shadow: 0 12px 28px rgba(103, 74, 69, .1);
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .process-section .step-card { transition: none; }
+}
+
+/* Pied de page mobile : logo et signature alignés à gauche sur une même ligne */
+@media (max-width: 760px){
+  .site-footer .footer-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+  .site-footer .footer-brand {
+    width: 92px;
+    flex: 0 0 92px;
+  }
+  .site-footer .footer-brand img {
+    display: block;
+    width: 100%;
+    max-height: 56px;
+  }
+  .site-footer .footer-main > p {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .site-footer .footer-main > p span {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 10px;
+  }
+  .site-footer .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 12px;
+  }
+  .site-footer .footer-bottom nav {
+    order: 2;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .site-footer .footer-bottom > span:last-child {
+    margin-left: auto;
+  }
+}
+
+/* Footer : logo correctement centré sur sa ligne et aligné au texte sur mobile */
+.site-footer .footer-main {
+  align-items: center;
+}
+.site-footer .footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: center;
+  line-height: 0;
+}
+.site-footer .footer-brand img {
+  display: block;
+  object-position: left center;
+  margin: 0;
+}
+@media (max-width: 760px){
+  .site-footer .footer-main {
+    align-items: center !important;
+  }
+  .site-footer .footer-brand {
+    align-self: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+  }
+  .site-footer .footer-brand img {
+    object-position: left center !important;
+  }
+}
+
+/* Desktop: garder les paragraphes de la section histoire alignés sur la même colonne */
+@media (min-width: 761px){
+  .story-section .story-copy {
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left !important;
+  }
+  .story-section .story-copy h2,
+  .story-section .story-copy .section-eyebrow,
+  .story-section .story-copy .story-lead,
+  .story-section .story-copy > p:not(.story-lead) {
+    text-align: left !important;
+  }
+  .story-section .story-copy .section-eyebrow {
+    justify-content: flex-start !important;
+  }
+  .story-section .story-copy .story-lead,
+  .story-section .story-copy > p:not(.story-lead) {
+    width: 100%;
+    max-width: 850px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Mobile footer: center the navigation links */
+@media (max-width: 760px){
+  .site-footer .footer-bottom nav {
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
+/* Voile chaud et fondu subtil sur les photos, sauf le hero */
+
+.occasion-card:hover .occasion-image img,
+.details-photo:hover img,
+.offer-card:hover .offer-image img,
+.offer-item:hover .offer-card-image img {
+  transform: scale(1.025);
+}
+
+/* Fondu réellement visible sur les images éditoriales (hors hero et logo) */
+
+.occasion-image img,
+.details-photo img,
+.offer-expanded-image {
+  filter: saturate(.82) contrast(.96) sepia(.06) !important;
+}
+.offer-expanded-image {
+  border-radius: 10px;
+}
+
+/* Fondu plus perceptible sur les cartes d'occasions : voile crème visible mais doux */
+
+.details-photo img,
+.story-visual img,
+.about-photo img,
+.offer-expanded-image {
+  filter: saturate(.80) brightness(1.03) sepia(.04) !important;
+}
+
+/* Accueil plus fluide : réduire les espaces verticaux sans perdre le rythme premium */
+@media (min-width: 761px){
+  .occasions-section,
+  .details-section,
+  .process-section,
+  .story-section,
+  .contact-section {
+    padding-top: clamp(58px, 6vw, 84px);
+    padding-bottom: clamp(58px, 6vw, 84px);
+  }
+  .story-section .story-copy {
+    max-width: 820px;
+  }
+}
+@media (max-width: 760px){
+  .occasions-section,
+  .details-section,
+  .process-section,
+  .story-section,
+  .contact-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .occasions-heading {
+    margin-bottom: 24px;
+  }
+  .occasion-grid {
+    gap: 18px;
+  }
+  .details-editorial-head {
+    margin-bottom: 26px;
+  }
+
+  .process-heading {
+    margin-bottom: 24px;
+  }
+
+  .process-section .step-card {
+    padding: 24px;
+  }
+  .story-section .story-copy h2 {
+    margin-bottom: 16px;
+  }
+  .story-section .story-lead {
+    margin-bottom: 16px;
+  }
+  .story-section .story-copy > p:not(.story-lead) {
+    margin-bottom: 14px;
+  }
+}
+
+/* Chevron net et régulier pour les listes déroulantes du formulaire */
+.project-form .custom-chevron {
+  display: inline-block;
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin: -5px 3px 0 0;
+  border-right: 2px solid #a97935;
+  border-bottom: 2px solid #a97935;
+  transform: rotate(45deg);
+  transition: transform .2s ease, margin .2s ease;
+  font-size: 0;
+  line-height: 0;
+}
+.project-form .custom-select-trigger[aria-expanded="true"] .custom-chevron {
+  margin-top: 5px;
+  transform: rotate(225deg);
+}
+
+/* Page Les occasions : présentation éditoriale cohérente avec C by C */
+.occasions-page-hero {
+  padding: clamp(72px, 10vw, 132px) clamp(24px, 8vw, 120px) clamp(52px, 7vw, 88px);
+  text-align: center;
+  background: #f5e9e5;
+}
+.occasions-page-hero .section-eyebrow,
+.occasion-page-cta .section-eyebrow {
+  display: block;
+  margin-bottom: 22px;
+  color: #a77d42;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+.occasions-page-hero h1,
+.occasion-page-cta h2 {
+  margin: 0 auto 22px;
+  color: #38291e;
+  font-family: var(--display);
+  font-size: clamp(36px, 5.6vw, 66px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: 1.12;
+}
+.occasions-page-hero h1 em,
+.occasion-page-cta h2 em {
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+.occasions-page-hero p,
+.occasion-page-cta p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: #7e7063;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.85;
+}
+.occasion-collections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(22px, 4vw, 48px);
+  background: #fbf7f2;
+}
+
+.occasion-collection-copy .section-eyebrow {
+  margin-bottom: 12px;
+  color: #a77d42;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.occasion-page-cta {
+  padding: clamp(64px, 8vw, 104px) 24px;
+  text-align: center;
+  background: #f2e4d3;
+}
+.occasion-page-cta h2 {
+  font-size: clamp(34px, 4.5vw, 54px);
+}
+.occasion-page-cta p {
+  margin-bottom: 28px;
+}
+.occasion-page-cta .button {
+  display: inline-flex;
+  margin-top: 2px;
+}
+@media (max-width: 760px){
+  .occasions-page-hero {
+    padding: 62px 24px 44px;
+  }
+  .occasions-page-hero h1 {
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.13;
+  }
+  .occasions-page-hero p {
+    font-size: 15px;
+  }
+  .occasion-collections {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .occasion-page-cta {
+    padding: 58px 24px 64px;
+  }
+}
