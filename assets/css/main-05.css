@@ -1,0 +1,836 @@
+@media (max-width: 390px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 66px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 22px 16px !important;
+    min-height: 178px !important;
+  }
+}
+
+/* Pages occasions : espacement régulier entre les cartes sur mobile */
+@media (max-width: 760px){
+  .occasion-grid,
+  .occasion-list,
+  .occasion-catalog,
+  .occasions-grid,
+  .occasion-word-garden {
+    gap: 18px !important;
+    row-gap: 18px !important;
+  }
+  .occasion-grid > *,
+  .occasion-list > *,
+  .occasion-catalog > *,
+  .occasions-grid > *,
+  .occasion-word-garden > * {
+    margin-block: 0 !important;
+  }
+  /* Les cartes des pages de catégories utilisent différents noms de classes selon la page. */
+  .occasion-card,
+  .category-card,
+  .occasion-detail-card,
+  .occasion-page-card,
+  .collection-card,
+  .occasion-word-item {
+    margin-bottom: 18px !important;
+  }
+  .occasion-card:last-child,
+  .category-card:last-child,
+  .occasion-detail-card:last-child,
+  .occasion-page-card:last-child,
+  .collection-card:last-child,
+  .occasion-word-item:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Pages occasions sur mobile : éloigner les numéros de la bordure des cartes */
+@media (max-width: 760px){
+  .occasion-card,
+  .category-card,
+  .occasion-detail-card,
+  .occasion-page-card,
+  .collection-card,
+  .occasion-word-item {
+    padding-left: 26px !important;
+    padding-right: 24px !important;
+  }
+  .occasion-card .occasion-number,
+  .category-card .occasion-number,
+  .occasion-detail-card .occasion-number,
+  .occasion-page-card .occasion-number,
+  .collection-card .occasion-number,
+  .occasion-word-item .occasion-word-number {
+    margin-left: 4px !important;
+  }
+}
+@media (max-width: 390px){
+  .occasion-card,
+  .category-card,
+  .occasion-detail-card,
+  .occasion-page-card,
+  .collection-card,
+  .occasion-word-item {
+    padding-left: 22px !important;
+    padding-right: 18px !important;
+  }
+}
+
+/* Accueil mobile : aligner les numéros d'occasion sur la ligne des titres */
+@media (max-width: 760px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 86px minmax(0, 1fr) !important;
+    align-items: start !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1 !important;
+    grid-row: 1 / span 4 !important;
+    align-self: start !important;
+    margin-top: 1.1em !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin-top: 4px !important;
+  }
+}
+@media (max-width: 390px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 66px minmax(0, 1fr) !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    margin-top: 1.15em !important;
+  }
+}
+
+/* Accueil : reprendre exactement le placement latéral des numéros des pages occasions */
+@media (max-width: 760px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    display: grid !important;
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 16px !important;
+    padding: 24px 20px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1 !important;
+    grid-row: 1 / span 4 !important;
+    align-self: center !important;
+    justify-self: start !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-row: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-row: 2 !important;
+    margin-top: 4px !important;
+  }
+}
+@media (max-width: 390px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 84px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 22px 16px !important;
+  }
+}
+
+/* Accueil mobile : numéro sur la même ligne que le titre, comme sur /occasions */
+@media (max-width: 760px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    align-self: start !important;
+    justify-self: start !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin-top: 4px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2 !important;
+    grid-row: 4 !important;
+  }
+}
+
+/* Accueil : reprendre le même style de cartes que la page /occasions */
+@media (max-width: 760px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 16px !important;
+    min-height: 0 !important;
+    padding: 26px 22px !important;
+    border: 1px solid rgba(181,138,75,.22) !important;
+    border-radius: 28px !important;
+    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
+    box-shadow: 0 10px 26px rgba(79,52,43,.075), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1 !important;
+    grid-row: 1 / span 4 !important;
+    align-self: center !important;
+    justify-self: start !important;
+    margin: 0 !important;
+    font-size: clamp(38px, 11vw, 56px) !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 0 5px !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin: 0 0 8px !important;
+    font-size: clamp(25px, 6.6vw, 32px) !important;
+    line-height: 1.18 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+    margin: 0 0 16px !important;
+    line-height: 1.65 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2 !important;
+    grid-row: 4 !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 390px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 76px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 23px 17px !important;
+    border-radius: 24px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    font-size: 38px !important;
+  }
+}
+
+/* Accueil mobile : rapprocher visuellement le numéro du titre de l’occasion */
+@media (max-width: 760px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+    column-gap: 10px !important;
+  }
+}
+@media (max-width: 390px){
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 60px minmax(0, 1fr) !important;
+    column-gap: 8px !important;
+  }
+}
+
+/* C by C contact form — progressive question wizard */
+.project-form .wizard-heading {
+  margin: 22px 0 24px;
+  padding: 22px 22px 18px;
+  border: 1px solid rgba(181,138,75,.19);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255,253,251,.98), rgba(248,233,229,.55));
+}
+.wizard-step-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #a77d70;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+.project-form .wizard-heading h3 {
+  margin: 0 0 5px;
+  color: var(--dark);
+  font-family: var(--serif);
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+.project-form .wizard-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.wizard-content {
+  min-height: 220px;
+  animation: wizardFadeIn .24s ease both;
+}
+.wizard-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.wizard-fields > label,
+.wizard-field-full {
+  min-width: 0;
+}
+.wizard-fields > label,
+.wizard-field-full > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+.wizard-field-full {
+  grid-column: 1 / -1;
+}
+.wizard-fields input:not([type="checkbox"]),
+.wizard-fields textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e7d6ce;
+  border-radius: 14px;
+  padding: 14px 15px;
+  background: #fffdfb;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+}
+.wizard-fields input:focus,
+.wizard-fields textarea:focus {
+  outline: 2px solid rgba(181,138,75,.28);
+  border-color: #b58a4b;
+}
+.project-field-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+.wizard-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.wizard-choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid #ead8d2;
+  border-radius: 14px;
+  background: #fffdfb;
+  color: #674a45;
+  text-align: left;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  cursor: pointer;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.wizard-choice.is-selected {
+  border-color: #b58a4b;
+  background: #f8e9e5;
+  box-shadow: inset 0 0 0 1px rgba(181,138,75,.12);
+}
+.wizard-choice > span { color: #a77d42; font-weight: 700; }
+.wizard-choice-grid-single { grid-template-columns: 1fr; }
+.wizard-option-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.wizard-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid #ead8d2;
+  border-radius: 999px;
+  background: #fffdfb;
+  color: #674a45;
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.35;
+  cursor: pointer;
+}
+.wizard-option.is-selected {
+  border-color: #b58a4b;
+  background: #f8e9e5;
+}
+.wizard-option-check {
+  color: #a77d42;
+  font-weight: 700;
+}
+.wizard-fields .project-consent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.wizard-fields .project-consent input {
+  margin-top: 4px;
+  accent-color: #8b6258;
+}
+.wizard-fields .project-form-privacy { margin: 0; }
+.wizard-error {
+  margin: 16px 0 0;
+  color: #9a3d35;
+  font-size: 12px;
+}
+.wizard-footer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #ead8d2;
+}
+.wizard-progress-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+  color: #8a7569;
+  font-size: 11px;
+}
+.wizard-progress-copy strong {
+  color: #674a45;
+  font-weight: 700;
+}
+.wizard-progress-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f0e4dd;
+}
+.wizard-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #b58a4b, #d4b77f);
+  transition: width .25s ease;
+}
+.wizard-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+.wizard-note {
+  color: #8a7569;
+  font-size: 11px;
+}
+.wizard-back {
+  border: 0;
+  background: transparent;
+  color: #674a45;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.wizard-next,
+.wizard-actions .project-submit {
+  margin: 0;
+}
+@keyframes wizardFadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px){
+  .project-form .wizard-heading {
+    margin-top: 18px;
+    padding: 19px 17px 16px;
+  }
+  .wizard-content { min-height: 0; }
+  .wizard-fields { grid-template-columns: 1fr; gap: 15px; }
+  .wizard-choice-grid { grid-template-columns: 1fr; }
+  .wizard-choice-grid-single { grid-template-columns: 1fr; }
+  .wizard-footer { margin-top: 24px; }
+  .wizard-actions { align-items: center; }
+  .wizard-next, .wizard-actions .project-submit { padding: 12px 15px; gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .wizard-content { animation: none; }
+  .wizard-progress-track span { transition: none; }
+}
+
+/* Contact mobile : réduire le scroll et rendre les options plus compactes */
+@media (max-width: 760px){
+  .contact-form-hero {
+    padding-top: 28px !important;
+    padding-bottom: 42px !important;
+  }
+  .contact-form-intro {
+    margin-bottom: 22px !important;
+  }
+  .contact-form-intro h1 {
+    font-size: clamp(30px, 8vw, 40px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 12px !important;
+  }
+  .contact-form-intro > p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 10px !important;
+  }
+  .contact-reassurance {
+    margin-top: 10px !important;
+    font-size: 12px !important;
+  }
+  .project-form-heading {
+    margin-bottom: 12px !important;
+    padding-bottom: 0 !important;
+  }
+  .project-form-heading > p {
+    margin-top: 5px !important;
+    font-size: 12px !important;
+  }
+  .project-form .wizard-heading {
+    margin: 12px 0 18px !important;
+    padding: 15px 16px !important;
+  }
+  .wizard-content {
+    min-height: 0 !important;
+  }
+  .wizard-fields {
+    gap: 12px !important;
+  }
+  .wizard-fields input:not([type="checkbox"]),
+  .wizard-fields textarea {
+    padding: 12px 13px !important;
+  }
+  .wizard-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .wizard-choice {
+    min-height: 44px !important;
+    padding: 10px 11px !important;
+    font-size: 12px !important;
+  }
+  .wizard-choice-grid-single {
+    grid-template-columns: 1fr !important;
+  }
+  .wizard-option-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+  }
+  .wizard-option {
+    width: 100% !important;
+    min-height: 38px !important;
+    justify-content: flex-start !important;
+    padding: 8px 10px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    text-align: left !important;
+  }
+  .wizard-help {
+    margin: 0 0 10px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+  .wizard-footer {
+    margin-top: 18px !important;
+    padding-top: 14px !important;
+  }
+}
+
+/* Contact mobile : réduire la hauteur du bloc de titre d’étape */
+@media (max-width: 760px){
+  .project-form .wizard-heading {
+    margin: 8px 0 12px !important;
+    padding: 11px 14px !important;
+    border-radius: 15px !important;
+  }
+  .wizard-step-label {
+    margin-bottom: 4px !important;
+    font-size: 9px !important;
+    letter-spacing: .12em !important;
+  }
+  .project-form .wizard-heading h3 {
+    margin: 0 0 3px !important;
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+  .project-form .wizard-heading p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Contact page: compact mobile introduction and shorter wizard flow */
+@media (max-width: 760px){
+  .contact-form-hero { padding-top: 18px !important; padding-bottom: 28px !important; }
+  .contact-form-intro { margin-bottom: 16px !important; }
+  .contact-form-intro .section-eyebrow { margin-bottom: 6px !important; }
+  .contact-form-intro h1 { font-size: 29px !important; line-height: 1.08 !important; margin-bottom: 8px !important; }
+  .contact-form-intro > p { font-size: 12px !important; line-height: 1.45 !important; margin-bottom: 6px !important; max-width: 34em; }
+  .contact-reassurance { display: none !important; }
+  .project-form-heading { margin-bottom: 8px !important; }
+  .project-form-heading p { margin-bottom: 0 !important; }
+  .project-form .wizard-heading { margin: 7px 0 12px !important; padding: 10px 13px !important; }
+  .project-form .wizard-heading p { display: none !important; }
+  .wizard-content { min-height: 0 !important; }
+  .wizard-fields { gap: 10px !important; }
+  .wizard-fields > label { gap: 5px !important; }
+  .wizard-fields input:not([type="checkbox"]), .wizard-fields textarea { padding: 10px 12px !important; min-height: 42px; }
+  .wizard-choice-grid { gap: 7px !important; }
+  .wizard-choice { min-height: 40px !important; padding: 8px 10px !important; }
+  .wizard-option-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 6px !important; }
+  .wizard-option { min-height: 34px !important; padding: 6px 8px !important; font-size: 10px !important; }
+  .wizard-footer { margin-top: 14px !important; padding-top: 11px !important; }
+  .wizard-actions { margin-top: 13px !important; }
+}
+
+/* Contact submission success state */
+.project-success-card { position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; min-height:360px; padding:clamp(28px,5vw,54px) !important; border:1px solid rgba(181,138,75,.28) !important; border-radius:28px !important; background:linear-gradient(145deg,#fffdfb 0%,#f8e9e5 100%) !important; box-shadow:0 18px 48px rgba(79,52,43,.10),inset 0 1px 0 rgba(255,255,255,.95) !important; text-align:left; }
+.project-success-card .success-icon { display:grid; place-items:center; width:56px; height:56px; margin-bottom:24px; border:1px solid rgba(181,138,75,.45); border-radius:50%; background:#fffaf4; color:#9b7844; font-size:28px; }
+.project-success-card .section-eyebrow { margin-bottom:12px; }
+.project-success-card h2 { max-width:12em; margin:0 0 14px; color:var(--dark,#674a45); font-family:var(--serif,Georgia,serif); font-size:clamp(30px,4vw,44px); font-weight:500; line-height:1.15; }
+.project-success-card p { max-width:34em; margin:0; color:var(--muted,#806d65); font-size:15px; line-height:1.75; }
+.project-success-card .success-decoration { align-self:flex-end; margin-top:22px; color:#b58a4b; font-size:28px; }
+.project-success-card .success-new-request { margin-top:24px; border:1px solid #b58a4b; border-radius:999px; padding:12px 18px; background:#674a45; color:#fffdfb; font:inherit; font-size:12px; font-weight:700; cursor:pointer; }
+@media (max-width:760px){ .project-success-card { min-height:280px; padding:28px 22px !important; border-radius:22px !important; } .project-success-card .success-icon { width:48px; height:48px; margin-bottom:20px; } .project-success-card h2 { font-size:30px; } .project-success-card p { font-size:14px; line-height:1.6; } }
+
+/* Contact wizard: bouton Continuer plus sobre et élégant */
+.project-form .wizard-actions .wizard-next {
+  min-width: 142px;
+  justify-content: center;
+  border: 1px solid #b58a4b !important;
+  border-radius: 999px !important;
+  padding: 13px 24px !important;
+  background: #fffaf5 !important;
+  color: #674a45 !important;
+  box-shadow: 0 4px 12px rgba(79,52,43,.06) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: .02em;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.project-form .wizard-actions .wizard-next:hover {
+  background: #674a45 !important;
+  color: #fffdfb !important;
+  box-shadow: 0 7px 18px rgba(79,52,43,.13) !important;
+  transform: translateY(-1px);
+}
+@media (max-width: 600px){
+  .project-form .wizard-actions .wizard-next {
+    min-width: 126px;
+    padding: 12px 20px !important;
+  }
+}
+
+/* Desktop : rapprocher et alléger le bloc de contact de la page d’accueil */
+@media (min-width: 761px){
+  .contact-section {
+    padding-top: 34px !important;
+    padding-bottom: 58px !important;
+  }
+  .contact-panel {
+    min-height: 0 !important;
+  }
+  .contact-copy {
+    padding: 44px 54px !important;
+  }
+  .contact-copy h2 {
+    font-size: clamp(38px, 3.6vw, 48px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 14px !important;
+  }
+  .contact-copy > p {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Desktop : réduire encore le bloc final et supprimer le grand vide avant celui-ci */
+@media (min-width: 761px){
+  .story-section {
+    padding-bottom: 28px !important;
+  }
+  .contact-section {
+    padding-top: 12px !important;
+    padding-bottom: 34px !important;
+  }
+  .contact-panel {
+    border-radius: 24px !important;
+  }
+  .contact-copy {
+    padding: 30px 42px !important;
+  }
+  .contact-copy h2 {
+    font-size: clamp(34px, 3vw, 40px) !important;
+    line-height: 1.06 !important;
+    margin-bottom: 12px !important;
+  }
+  .contact-copy > p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+  }
+  .contact-copy .button {
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Accueil desktop : créer une séparation nette entre les blocs de la section détails */
+@media (min-width: 761px){
+  #details .details-simple-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    row-gap: 14px !important;
+    margin-top: 28px !important;
+  }
+  #details .details-simple-list > li,
+  #details .details-simple-list > li + li,
+  #details .details-simple-list > li:last-child {
+    margin: 0 !important;
+  }
+  #details .details-simple-list > li {
+    border-radius: 18px !important;
+    overflow: hidden;
+  }
+  #details .details-editorial-head {
+    margin-bottom: 28px !important;
+  }
+}
+
+/* Accueil desktop : les cartes de détail occupent toute la largeur de la section */
+@media (min-width: 761px){
+  #details .details-simple-list {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  #details .details-simple-list > li {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Accueil : léger zoom élégant au survol des cartes de détail */
+@media (hover: hover) and (pointer: fine){
+  #details .details-simple-list > li {
+    transform: translateZ(0);
+    transform-origin: center;
+    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    will-change: transform;
+  }
+  #details .details-simple-list > li:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 28px rgba(79,52,43,.10) !important;
+    border-color: rgba(181,138,75,.4) !important;
+    z-index: 2;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  #details .details-simple-list > li {
+    transition: none !important;
+  }
+  #details .details-simple-list > li:hover {
+    transform: none !important;
+  }
+}
+
+/* Accueil desktop : harmoniser les cartes d’occasions avec la présentation mobile */
+@media (min-width: 761px){
+  .occasions-section .occasion-word-garden-home {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    row-gap: 16px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 28px 0 12px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    display: grid !important;
+    grid-template-columns: 100px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto auto !important;
+    align-items: center !important;
+    column-gap: 22px !important;
+    width: 100% !important;
+    min-height: 150px !important;
+    margin: 0 !important;
+    padding: 24px 30px !important;
+    border: 1px solid rgba(181,138,75,.22) !important;
+    border-radius: 24px !important;
+    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
+    box-shadow: 0 10px 26px rgba(79,52,43,.06), inset 0 1px 0 rgba(255,255,255,.95) !important;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    grid-column: 1 !important;
+    grid-row: 1 / span 4 !important;
+    align-self: center !important;
+    justify-self: start !important;
+    margin: 0 !important;
+    color: rgba(181,138,75,.72) !important;
+    font-size: 58px !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 0 5px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin: 0 0 7px !important;
+    font-size: clamp(25px, 2.3vw, 34px) !important;
+    line-height: 1.15 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+    max-width: none !important;
+    margin: 0 0 10px !important;
+    line-height: 1.55 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2 !important;
+    grid-row: 4 !important;
+    margin: 0 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item:hover {
+    transform: scale(1.01) !important;
+    border-color: rgba(181,138,75,.42) !important;
+    box-shadow: 0 14px 30px rgba(79,52,43,.10), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  }
+}
