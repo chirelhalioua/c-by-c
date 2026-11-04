@@ -1,0 +1,845 @@
+
+/* Repère digital discret sur les visuels de la page occasions */
+
+/* Icônes temporaires à la place des grandes photos d'invitations */
+.occasions-page .occasion-icon-panel {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  aspect-ratio: 1.65 / 1;
+  background: linear-gradient(135deg, #f8eee8, #ead8d2);
+}
+.occasions-page .occasion-icon-panel::after 
+.occasions-page .occasion-icon-panel .occasion-symbol {
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: clamp(58px, 8vw, 88px);
+  font-weight: 400;
+  line-height: 1;
+}
+.occasions-page .occasion-collection-number {
+  color: #9a7968;
+  text-shadow: none;
+}
+.occasions-page .occasion-digital-tag { display: none !important; }
+
+.offer-thumb.offer-icon {
+  display: grid;
+  place-items: center;
+  background: #f5e9e5;
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 34px;
+}
+.offer-expanded-image.offer-icon-large {
+  display: grid;
+  place-items: center;
+  min-height: 130px;
+  background: #f5e9e5;
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 72px;
+}
+
+/* Icônes d'occasion en attendant les visuels définitifs : cartes plus compactes */
+.occasion-collections {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(12px, 2vw, 22px) !important;
+}
+.occasions-page .occasion-collection-card 
+.occasions-page .occasion-icon-panel {
+  min-height: 108px;
+  aspect-ratio: 1.35 / 1;
+}
+.occasions-page .occasion-icon-panel .occasion-symbol {
+  font-size: clamp(38px, 4.5vw, 54px);
+}
+.occasions-page .occasion-collection-number {
+  top: 10px;
+  left: 12px;
+  font-size: 14px;
+}
+.occasions-page .occasion-collection-copy {
+  padding: 16px 17px 18px;
+}
+.occasions-page .occasion-collection-copy .section-eyebrow {
+  font-size: 8px;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
+.occasions-page .occasion-collection-copy h2 {
+  font-size: clamp(17px, 1.6vw, 21px);
+}
+.occasions-page .occasion-collection-copy p {
+  font-size: 12px;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.occasions-page .occasion-collection-link {
+  gap: 8px;
+  font-size: 10px;
+}
+@media (max-width: 900px){
+  .occasion-collections {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 520px){
+  .occasion-collections {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .occasions-page .occasion-icon-panel {
+    min-height: 88px;
+  }
+  .occasions-page .occasion-collection-copy {
+    padding: 13px 12px 15px;
+  }
+  .occasions-page .occasion-collection-copy .section-eyebrow {
+    font-size: 7px;
+  }
+  .occasions-page .occasion-collection-copy h2 {
+    font-size: 17px;
+  }
+  .occasions-page .occasion-collection-copy p {
+    font-size: 11px;
+  }
+  .occasions-page .occasion-collection-link {
+    font-size: 10px;
+  }
+}
+
+/* Présentation éditoriale des occasions : typographie, lignes fines, aucun bloc ni visuel */
+
+.occasion-editorial-title .section-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #a77d70;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px){
+
+  .occasion-editorial-title .section-eyebrow { font-size: 8px; }
+
+}
+
+/* Les occasions en composition typographique libre : sans cartes, icônes ni filets */
+.occasion-word-garden {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 0 clamp(18px, 4vw, 58px) !important;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: clamp(28px, 5vw, 58px);
+  padding-bottom: clamp(58px, 8vw, 96px);
+}
+.occasion-word-item {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0 28px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+
+.occasion-word-item:hover { transform: translateY(-4px); }
+.occasion-word-number {
+  position: absolute;
+  z-index: 0;
+  top: -15px;
+  right: 3px;
+  color: rgba(181,138,75,.12);
+  font-family: var(--serif);
+  font-size: clamp(100px, 13vw, 160px);
+  font-style: italic;
+  line-height: 1;
+  pointer-events: none;
+}
+.occasion-word-eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+  color: #a77d70;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .17em;
+}
+.occasion-word-item h2,
+.occasion-word-item h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 0 12px;
+  color: #674a45;
+  font-family: var(--serif);
+  font-size: clamp(27px, 3.2vw, 43px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.12;
+}
+.occasion-word-item p {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 0 0 20px;
+  color: #7e7063;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.occasion-word-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  color: #8b6258;
+  font-size: 11px;
+  font-weight: 700;
+}
+.occasion-word-link span { color: #b58a4b; font-size: 17px; transition: transform .2s ease; }
+.occasion-word-item:hover .occasion-word-link span { transform: translate(3px,-3px); }
+.occasion-word-garden-home {
+  max-width: none;
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+.occasion-word-garden-home .occasion-word-item h3 { font-size: clamp(25px, 3vw, 38px); }
+@media (max-width: 760px){
+  .occasion-word-garden {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 22px !important;
+    padding: 26px 22px 52px;
+  }
+
+  .occasion-word-item { padding-bottom: 12px; }
+  .occasion-word-number { top: -8px; right: 0; font-size: clamp(76px, 17vw, 112px); }
+  .occasion-word-eyebrow { font-size: 7px; letter-spacing: .12em; line-height: 1.5; }
+  .occasion-word-item h2,
+  .occasion-word-item h3,
+  .occasion-word-garden-home .occasion-word-item h3 { font-size: clamp(22px, 5.6vw, 30px); }
+  .occasion-word-item p { font-size: 11px; line-height: 1.65; }
+  .occasion-word-link { font-size: 10px; gap: 5px; }
+}
+@media (max-width: 380px){
+  .occasion-word-garden { gap: 22px 14px !important; padding-left: 16px; padding-right: 16px; }
+  .occasion-word-item h2, .occasion-word-item h3, .occasion-word-garden-home .occasion-word-item h3 { font-size: 21px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .occasion-word-item, .occasion-word-link span { transition: none; }
+}
+
+/* Version finale des occasions : une par ligne, numéros botaniques plus discrets */
+.occasion-word-garden {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0 !important;
+  max-width: 1000px;
+  padding-top: clamp(26px, 4vw, 44px);
+  padding-bottom: clamp(50px, 7vw, 78px);
+}
+.occasion-word-item,
+.occasion-word-garden-home .occasion-word-item {
+  display: grid;
+  grid-template-columns: minmax(110px, 23%) minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto;
+  column-gap: clamp(22px, 5vw, 64px);
+  align-items: start;
+  width: 100%;
+  min-height: 0;
+  margin: 0 !important;
+  padding: clamp(26px, 4vw, 42px) 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none;
+}
+.occasion-word-item + .occasion-word-item {
+  border-top: 1px solid rgba(181,138,75,.17) !important;
+}
+.occasion-word-item:hover { transform: none; }
+.occasion-word-number {
+  position: relative;
+  top: auto;
+  right: auto;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  align-self: center;
+  justify-self: center;
+  color: rgba(181,138,75,.17);
+  font-size: clamp(54px, 7vw, 82px);
+  line-height: .95;
+  letter-spacing: -.07em;
+}
+.occasion-word-eyebrow { grid-column: 2; margin-bottom: 8px; }
+.occasion-word-item h2,
+.occasion-word-item h3 {
+  grid-column: 2;
+  margin-bottom: 10px;
+  font-size: clamp(26px, 3vw, 38px);
+}
+.occasion-word-item p {
+  grid-column: 2;
+  max-width: 560px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+.occasion-word-link {
+  grid-column: 2;
+  margin-top: 0;
+}
+.occasion-word-garden-home .occasion-word-item h3 {
+  font-size: clamp(25px, 3vw, 36px);
+}
+@media (max-width: 760px){
+  .occasion-word-garden {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0 !important;
+    padding: 20px 24px 48px;
+  }
+  .occasion-word-item,
+  .occasion-word-garden-home .occasion-word-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 18px;
+    padding: 25px 0 !important;
+  }
+  .occasion-word-number {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: start;
+    justify-self: start;
+    margin-top: 10px;
+    font-size: 54px;
+  }
+  .occasion-word-eyebrow { font-size: 8px; line-height: 1.5; }
+  .occasion-word-item h2,
+  .occasion-word-item h3,
+  .occasion-word-garden-home .occasion-word-item h3 {
+    font-size: clamp(23px, 6vw, 30px);
+  }
+  .occasion-word-item p { font-size: 12px; line-height: 1.7; }
+}
+
+/* Motifs botaniques délicats intégrés à l'intérieur des chiffres */
+.occasion-word-number {
+  color: transparent !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23f1ddd5'/%3E%3Cg fill='none' stroke='%23b58a4b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' opacity='.82'%3E%3Cpath d='M15 180 C40 145 28 112 62 82 S93 34 86 0 M42 139 C17 127 14 107 20 96 C39 100 48 116 42 139 M57 91 C82 92 99 75 100 57 C78 57 62 70 57 91 M82 40 C63 33 59 18 64 8 C81 13 88 25 82 40 M99 180 C115 145 143 127 145 94 S158 48 180 28 M126 135 C107 126 104 108 111 97 C129 105 135 120 126 135 M145 94 C164 91 173 78 170 64 C154 67 145 78 145 94'/%3E%3C/g%3E%3Cg fill='%23d9b6a9' stroke='%23b58a4b' stroke-width='1.4' opacity='.9'%3E%3Cpath d='M86 25 C72 16 76 4 86 7 C93 -1 104 7 99 17 C108 23 100 34 91 29 C84 38 74 31 86 25Z'/%3E%3Cpath d='M20 97 C9 86 16 77 24 84 C33 76 41 86 34 94 C42 105 29 112 23 103 C12 108 7 98 20 97Z'/%3E%3Cpath d='M145 91 C133 81 139 71 148 78 C157 69 166 79 159 88 C169 98 157 106 149 98 C139 104 132 95 145 91Z'/%3E%3C/g%3E%3Cg fill='%23fff8f2' stroke='%23c8a06a' stroke-width='1.2'%3E%3Ccircle cx='91' cy='22' r='3'/%3E%3Ccircle cx='25' cy='96' r='3'/%3E%3Ccircle cx='151' cy='90' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: .68;
+}
+@media (max-width: 760px){
+  .occasion-word-number { background-size: 120% 100%; }
+}
+
+/* Section détails sans photo, plus légère et typographique */
+
+/* L'art du détail : composition en trois panneaux plutôt qu'une liste verticale */
+
+/* Version compacte des trois éléments de l'art du détail */
+
+/* Présentation simple en puces pour la section L'art du détail */
+.details-simple-list {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 0;
+  list-style: none;
+}
+.details-simple-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 13px 0;
+}
+.details-simple-dot {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: #b58a4b;
+}
+.details-simple-list li > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.details-simple-list strong {
+  color: #674a45;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.details-simple-list small {
+  color: #7e7063;
+  font-size: 13px;
+  line-height: 1.65;
+}
+@media (max-width: 760px){
+  .details-simple-list { margin-top: 22px; }
+  .details-simple-list li { gap: 11px; padding: 10px 0; }
+  .details-simple-list strong { font-size: 14px; }
+  .details-simple-list small { font-size: 12px; }
+}
+
+/* Harmoniser la police du titre « L'art du détail » avec les autres titres */
+.details-editorial-head h2,
+.details-editorial-head h2 em {
+  font-family: var(--serif) !important;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+.details-editorial-head h2 em {
+  font-style: italic;
+}
+
+/* Harmoniser le titre « L'art du détail » avec les autres titres de section */
+.details-editorial-head h2 
+.details-editorial-head h2 em {
+  font-family: var(--display) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  color: var(--gold) !important;
+}
+
+/* Reprendre exactement le traitement typographique des autres titres de section */
+.details-editorial-head h2 
+.details-editorial-head h2 em {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  color: var(--gold) !important;
+}
+
+/* Titres des occasions : même duo typographique que les titres principaux */
+.occasion-word-item h2,
+.occasion-word-item h3 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.055em !important;
+  line-height: 1.08 !important;
+}
+
+/* Harmoniser le grand titre de la page Occasions avec les titres principaux de l’accueil */
+.occasions-page-hero h1 
+.occasions-page-hero h1 em 
+
+/* Même traitement typographique pour « Votre histoire est unique » */
+.occasion-page-cta h2 
+.occasion-page-cta h2 em {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  letter-spacing: -.04em !important;
+}
+
+/* Accueil : conserver l’italique sur la seconde partie de chaque grand titre */
+.hero h1 span,
+.occasions-heading h2 span,
+.story-copy h2 span,
+.process-heading h2 span,
+.about-copy h2 span,
+.contact-copy h2 span {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+
+/* Histoire : le visuel ayant été retiré, replacer le texte dans la première colonne */
+.story-section 
+.story-copy {
+  grid-column: 1 !important;
+  width: 100%;
+  max-width: 900px;
+  justify-self: start;
+  margin-left: 0;
+}
+
+/* Section « La petite histoire » : aligner le contenu sur le bord gauche des autres sections */
+.story-section {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.story-copy {
+  grid-column: 1 !important;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
+}
+
+/* Correction définitive : aligner le contenu de « La petite histoire » à gauche */
+.story-section .story-copy {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+.story-section .section-eyebrow {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.story-section .story-copy h2,
+.story-section .story-copy p {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.story-section .story-copy h2,
+.story-section .story-copy > p {
+  max-width: 900px;
+}
+
+/* Accueil uniquement : compacter la section des occasions sur ordinateur */
+@media (min-width: 761px){
+  .occasion-word-garden-home {
+    max-width: 900px !important;
+    padding-top: 18px !important;
+    padding-bottom: 36px !important;
+  }
+  .occasion-word-garden-home .occasion-word-item {
+    grid-template-columns: 84px minmax(0, 1fr) !important;
+    column-gap: 28px !important;
+    padding: 18px 0 !important;
+  }
+  .occasion-word-garden-home .occasion-word-number {
+    font-size: 54px !important;
+  }
+  .occasion-word-garden-home .occasion-word-eyebrow {
+    margin-bottom: 4px !important;
+    font-size: 8px !important;
+  }
+  .occasion-word-garden-home .occasion-word-item h3 {
+    font-size: 27px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 5px !important;
+  }
+  .occasion-word-garden-home .occasion-word-item p {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 7px !important;
+  }
+  .occasion-word-garden-home .occasion-word-link {
+    font-size: 10px !important;
+  }
+}
+
+/* Accueil : réduire la hauteur de la section occasions sur ordinateur */
+@media (min-width: 761px){
+  .occasions-section.section-pad {
+    padding-top: 58px !important;
+    padding-bottom: 58px !important;
+  }
+  .occasions-section .occasions-heading {
+    margin: 24px 0 18px !important;
+    align-items: center;
+  }
+  .occasions-section .occasion-word-garden-home {
+    padding-top: 10px !important;
+    padding-bottom: 18px !important;
+  }
+  .occasions-section .occasion-word-item,
+  .occasions-section .occasion-word-garden-home .occasion-word-item {
+    padding: 20px 0 !important;
+  }
+  .occasions-section .occasion-word-item h3 { margin-bottom: 6px !important; }
+  .occasions-section .occasion-word-item p { margin-bottom: 8px !important; }
+}
+
+/* Accueil desktop : aligner le titre et les occasions sur le même bord gauche */
+@media (min-width: 761px){
+  .occasions-section .occasions-heading {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasions-heading h2 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasions-heading > p {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasion-word-garden-home {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+  .occasions-section .occasion-word-item,
+  .occasions-section .occasion-word-garden-home .occasion-word-item {
+    margin-left: 0 !important;
+  }
+}
+
+/* Mobile : réduire la hauteur du hero sans sacrifier le visuel */
+@media (max-width: 760px){
+  .hero {
+    min-height: 0 !important;
+    padding: 34px 22px 58px !important;
+    gap: 8px !important;
+  }
+  .hero-kicker {
+    margin-bottom: 16px !important;
+  }
+  .hero-description {
+    margin-top: 16px !important;
+    line-height: 1.65 !important;
+  }
+  .hero-actions {
+    margin-top: 20px !important;
+  }
+  .hero-proof {
+    margin-top: 18px !important;
+  }
+  .hero-visual {
+    min-height: 300px !important;
+    margin-top: 0 !important;
+  }
+  .hero-visual:before {
+    width: min(82%, 340px) !important;
+  }
+  .visual-orbit {
+    width: 76% !important;
+  }
+  .orbit-two {
+    width: 90% !important;
+  }
+  .invite-stack {
+    transform: scale(.76) rotate(-4deg) !important;
+  }
+  .hero-bottom {
+    bottom: 14px !important;
+  }
+}
+@media (max-width: 390px){
+  .hero {
+    padding: 28px 20px 52px !important;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 11vw, 52px) !important;
+  }
+  .hero-visual {
+    min-height: 255px !important;
+  }
+  .invite-stack {
+    transform: scale(.66) rotate(-4deg) !important;
+  }
+}
+
+/* Accueil mobile : hero plus compact, y compris le bloc d’introduction */
+@media (max-width: 760px){
+  .home-page .hero,
+  body:has(.home-page) .hero,
+  .hero {
+    min-height: 0 !important;
+    padding-top: 30px !important;
+    padding-bottom: 48px !important;
+    gap: 6px !important;
+  }
+  .hero-content {
+    align-self: start !important;
+  }
+  .hero-kicker {
+    margin-bottom: 14px !important;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 10.5vw, 60px) !important;
+    line-height: 1.02 !important;
+  }
+  .hero-description {
+    margin-top: 14px !important;
+    line-height: 1.6 !important;
+  }
+  .hero-actions {
+    margin-top: 18px !important;
+  }
+  .hero-proof {
+    margin-top: 16px !important;
+  }
+  .hero-visual {
+    min-height: 270px !important;
+    margin-top: 0 !important;
+    padding-bottom: 30px !important;
+  }
+  .hero-visual:before {
+    width: min(78%, 320px) !important;
+  }
+  .visual-orbit {
+    width: 72% !important;
+  }
+  .orbit-two {
+    width: 86% !important;
+  }
+  .invite-stack {
+    transform: scale(.7) rotate(-4deg) !important;
+  }
+  .hero-bottom {
+    bottom: 12px !important;
+  }
+}
+@media (max-width: 390px){
+  .hero {
+    padding-top: 24px !important;
+    padding-bottom: 42px !important;
+  }
+  .hero h1 {
+    font-size: clamp(39px, 10.5vw, 48px) !important;
+  }
+  .hero-visual {
+    min-height: 230px !important;
+  }
+  .invite-stack {
+    transform: scale(.62) rotate(-4deg) !important;
+  }
+}
+
+/* Correctif mobile accueil : réduire les dimensions réelles du visuel (pas seulement son échelle) */
+@media screen and (max-width: 760px){
+  .site-shell main > #accueil.hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: auto !important;
+    padding: 24px 20px 44px !important;
+    row-gap: 0 !important;
+  }
+  .site-shell main > #accueil.hero .hero-content {
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+  .site-shell main > #accueil.hero .hero-kicker {
+    margin-bottom: 12px !important;
+  }
+  .site-shell main > #accueil.hero h1 {
+    font-size: clamp(38px, 10vw, 54px) !important;
+    line-height: 1 !important;
+  }
+  .site-shell main > #accueil.hero .hero-description {
+    margin-top: 12px !important;
+    line-height: 1.55 !important;
+  }
+  .site-shell main > #accueil.hero .hero-actions {
+    margin-top: 16px !important;
+  }
+  .site-shell main > #accueil.hero .hero-proof {
+    margin-top: 14px !important;
+  }
+  .site-shell main > #accueil.hero .hero-visual {
+    min-height: 0 !important;
+    height: 270px !important;
+    margin: 0 !important;
+    padding: 0 0 28px !important;
+    overflow: visible !important;
+  }
+  .site-shell main > #accueil.hero .invite-stack {
+    width: 220px !important;
+    height: 300px !important;
+    transform: scale(.78) rotate(-4deg) !important;
+    transform-origin: center center !important;
+  }
+  .site-shell main > #accueil.hero .hero-visual:before {
+    width: min(76%, 300px) !important;
+  }
+  .site-shell main > #accueil.hero .visual-orbit {
+    width: 70% !important;
+  }
+  .site-shell main > #accueil.hero .orbit-two {
+    width: 84% !important;
+  }
+  .site-shell main > #accueil.hero .hero-bottom {
+    bottom: 10px !important;
+    left: 20px !important;
+    right: 20px !important;
+  }
+}
+@media screen and (max-width: 390px){
+  .site-shell main > #accueil.hero {
+    padding: 20px 18px 40px !important;
+  }
+  .site-shell main > #accueil.hero .hero-visual {
+    height: 230px !important;
+  }
+  .site-shell main > #accueil.hero .invite-stack {
+    width: 200px !important;
+    height: 270px !important;
+    transform: scale(.72) rotate(-4deg) !important;
+  }
+  .site-shell main > #accueil.hero .hero-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+}
+
+/* Mobile accueil : vraie version courte du hero, sans la grande scène d’illustration */
+@media (max-width: 760px){
+  #accueil.hero {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 26px 20px 56px !important;
+    overflow: hidden !important;
+  }
+  #accueil.hero .hero-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  #accueil.hero .hero-kicker {
+    margin-bottom: 14px !important;
+    font-size: 8px !important;
+  }
+  #accueil.hero h1 {
+    font-size: clamp(38px, 9.2vw, 52px) !important;
+    line-height: .98 !important;
+    letter-spacing: -.06em !important;
+  }
+  #accueil.hero .hero-description {
+    margin-top: 14px !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+  #accueil.hero .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-top: 18px !important;
+  }
+  #accueil.hero .hero-actions .button {
+    min-height: 48px !important;
+    padding: 12px 14px !important;
+  }
+  #accueil.hero .hero-proof {
+    margin-top: 16px !important;
+    font-size: 10px !important;
+  }
+  #accueil.hero .hero-visual {
+    display: none !important;
+  }
+  #accueil.hero .hero-bottom {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 12px !important;
+    font-size: 7px !important;
+  }
+  #accueil.hero .hero-bottom > span:nth-child(2) {
+    display: none !important;
+  }
+}
