@@ -218,12 +218,19 @@
 }
 
 
-/* Formulaire de contact uniquement : texte foncé sur les boutons dorés */
+/* Formulaire de contact uniquement : texte foncé au repos, blanc à l'interaction */
 .contact-page .project-form .wizard-actions .button-gold,
-.contact-page .project-form .wizard-actions .button-gold *,
-.contact-page .project-form .wizard-actions .button-gold:hover,
-.contact-page .project-form .wizard-actions .button-gold:focus-visible,
-.contact-page .project-form .wizard-actions .button-gold:active {
+.contact-page .project-form .wizard-actions .button-gold * {
   color: #38291e !important;
   -webkit-text-fill-color: #38291e !important;
+}
+
+.contact-page .project-form .wizard-actions .button-gold:hover,
+.contact-page .project-form .wizard-actions .button-gold:focus-visible,
+.contact-page .project-form .wizard-actions .button-gold:active,
+.contact-page .project-form .wizard-actions .button-gold:hover *,
+.contact-page .project-form .wizard-actions .button-gold:focus-visible *,
+.contact-page .project-form .wizard-actions .button-gold:active * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
