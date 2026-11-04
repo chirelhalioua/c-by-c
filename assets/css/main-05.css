@@ -1,4 +1,884 @@
-@media (max-width: 390px){
+@media (max-width: 390px) {
+  #accueil.hero {
+    padding: 22px 18px 52px !important;
+  }
+  #accueil.hero h1 {
+    font-size: clamp(36px, 9.5vw, 44px) !important;
+  }
+}
+
+
+/* Mobile accueil : réafficher la carte d’invitation en version compacte */
+@media (max-width: 760px) {
+  #accueil.hero .hero-visual {
+    display: grid !important;
+    position: relative !important;
+    min-height: 0 !important;
+    height: 215px !important;
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+  }
+  #accueil.hero .hero-visual:before {
+    width: 190px !important;
+    max-width: 72% !important;
+    background: radial-gradient(circle, #74563a 0%, #4a3525 48%, #302319 72%) !important;
+  }
+  #accueil.hero .visual-orbit {
+    width: 178px !important;
+    max-width: 68% !important;
+  }
+  #accueil.hero .orbit-two {
+    width: 205px !important;
+    max-width: 78% !important;
+  }
+  #accueil.hero .invite-stack {
+    width: 160px !important;
+    height: 215px !important;
+    transform: scale(.82) rotate(-4deg) !important;
+    transform-origin: center center !important;
+  }
+  #accueil.hero .invite-back {
+    inset: 8px -8px -8px 8px !important;
+  }
+  #accueil.hero .invite-tag {
+    right: -12px !important;
+    bottom: 18px !important;
+    transform: scale(.78) !important;
+    transform-origin: bottom right !important;
+  }
+  #accueil.hero .visual-caption {
+    bottom: 2px !important;
+    left: 0 !important;
+    right: 0 !important;
+    font-size: 7px !important;
+    text-align: center !important;
+  }
+  #accueil.hero .visual-spark {
+    font-size: 18px !important;
+  }
+  #accueil.hero .hero-bottom {
+    bottom: 10px !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero .hero-visual {
+    height: 190px !important;
+    margin-top: 8px !important;
+  }
+  #accueil.hero .invite-stack {
+    width: 145px !important;
+    height: 195px !important;
+    transform: scale(.78) rotate(-4deg) !important;
+  }
+  #accueil.hero .invite-tag {
+    right: -8px !important;
+    transform: scale(.68) !important;
+  }
+}
+
+
+/* Retour à la version mobile compacte du hero : carte masquée, composition épurée */
+@media (max-width: 760px) {
+  #accueil.hero .hero-visual {
+    display: none !important;
+  }
+}
+
+
+/* Mobile : descendre légèrement le libellé « Célébrations by Chirel » */
+@media (max-width: 760px) {
+  #accueil.hero .hero-kicker {
+    margin-top: 8px !important;
+  }
+}
+
+
+/* Mobile : rapprocher la section contact de la présentation « La petite histoire » */
+@media (max-width: 760px) {
+  .story-section.section-pad {
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+  }
+  .contact-section.section-pad {
+    padding-top: 24px !important;
+    margin-top: 0 !important;
+  }
+  .story-section .story-copy > p:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+
+/* Formulaire contact : options facultatives multiples */
+.project-options-field { display: flex; flex-direction: column; gap: 10px; }
+.project-options-heading { display: flex; flex-direction: column; gap: 5px; }
+.project-field-label { color: var(--dark); font-size: 13px; font-weight: 600; }
+.project-options-heading p { margin: 0; color: var(--muted, #82736a); font-size: 12px; line-height: 1.5; }
+.project-option-row { display: flex; align-items: center; gap: 8px; }
+.project-option-row input { flex: 1; min-width: 0; width: 100%; }
+.project-option-remove { flex: 0 0 38px; width: 38px; height: 44px; border: 1px solid var(--line); border-radius: 3px; background: transparent; color: var(--dark); font-size: 22px; cursor: pointer; }
+.project-option-add { align-self: flex-start; border: 0; padding: 4px 0; background: transparent; color: var(--bronze, #a77d42); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.project-option-add:hover { text-decoration: underline; }
+
+
+/* Liste déroulante à choix multiples pour les options du formulaire */
+.project-options-select { position: relative; width: 100%; }
+.project-options-menu { max-height: 290px; overflow-y: auto; }
+.project-option-choice { display: flex; align-items: center; justify-content: flex-start; gap: 11px; text-align: left; white-space: normal; }
+.project-option-checkbox { display: inline-flex; flex: 0 0 18px; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1px solid var(--line, #d9c9bd); border-radius: 3px; color: #fff; font-size: 12px; }
+.project-option-checkbox.is-checked { border-color: var(--bronze, #a77d42); background: var(--bronze, #a77d42); }
+.project-selected-options { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 3px; }
+.project-selected-option { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border: 1px solid var(--line, #e3d6cc); border-radius: 3px; background: #fffaf6; color: var(--dark, #34261f); font-size: 11px; line-height: 1.35; }
+.project-selected-option button { border: 0; padding: 0; background: transparent; color: inherit; font-size: 16px; line-height: 1; cursor: pointer; }
+
+
+/* Expérience signature C by C : une invitation qui se dévoile au clic */
+.signature-moment {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 100px);
+  overflow: hidden;
+  padding: 92px clamp(24px, 8vw, 120px);
+  background: #f4e9e3;
+  color: #35251f;
+}
+.signature-copy { position: relative; z-index: 2; max-width: 500px; }
+.signature-copy .section-eyebrow { display: inline-block; margin-bottom: 22px; color: #a77d42; }
+.signature-copy h2 { margin: 0; font-family: var(--display); font-size: clamp(34px, 4.2vw, 56px); font-weight: 600; letter-spacing: -.06em; line-height: 1.04; }
+.signature-copy h2 em { color: #a77d42; font-family: var(--serif); font-weight: 500; letter-spacing: -.035em; }
+.signature-copy p { max-width: 420px; margin: 22px 0 0; color: #756158; font-size: 14px; line-height: 1.8; }
+.signature-reveal-button { display: inline-flex; align-items: center; gap: 22px; margin-top: 26px; padding: 14px 18px; border: 1px solid #a77d42; border-radius: 2px; background: transparent; color: #62483d; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: background .25s ease, color .25s ease, transform .25s ease; }
+.signature-reveal-button:hover { transform: translateY(-2px); background: #a77d42; color: #fffaf5; }
+.signature-reveal-button span { font-size: 17px; }
+.signature-stage { position: relative; display: grid; place-items: center; min-height: 390px; perspective: 1100px; }
+.signature-glow { position: absolute; width: min(82%, 380px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(196,155,111,.22), rgba(196,155,111,0) 70%); }
+.signature-envelope { position: relative; width: min(100%, 370px); height: 250px; transform: rotate(-3deg); filter: drop-shadow(0 22px 25px rgba(72,48,36,.14)); transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.signature-stage.is-revealed .signature-envelope { transform: translateY(8px) rotate(0deg); }
+.signature-envelope-back { position: absolute; inset: 0; background: #c9a77e; border: 1px solid #b99468; }
+.signature-letter { position: absolute; z-index: 1; left: 8%; right: 8%; top: 8%; height: 92%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px; border: 1px solid #d9c6aa; background: #fffaf2; color: #5e453b; text-align: center; transform: translateY(0); transition: transform .7s cubic-bezier(.2,.75,.25,1); }
+.signature-stage.is-revealed .signature-letter { transform: translateY(-105px); }
+.signature-letter-kicker, .signature-letter-date { color: #a77d42; font-size: 7px; font-weight: 700; letter-spacing: .2em; }
+.signature-letter-script { color: #927168; font-family: var(--serif); font-size: 23px; font-style: italic; }
+.signature-letter-title { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: -.04em; line-height: 1.12; }
+.signature-letter-rule { width: 42px; height: 1px; background: #c4a16e; }
+.signature-envelope-front { position: absolute; z-index: 2; inset: 0; background: #e5d1b8; clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%); }
+.signature-envelope-flap { position: absolute; z-index: 3; inset: 0; background: #f0dfcb; clip-path: polygon(0 0, 100% 0, 50% 65%); transform-origin: top center; transition: transform .6s ease, opacity .3s ease; }
+.signature-stage.is-revealed .signature-envelope-flap { transform: rotateX(180deg); opacity: .15; }
+.signature-seal { position: absolute; z-index: 4; left: 50%; top: 58%; display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #b58a4b; border-radius: 50%; background: #a77d42; color: #fff4df; font-family: var(--serif); font-size: 21px; font-style: italic; transform: translate(-50%, -50%); transition: opacity .25s ease, transform .35s ease; }
+.signature-stage.is-revealed .signature-seal { opacity: 0; transform: translate(-50%, -50%) scale(.7); }
+.signature-stage-caption { position: absolute; bottom: 4px; color: #a18876; font-size: 8px; font-weight: 700; letter-spacing: .17em; text-align: center; }
+@media (max-width: 760px) {
+  .signature-moment { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 58px 22px 48px; }
+  .signature-copy .section-eyebrow { margin-bottom: 16px; }
+  .signature-copy h2 { font-size: clamp(32px, 8vw, 42px); }
+  .signature-copy p { margin-top: 15px; font-size: 13px; }
+  .signature-reveal-button { margin-top: 18px; }
+  .signature-stage { min-height: 300px; margin-top: 8px; }
+  .signature-envelope { width: min(86%, 330px); height: 218px; }
+  .signature-stage.is-revealed .signature-letter { transform: translateY(-82px); }
+  .signature-letter-script { font-size: 20px; }
+  .signature-letter-title { font-size: 20px; }
+  .signature-stage-caption { bottom: 0; font-size: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signature-envelope, .signature-letter, .signature-envelope-flap, .signature-seal, .signature-reveal-button { transition: none !important; }
+}
+
+
+/* Invitation signature : logo discret et typographie plus raffinée */
+.signature-letter {
+  gap: 9px !important;
+  padding: 14px 18px !important;
+}
+.signature-letter-logo {
+  display: block;
+  width: 42px;
+  max-height: 26px;
+  object-fit: contain;
+  opacity: .82;
+  margin-bottom: 1px;
+}
+.signature-letter-script {
+  font-family: 'Cormorant Garamond', var(--serif) !important;
+  font-size: 26px !important;
+  font-weight: 500;
+  letter-spacing: -.015em;
+}
+.signature-letter-title {
+  font-family: 'Cormorant Garamond', var(--serif) !important;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  letter-spacing: -.025em !important;
+  line-height: .98 !important;
+}
+.signature-letter-kicker,
+.signature-letter-date {
+  font-size: 6px !important;
+  letter-spacing: .22em !important;
+}
+@media (max-width: 760px) {
+  .signature-letter { gap: 7px !important; padding: 12px 14px !important; }
+  .signature-letter-logo { width: 36px; max-height: 22px; }
+  .signature-letter-script { font-size: 23px !important; }
+  .signature-letter-title { font-size: 25px !important; }
+}
+
+
+/* Carte signature : logo discret et typographie d’invitation plus raffinée */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+.signature-letter {
+  gap: 9px !important;
+  padding: 14px 18px !important;
+}
+.signature-letter-logo {
+  display: block;
+  width: 42px;
+  max-height: 25px;
+  object-fit: contain;
+  opacity: .72;
+  margin-bottom: 1px;
+}
+.signature-letter-kicker,
+.signature-letter-date {
+  font-family: var(--sans);
+  font-size: 6px !important;
+  letter-spacing: .19em !important;
+}
+.signature-letter-script {
+  font-family: 'Allura', 'Cormorant Garamond', cursive !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  color: #9b7569 !important;
+}
+.signature-letter-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 27px !important;
+  font-weight: 500 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.02 !important;
+}
+.signature-letter-rule { margin-top: 1px; }
+@media (max-width: 760px) {
+  .signature-letter-logo { width: 36px; max-height: 21px; }
+  .signature-letter-script { font-size: 27px !important; }
+  .signature-letter-title { font-size: 24px !important; }
+}
+
+
+/* Invitation signature plus ornée, et enveloppe cliquable pour ouvrir/fermer */
+.signature-envelope {
+  display: block;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.signature-envelope:focus-visible {
+  outline: 2px solid #a77d42;
+  outline-offset: 8px;
+}
+.signature-letter {
+  overflow: hidden;
+  outline: 1px solid rgba(167,125,66,.35);
+  outline-offset: -7px;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "✦  ❧  ✦";
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #b89460;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px;
+  letter-spacing: .32em;
+  text-align: center;
+  opacity: .85;
+  pointer-events: none;
+}
+.signature-letter::before { top: 9px; }
+.signature-letter::after { bottom: 8px; transform: rotate(180deg); }
+.signature-letter-logo {
+  width: 39px !important;
+  max-height: 23px !important;
+  margin-top: 5px;
+  margin-bottom: 0 !important;
+}
+.signature-letter-script {
+  font-size: 32px !important;
+  text-shadow: 0 .3px 0 rgba(155,117,105,.12);
+}
+.signature-letter-title {
+  position: relative;
+  padding: 10px 0;
+  font-size: 29px !important;
+}
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: "❧";
+  position: absolute;
+  top: 50%;
+  color: #b89460;
+  font-size: 14px;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+.signature-letter-title::before { right: calc(100% + 9px); }
+.signature-letter-title::after { left: calc(100% + 9px); transform: translateY(-50%) scaleX(-1); }
+.signature-letter-rule {
+  position: relative;
+  width: 60px !important;
+}
+.signature-letter-rule::before,
+.signature-letter-rule::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  color: #b89460;
+  font-size: 9px;
+  transform: translateY(-50%);
+}
+.signature-letter-rule::before { left: -12px; }
+.signature-letter-rule::after { right: -12px; }
+.signature-envelope-front {
+  box-shadow: inset 0 0 0 1px rgba(155,111,72,.22);
+}
+.signature-envelope-flap {
+  backface-visibility: hidden;
+}
+.signature-seal {
+  box-shadow: 0 2px 8px rgba(85,53,30,.18), inset 0 0 0 2px rgba(255,244,223,.18);
+}
+@media (max-width: 760px) {
+  .signature-letter-logo { width: 34px !important; max-height: 20px !important; }
+  .signature-letter-script { font-size: 28px !important; }
+  .signature-letter-title { font-size: 24px !important; }
+  .signature-letter::before,
+  .signature-letter::after { font-size: 14px; }
+}
+
+
+/* Ajustements demandés : motifs sur le papier intérieur, sans bordure décorative */
+.signature-letter {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 1px solid #eadbc5 !important;
+  background:
+    radial-gradient(ellipse at 12% 14%, rgba(190,151,94,.15) 0 2px, transparent 3px),
+    radial-gradient(ellipse at 88% 86%, rgba(190,151,94,.15) 0 2px, transparent 3px),
+    linear-gradient(135deg, rgba(255,255,255,.75), transparent 48%),
+    #fffaf2 !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "❦  ✦  ❦" !important;
+  left: 14px !important;
+  right: 14px !important;
+  font-size: 15px !important;
+  letter-spacing: .24em !important;
+  color: #b89460 !important;
+  opacity: .9 !important;
+}
+.signature-letter::before { top: 12px !important; }
+.signature-letter::after { bottom: 12px !important; }
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: none !important;
+}
+.signature-letter-logo {
+  position: relative;
+  z-index: 1;
+}
+.signature-letter-script,
+.signature-letter-title,
+.signature-letter-kicker,
+.signature-letter-date,
+.signature-letter-rule {
+  position: relative;
+  z-index: 1;
+}
+/* Agrandir légèrement le bloc signature pour donner plus de présence à l'expérience */
+.signature-moment {
+  padding-top: 104px !important;
+  padding-bottom: 104px !important;
+}
+.signature-stage {
+  min-height: 420px !important;
+}
+.signature-envelope {
+  width: min(100%, 395px) !important;
+  height: 266px !important;
+}
+.signature-stage.is-revealed .signature-letter {
+  transform: translateY(-112px) !important;
+}
+@media (max-width: 760px) {
+  .signature-moment {
+    padding-top: 66px !important;
+    padding-bottom: 58px !important;
+  }
+  .signature-stage {
+    min-height: 320px !important;
+  }
+  .signature-envelope {
+    width: min(88%, 350px) !important;
+    height: 228px !important;
+  }
+  .signature-stage.is-revealed .signature-letter {
+    transform: translateY(-86px) !important;
+  }
+}
+
+
+/* Affiner les ornements : motifs sur la carte intérieure, sans bordure encadrée */
+.signature-letter {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background:
+    radial-gradient(ellipse at 12% 15%, rgba(190,151,99,.12), transparent 28%),
+    radial-gradient(ellipse at 88% 84%, rgba(190,151,99,.12), transparent 28%),
+    #fffaf2 !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "✦  ❧  ✦  ❧  ✦" !important;
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  color: #b89460;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  letter-spacing: .22em;
+  text-align: center;
+  opacity: .9;
+  pointer-events: none;
+}
+.signature-letter::before { top: 9px; }
+.signature-letter::after { bottom: 8px; transform: none !important; }
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: "❧" !important;
+  color: #b89460;
+  font-size: 15px;
+}
+.signature-envelope-front { box-shadow: none !important; }
+/* Un peu plus de présence pour la section signature */
+.signature-moment { padding-top: 104px !important; padding-bottom: 104px !important; }
+.signature-stage { min-height: 420px !important; }
+.signature-envelope { width: min(100%, 390px) !important; height: 265px !important; }
+.signature-stage.is-revealed .signature-letter { transform: translateY(-112px) !important; }
+@media (max-width: 760px) {
+  .signature-moment { padding-top: 64px !important; padding-bottom: 58px !important; }
+  .signature-stage { min-height: 320px !important; }
+  .signature-envelope { width: min(90%, 350px) !important; height: 228px !important; }
+  .signature-stage.is-revealed .signature-letter { transform: translateY(-86px) !important; }
+}
+
+
+/* Carte d’invitation : papier ivoire texturé, sans motifs décoratifs répétitifs */
+.signature-letter {
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: #fbf6ec !important;
+  background-image:
+    radial-gradient(ellipse at 20% 18%, rgba(156,126,91,.055) 0, transparent 38%),
+    radial-gradient(ellipse at 78% 72%, rgba(174,143,106,.045) 0, transparent 42%),
+    repeating-linear-gradient(0deg, rgba(125,101,72,.018) 0px, rgba(125,101,72,.018) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(91deg, rgba(255,255,255,.22) 0px, rgba(255,255,255,.22) 1px, transparent 1px, transparent 5px) !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: none !important;
+  display: none !important;
+}
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: none !important;
+  display: none !important;
+}
+.signature-letter-logo { opacity: .62 !important; }
+.signature-letter-script { color: #96776a !important; }
+.signature-letter-rule { background: rgba(177,142,94,.7) !important; }
+
+
+/* Papier d’invitation haut de gamme : ivoire satiné avec un léger éclat */
+.signature-letter {
+  background-color: #fffaf0 !important;
+  background-image:
+    linear-gradient(118deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.30) 22%, transparent 43%, rgba(218,194,155,.10) 68%, rgba(255,255,255,.72) 100%),
+    radial-gradient(ellipse at 22% 12%, rgba(255,255,255,.75) 0, transparent 48%),
+    repeating-linear-gradient(0deg, rgba(126,101,72,.025) 0px, rgba(126,101,72,.025) 1px, transparent 1px, transparent 4px) !important;
+  box-shadow: inset 0 0 0 1px rgba(190,157,108,.20), inset 0 1px 8px rgba(255,255,255,.78), 0 2px 9px rgba(100,75,48,.08) !important;
+}
+
+
+/* Typographie de la carte : titre plus net et raffiné, sans effet trop classique */
+.signature-letter-title {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  letter-spacing: .075em !important;
+  line-height: 1.45 !important;
+  text-transform: uppercase;
+  color: #5e453b !important;
+}
+
+
+/* Typographie élégante pour le titre de la carte d’invitation */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+.signature-letter-title {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 21px !important;
+  font-weight: 400 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.18 !important;
+  text-transform: none !important;
+  color: #5e453b !important;
+}
+
+
+/* Accueil mobile : donner un peu plus d’ampleur au hero sans le rendre trop long */
+@media (max-width: 760px) {
+  #accueil.hero {
+    padding-top: 60px !important;
+    padding-bottom: 88px !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero {
+    padding-top: 27px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+
+/* Accueil mobile : hauteur minimale légèrement augmentée pour que le changement soit visible */
+@media (max-width: 760px) {
+  #accueil.hero {
+    min-height: 500px !important;
+    padding-top: 60px !important;
+    padding-bottom: 88px !important;
+    box-sizing: border-box !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero {
+    min-height: 490px !important;
+    padding-top: 27px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+
+/* Hero mobile : aérer la composition et les espaces entre chaque élément */
+@media (max-width: 760px) {
+  #accueil.hero {
+    min-height: 0 !important;
+    padding: 48px 24px 82px !important;
+  }
+  #accueil.hero .hero-kicker {
+    margin-top: 12px !important;
+    margin-bottom: 30px !important;
+  }
+  #accueil.hero h1 {
+    line-height: 1.13 !important;
+    margin-bottom: 0 !important;
+  }
+  #accueil.hero .hero-description {
+    margin-top: 28px !important;
+    line-height: 1.9 !important;
+    font-size: 14px !important;
+  }
+  #accueil.hero .hero-actions {
+    margin-top: 32px !important;
+    gap: 14px !important;
+  }
+  #accueil.hero .hero-actions .button {
+    min-height: 58px !important;
+    padding: 17px 16px !important;
+    line-height: 1.5 !important;
+  }
+  #accueil.hero .hero-proof {
+    margin-top: 34px !important;
+    line-height: 1.7 !important;
+  }
+  #accueil.hero .hero-bottom {
+    bottom: 16px !important;
+    padding-top: 16px !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero {
+    padding: 28px 18px 74px !important;
+  }
+  #accueil.hero .hero-kicker {
+    margin-bottom: 25px !important;
+  }
+  #accueil.hero .hero-description {
+    margin-top: 24px !important;
+  }
+  #accueil.hero .hero-actions {
+    margin-top: 27px !important;
+  }
+  #accueil.hero .hero-proof {
+    margin-top: 28px !important;
+  }
+}
+
+/* Desktop : retirer la carte d’invitation du hero, conserver la composition sur mobile */
+@media (min-width: 761px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 760px;
+    margin-left: 0;
+  }
+  .hero-visual {
+    display: none !important;
+  }
+}
+
+
+/* C by C — reliefs subtils et blocs arrondis, dans la continuité de Chirel Dev */
+:root {
+  --cbc-card-radius: 22px;
+  --cbc-card-shadow: 0 10px 28px rgba(79, 52, 43, .065), 0 2px 6px rgba(79, 52, 43, .035);
+  --cbc-card-border: 1px solid rgba(181, 138, 75, .17);
+}
+
+/* Des surfaces légèrement distinctes pour donner du rythme aux sections */
+.occasions-section,
+.process-section {
+  position: relative;
+}
+.occasions-section::before,
+.details-section::before,
+.process-section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 207, 200, .24), rgba(232, 207, 200, 0) 72%);
+}
+.occasions-section::before { top: 7%; right: -55px; }
+.details-section::before { top: 12%; left: -75px; }
+.process-section::before { bottom: 3%; right: -65px; }
+.occasions-section > *,
+.details-section > *,
+.process-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cartes d’occasions : effet papier, bord fin et survol discret */
+.occasion-word-item {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: var(--cbc-card-border) !important;
+  border-radius: var(--cbc-card-radius) !important;
+  background: linear-gradient(145deg, rgba(255,253,251,.98), rgba(248,233,229,.56)) !important;
+  box-shadow: var(--cbc-card-shadow), inset 0 1px 0 rgba(255,255,255,.88) !important;
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
+}
+.occasion-word-item::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -28px;
+  bottom: -38px;
+  width: 118px;
+  height: 118px;
+  border: 1px solid rgba(181,138,75,.15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px rgba(181,138,75,.035), 0 0 0 25px rgba(181,138,75,.025);
+  pointer-events: none;
+}
+.occasion-word-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181,138,75,.34) !important;
+  box-shadow: 0 16px 34px rgba(79,52,43,.10), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+/* Étapes : relief doux sans alourdir la lecture */
+.step-card {
+  border: var(--cbc-card-border) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(155deg, rgba(255,253,251,.98), rgba(248,233,229,.46)) !important;
+  box-shadow: var(--cbc-card-shadow), inset 0 1px 0 rgba(255,255,255,.9) !important;
+  transition: transform .22s ease, box-shadow .22s ease !important;
+}
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(79,52,43,.09), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+/* Liste des attentions : chaque point devient une petite surface lisible */
+.details-simple-list {
+  gap: 12px !important;
+}
+.details-simple-list li {
+  padding: 18px 20px !important;
+  border: 1px solid rgba(181,138,75,.15) !important;
+  border-radius: 17px !important;
+  background: rgba(255,253,251,.72) !important;
+  box-shadow: 0 5px 16px rgba(79,52,43,.035), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+/* Contact : un panneau principal plus enveloppant */
+.contact-panel {
+  overflow: hidden;
+  border: 1px solid rgba(181,138,75,.24) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 18px 42px rgba(79,52,43,.085), inset 0 1px 0 rgba(255,255,255,.45) !important;
+}
+
+/* Boutons et champs : cohérence avec les surfaces arrondies */
+.button {
+  border-radius: 999px;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease !important;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+input,
+select,
+textarea {
+  border-radius: 14px;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(181,138,75,.55);
+  outline-offset: 2px;
+}
+
+/* Respecter les préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .occasion-word-item,
+  .step-card,
+  .button {
+    transition: none !important;
+  }
+  .occasion-word-item:hover,
+  .step-card:hover,
+  .button:hover {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .occasion-word-item { border-radius: 19px !important; }
+  .details-simple-list li { padding: 16px !important; }
+  .contact-panel { border-radius: 22px !important; }
+}
+
+
+/* Mobile : espace net entre les cartes de la section « L’art du détail » */
+@media (max-width: 760px) {
+  .details-simple-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    row-gap: 16px !important;
+  }
+  .details-simple-list li {
+    margin: 0 !important;
+  }
+}
+
+
+/* Correction renforcée : l'espacement est porté par chaque carte, même si le layout parent est surchargé */
+@media (max-width: 760px) {
+  #details .details-simple-list {
+    display: block !important;
+    gap: 0 !important;
+    row-gap: 0 !important;
+  }
+  #details .details-simple-list > li {
+    display: flex !important;
+    margin: 0 0 18px !important;
+  }
+  #details .details-simple-list > li:last-child {
+    margin-bottom: 0 !important;
+  }
+  #details .details-simple-list > li + li {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* Occasions sur mobile : de vraies cartes indépendantes, espacées et arrondies */
+@media (max-width: 760px) {
+  .occasions-section .occasion-word-garden-home {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    row-gap: 18px !important;
+    padding: 0 4px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    display: grid !important;
+    grid-template-columns: 86px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 16px !important;
+    width: 100% !important;
+    min-height: 190px !important;
+    margin: 0 !important;
+    padding: 24px 20px !important;
+    border: 1px solid rgba(181,138,75,.22) !important;
+    border-radius: 22px !important;
+    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
+    box-shadow: 0 10px 26px rgba(79,52,43,.075), inset 0 1px 0 rgba(255,255,255,.95) !important;
+    box-sizing: border-box !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: center;
+    font-size: clamp(32px, 10vw, 48px) !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2;
+    min-width: 0;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    margin-top: 4px !important;
+    margin-bottom: 8px !important;
+    font-size: clamp(22px, 6vw, 29px) !important;
+    line-height: 1.18 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
+    margin: 0 0 12px !important;
+    line-height: 1.5 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    margin-top: 2px !important;
+  }
+}
+@media (max-width: 390px) {
   .occasions-section .occasion-word-garden-home > .occasion-word-item {
     grid-template-columns: 66px minmax(0, 1fr) !important;
     column-gap: 12px !important;
@@ -7,8 +887,9 @@
   }
 }
 
+
 /* Pages occasions : espacement régulier entre les cartes sur mobile */
-@media (max-width: 760px){
+@media (max-width: 760px) {
   .occasion-grid,
   .occasion-list,
   .occasion-catalog,
@@ -40,797 +921,5 @@
   .collection-card:last-child,
   .occasion-word-item:last-child {
     margin-bottom: 0 !important;
-  }
-}
-
-/* Pages occasions sur mobile : éloigner les numéros de la bordure des cartes */
-@media (max-width: 760px){
-  .occasion-card,
-  .category-card,
-  .occasion-detail-card,
-  .occasion-page-card,
-  .collection-card,
-  .occasion-word-item {
-    padding-left: 26px !important;
-    padding-right: 24px !important;
-  }
-  .occasion-card .occasion-number,
-  .category-card .occasion-number,
-  .occasion-detail-card .occasion-number,
-  .occasion-page-card .occasion-number,
-  .collection-card .occasion-number,
-  .occasion-word-item .occasion-word-number {
-    margin-left: 4px !important;
-  }
-}
-@media (max-width: 390px){
-  .occasion-card,
-  .category-card,
-  .occasion-detail-card,
-  .occasion-page-card,
-  .collection-card,
-  .occasion-word-item {
-    padding-left: 22px !important;
-    padding-right: 18px !important;
-  }
-}
-
-/* Accueil mobile : aligner les numéros d'occasion sur la ligne des titres */
-@media (max-width: 760px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 86px minmax(0, 1fr) !important;
-    align-items: start !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    grid-column: 1 !important;
-    grid-row: 1 / span 4 !important;
-    align-self: start !important;
-    margin-top: 1.1em !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-    margin-top: 4px !important;
-  }
-}
-@media (max-width: 390px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 66px minmax(0, 1fr) !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    margin-top: 1.15em !important;
-  }
-}
-
-/* Accueil : reprendre exactement le placement latéral des numéros des pages occasions */
-@media (max-width: 760px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    display: grid !important;
-    grid-template-columns: 112px minmax(0, 1fr) !important;
-    align-items: center !important;
-    column-gap: 16px !important;
-    padding: 24px 20px !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    grid-column: 1 !important;
-    grid-row: 1 / span 4 !important;
-    align-self: center !important;
-    justify-self: start !important;
-    margin: 0 !important;
-    line-height: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow,
-  .occasions-section .occasion-word-garden-home > .occasion-word-item h3,
-  .occasions-section .occasion-word-garden-home > .occasion-word-item p,
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
-    grid-column: 2 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
-    grid-row: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
-    grid-row: 2 !important;
-    margin-top: 4px !important;
-  }
-}
-@media (max-width: 390px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 84px minmax(0, 1fr) !important;
-    column-gap: 12px !important;
-    padding: 22px 16px !important;
-  }
-}
-
-/* Accueil mobile : numéro sur la même ligne que le titre, comme sur /occasions */
-@media (max-width: 760px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-    align-self: start !important;
-    justify-self: start !important;
-    margin: 0 !important;
-    line-height: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-    margin-top: 4px !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
-    grid-column: 2 !important;
-    grid-row: 3 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
-    grid-column: 2 !important;
-    grid-row: 4 !important;
-  }
-}
-
-/* Accueil : reprendre le même style de cartes que la page /occasions */
-@media (max-width: 760px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 112px minmax(0, 1fr) !important;
-    align-items: center !important;
-    column-gap: 16px !important;
-    min-height: 0 !important;
-    padding: 26px 22px !important;
-    border: 1px solid rgba(181,138,75,.22) !important;
-    border-radius: 28px !important;
-    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
-    box-shadow: 0 10px 26px rgba(79,52,43,.075), inset 0 1px 0 rgba(255,255,255,.95) !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    grid-column: 1 !important;
-    grid-row: 1 / span 4 !important;
-    align-self: center !important;
-    justify-self: start !important;
-    margin: 0 !important;
-    font-size: clamp(38px, 11vw, 56px) !important;
-    line-height: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    margin: 0 0 5px !important;
-    text-align: left !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-    margin: 0 0 8px !important;
-    font-size: clamp(25px, 6.6vw, 32px) !important;
-    line-height: 1.18 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
-    grid-column: 2 !important;
-    grid-row: 3 !important;
-    margin: 0 0 16px !important;
-    line-height: 1.65 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
-    grid-column: 2 !important;
-    grid-row: 4 !important;
-    margin-top: 0 !important;
-  }
-}
-@media (max-width: 390px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 76px minmax(0, 1fr) !important;
-    column-gap: 12px !important;
-    padding: 23px 17px !important;
-    border-radius: 24px !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    font-size: 38px !important;
-  }
-}
-
-/* Accueil mobile : rapprocher visuellement le numéro du titre de l’occasion */
-@media (max-width: 760px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 70px minmax(0, 1fr) !important;
-    column-gap: 10px !important;
-  }
-}
-@media (max-width: 390px){
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    grid-template-columns: 60px minmax(0, 1fr) !important;
-    column-gap: 8px !important;
-  }
-}
-
-/* C by C contact form — progressive question wizard */
-.project-form .wizard-heading {
-  margin: 22px 0 24px;
-  padding: 22px 22px 18px;
-  border: 1px solid rgba(181,138,75,.19);
-  border-radius: 20px;
-  background: linear-gradient(145deg, rgba(255,253,251,.98), rgba(248,233,229,.55));
-}
-.wizard-step-label {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: #a77d70;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .16em;
-}
-.project-form .wizard-heading h3 {
-  margin: 0 0 5px;
-  color: var(--dark);
-  font-family: var(--serif);
-  font-size: clamp(24px, 4vw, 30px);
-  font-weight: 500;
-  line-height: 1.25;
-}
-.project-form .wizard-heading p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-.wizard-content {
-  min-height: 220px;
-  animation: wizardFadeIn .24s ease both;
-}
-.wizard-fields {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-.wizard-fields > label,
-.wizard-field-full {
-  min-width: 0;
-}
-.wizard-fields > label,
-.wizard-field-full > label {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: var(--dark);
-  font-size: 12px;
-  font-weight: 700;
-}
-.wizard-field-full {
-  grid-column: 1 / -1;
-}
-.wizard-fields input:not([type="checkbox"]),
-.wizard-fields textarea {
-  width: 100%;
-  min-width: 0;
-  border: 1px solid #e7d6ce;
-  border-radius: 14px;
-  padding: 14px 15px;
-  background: #fffdfb;
-  color: var(--ink);
-  font: inherit;
-  font-size: 14px;
-  font-weight: 400;
-}
-.wizard-fields input:focus,
-.wizard-fields textarea:focus {
-  outline: 2px solid rgba(181,138,75,.28);
-  border-color: #b58a4b;
-}
-.project-field-label {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--dark);
-  font-size: 12px;
-  font-weight: 700;
-}
-.wizard-choice-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-.wizard-choice {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  min-height: 50px;
-  padding: 12px 14px;
-  border: 1px solid #ead8d2;
-  border-radius: 14px;
-  background: #fffdfb;
-  color: #674a45;
-  text-align: left;
-  font: inherit;
-  font-size: 13px;
-  line-height: 1.45;
-  cursor: pointer;
-  transition: border-color .18s ease, background .18s ease, transform .18s ease;
-}
-.wizard-choice.is-selected {
-  border-color: #b58a4b;
-  background: #f8e9e5;
-  box-shadow: inset 0 0 0 1px rgba(181,138,75,.12);
-}
-.wizard-choice > span { color: #a77d42; font-weight: 700; }
-.wizard-choice-grid-single { grid-template-columns: 1fr; }
-.wizard-option-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.wizard-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 11px;
-  border: 1px solid #ead8d2;
-  border-radius: 999px;
-  background: #fffdfb;
-  color: #674a45;
-  font: inherit;
-  font-size: 11px;
-  line-height: 1.35;
-  cursor: pointer;
-}
-.wizard-option.is-selected {
-  border-color: #b58a4b;
-  background: #f8e9e5;
-}
-.wizard-option-check {
-  color: #a77d42;
-  font-weight: 700;
-}
-.wizard-fields .project-consent {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 10px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-.wizard-fields .project-consent input {
-  margin-top: 4px;
-  accent-color: #8b6258;
-}
-.wizard-fields .project-form-privacy { margin: 0; }
-.wizard-error {
-  margin: 16px 0 0;
-  color: #9a3d35;
-  font-size: 12px;
-}
-.wizard-footer {
-  margin-top: 28px;
-  padding-top: 20px;
-  border-top: 1px solid #ead8d2;
-}
-.wizard-progress-copy {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 9px;
-  color: #8a7569;
-  font-size: 11px;
-}
-.wizard-progress-copy strong {
-  color: #674a45;
-  font-weight: 700;
-}
-.wizard-progress-track {
-  height: 5px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: #f0e4dd;
-}
-.wizard-progress-track span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #b58a4b, #d4b77f);
-  transition: width .25s ease;
-}
-.wizard-actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 20px;
-}
-.wizard-note {
-  color: #8a7569;
-  font-size: 11px;
-}
-.wizard-back {
-  border: 0;
-  background: transparent;
-  color: #674a45;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.wizard-next,
-.wizard-actions .project-submit {
-  margin: 0;
-}
-@keyframes wizardFadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 600px){
-  .project-form .wizard-heading {
-    margin-top: 18px;
-    padding: 19px 17px 16px;
-  }
-  .wizard-content { min-height: 0; }
-  .wizard-fields { grid-template-columns: 1fr; gap: 15px; }
-  .wizard-choice-grid { grid-template-columns: 1fr; }
-  .wizard-choice-grid-single { grid-template-columns: 1fr; }
-  .wizard-footer { margin-top: 24px; }
-  .wizard-actions { align-items: center; }
-  .wizard-next, .wizard-actions .project-submit { padding: 12px 15px; gap: 10px; }
-}
-@media (prefers-reduced-motion: reduce){
-  .wizard-content { animation: none; }
-  .wizard-progress-track span { transition: none; }
-}
-
-/* Contact mobile : réduire le scroll et rendre les options plus compactes */
-@media (max-width: 760px){
-  .contact-form-hero {
-    padding-top: 28px !important;
-    padding-bottom: 42px !important;
-  }
-  .contact-form-intro {
-    margin-bottom: 22px !important;
-  }
-  .contact-form-intro h1 {
-    font-size: clamp(30px, 8vw, 40px) !important;
-    line-height: 1.08 !important;
-    margin-bottom: 12px !important;
-  }
-  .contact-form-intro > p {
-    font-size: 14px !important;
-    line-height: 1.55 !important;
-    margin-bottom: 10px !important;
-  }
-  .contact-reassurance {
-    margin-top: 10px !important;
-    font-size: 12px !important;
-  }
-  .project-form-heading {
-    margin-bottom: 12px !important;
-    padding-bottom: 0 !important;
-  }
-  .project-form-heading > p {
-    margin-top: 5px !important;
-    font-size: 12px !important;
-  }
-  .project-form .wizard-heading {
-    margin: 12px 0 18px !important;
-    padding: 15px 16px !important;
-  }
-  .wizard-content {
-    min-height: 0 !important;
-  }
-  .wizard-fields {
-    gap: 12px !important;
-  }
-  .wizard-fields input:not([type="checkbox"]),
-  .wizard-fields textarea {
-    padding: 12px 13px !important;
-  }
-  .wizard-choice-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 8px !important;
-  }
-  .wizard-choice {
-    min-height: 44px !important;
-    padding: 10px 11px !important;
-    font-size: 12px !important;
-  }
-  .wizard-choice-grid-single {
-    grid-template-columns: 1fr !important;
-  }
-  .wizard-option-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 7px !important;
-  }
-  .wizard-option {
-    width: 100% !important;
-    min-height: 38px !important;
-    justify-content: flex-start !important;
-    padding: 8px 10px !important;
-    border-radius: 12px !important;
-    font-size: 11px !important;
-    text-align: left !important;
-  }
-  .wizard-help {
-    margin: 0 0 10px !important;
-    font-size: 12px !important;
-    line-height: 1.45 !important;
-  }
-  .wizard-footer {
-    margin-top: 18px !important;
-    padding-top: 14px !important;
-  }
-}
-
-/* Contact mobile : réduire la hauteur du bloc de titre d’étape */
-@media (max-width: 760px){
-  .project-form .wizard-heading {
-    margin: 8px 0 12px !important;
-    padding: 11px 14px !important;
-    border-radius: 15px !important;
-  }
-  .wizard-step-label {
-    margin-bottom: 4px !important;
-    font-size: 9px !important;
-    letter-spacing: .12em !important;
-  }
-  .project-form .wizard-heading h3 {
-    margin: 0 0 3px !important;
-    font-size: 22px !important;
-    line-height: 1.2 !important;
-  }
-  .project-form .wizard-heading p {
-    font-size: 12px !important;
-    line-height: 1.4 !important;
-  }
-}
-
-/* Contact page: compact mobile introduction and shorter wizard flow */
-@media (max-width: 760px){
-  .contact-form-hero { padding-top: 18px !important; padding-bottom: 28px !important; }
-  .contact-form-intro { margin-bottom: 16px !important; }
-  .contact-form-intro .section-eyebrow { margin-bottom: 6px !important; }
-  .contact-form-intro h1 { font-size: 29px !important; line-height: 1.08 !important; margin-bottom: 8px !important; }
-  .contact-form-intro > p { font-size: 12px !important; line-height: 1.45 !important; margin-bottom: 6px !important; max-width: 34em; }
-  .contact-reassurance { display: none !important; }
-  .project-form-heading { margin-bottom: 8px !important; }
-  .project-form-heading p { margin-bottom: 0 !important; }
-  .project-form .wizard-heading { margin: 7px 0 12px !important; padding: 10px 13px !important; }
-  .project-form .wizard-heading p { display: none !important; }
-  .wizard-content { min-height: 0 !important; }
-  .wizard-fields { gap: 10px !important; }
-  .wizard-fields > label { gap: 5px !important; }
-  .wizard-fields input:not([type="checkbox"]), .wizard-fields textarea { padding: 10px 12px !important; min-height: 42px; }
-  .wizard-choice-grid { gap: 7px !important; }
-  .wizard-choice { min-height: 40px !important; padding: 8px 10px !important; }
-  .wizard-option-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 6px !important; }
-  .wizard-option { min-height: 34px !important; padding: 6px 8px !important; font-size: 10px !important; }
-  .wizard-footer { margin-top: 14px !important; padding-top: 11px !important; }
-  .wizard-actions { margin-top: 13px !important; }
-}
-
-/* Contact submission success state */
-.project-success-card { position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; min-height:360px; padding:clamp(28px,5vw,54px) !important; border:1px solid rgba(181,138,75,.28) !important; border-radius:28px !important; background:linear-gradient(145deg,#fffdfb 0%,#f8e9e5 100%) !important; box-shadow:0 18px 48px rgba(79,52,43,.10),inset 0 1px 0 rgba(255,255,255,.95) !important; text-align:left; }
-.project-success-card .success-icon { display:grid; place-items:center; width:56px; height:56px; margin-bottom:24px; border:1px solid rgba(181,138,75,.45); border-radius:50%; background:#fffaf4; color:#9b7844; font-size:28px; }
-.project-success-card .section-eyebrow { margin-bottom:12px; }
-.project-success-card h2 { max-width:12em; margin:0 0 14px; color:var(--dark,#674a45); font-family:var(--serif,Georgia,serif); font-size:clamp(30px,4vw,44px); font-weight:500; line-height:1.15; }
-.project-success-card p { max-width:34em; margin:0; color:var(--muted,#806d65); font-size:15px; line-height:1.75; }
-.project-success-card .success-decoration { align-self:flex-end; margin-top:22px; color:#b58a4b; font-size:28px; }
-.project-success-card .success-new-request { margin-top:24px; border:1px solid #b58a4b; border-radius:999px; padding:12px 18px; background:#674a45; color:#fffdfb; font:inherit; font-size:12px; font-weight:700; cursor:pointer; }
-@media (max-width:760px){ .project-success-card { min-height:280px; padding:28px 22px !important; border-radius:22px !important; } .project-success-card .success-icon { width:48px; height:48px; margin-bottom:20px; } .project-success-card h2 { font-size:30px; } .project-success-card p { font-size:14px; line-height:1.6; } }
-
-/* Contact wizard: bouton Continuer plus sobre et élégant */
-.project-form .wizard-actions .wizard-next {
-  min-width: 142px;
-  justify-content: center;
-  border: 1px solid #b58a4b !important;
-  border-radius: 999px !important;
-  padding: 13px 24px !important;
-  background: #fffaf5 !important;
-  color: #674a45 !important;
-  box-shadow: 0 4px 12px rgba(79,52,43,.06) !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  letter-spacing: .02em;
-  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
-}
-.project-form .wizard-actions .wizard-next:hover {
-  background: #674a45 !important;
-  color: #fffdfb !important;
-  box-shadow: 0 7px 18px rgba(79,52,43,.13) !important;
-  transform: translateY(-1px);
-}
-@media (max-width: 600px){
-  .project-form .wizard-actions .wizard-next {
-    min-width: 126px;
-    padding: 12px 20px !important;
-  }
-}
-
-/* Desktop : rapprocher et alléger le bloc de contact de la page d’accueil */
-@media (min-width: 761px){
-  .contact-section {
-    padding-top: 34px !important;
-    padding-bottom: 58px !important;
-  }
-  .contact-panel {
-    min-height: 0 !important;
-  }
-  .contact-copy {
-    padding: 44px 54px !important;
-  }
-  .contact-copy h2 {
-    font-size: clamp(38px, 3.6vw, 48px) !important;
-    line-height: 1.08 !important;
-    margin-bottom: 14px !important;
-  }
-  .contact-copy > p {
-    margin-bottom: 20px !important;
-  }
-}
-
-/* Desktop : réduire encore le bloc final et supprimer le grand vide avant celui-ci */
-@media (min-width: 761px){
-  .story-section {
-    padding-bottom: 28px !important;
-  }
-  .contact-section {
-    padding-top: 12px !important;
-    padding-bottom: 34px !important;
-  }
-  .contact-panel {
-    border-radius: 24px !important;
-  }
-  .contact-copy {
-    padding: 30px 42px !important;
-  }
-  .contact-copy h2 {
-    font-size: clamp(34px, 3vw, 40px) !important;
-    line-height: 1.06 !important;
-    margin-bottom: 12px !important;
-  }
-  .contact-copy > p {
-    font-size: 12px !important;
-    line-height: 1.6 !important;
-    margin-bottom: 16px !important;
-  }
-  .contact-copy .button {
-    padding: 12px 20px !important;
-    font-size: 12px !important;
-  }
-}
-
-/* Accueil desktop : créer une séparation nette entre les blocs de la section détails */
-@media (min-width: 761px){
-  #details .details-simple-list {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 14px !important;
-    row-gap: 14px !important;
-    margin-top: 28px !important;
-  }
-  #details .details-simple-list > li,
-  #details .details-simple-list > li + li,
-  #details .details-simple-list > li:last-child {
-    margin: 0 !important;
-  }
-  #details .details-simple-list > li {
-    border-radius: 18px !important;
-    overflow: hidden;
-  }
-  #details .details-editorial-head {
-    margin-bottom: 28px !important;
-  }
-}
-
-/* Accueil desktop : les cartes de détail occupent toute la largeur de la section */
-@media (min-width: 761px){
-  #details .details-simple-list {
-    width: 100% !important;
-    max-width: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  #details .details-simple-list > li {
-    width: 100% !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-  }
-}
-
-/* Accueil : léger zoom élégant au survol des cartes de détail */
-@media (hover: hover) and (pointer: fine){
-  #details .details-simple-list > li {
-    transform: translateZ(0);
-    transform-origin: center;
-    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
-    will-change: transform;
-  }
-  #details .details-simple-list > li:hover {
-    transform: scale(1.015);
-    box-shadow: 0 12px 28px rgba(79,52,43,.10) !important;
-    border-color: rgba(181,138,75,.4) !important;
-    z-index: 2;
-  }
-}
-@media (prefers-reduced-motion: reduce){
-  #details .details-simple-list > li {
-    transition: none !important;
-  }
-  #details .details-simple-list > li:hover {
-    transform: none !important;
-  }
-}
-
-/* Accueil desktop : harmoniser les cartes d’occasions avec la présentation mobile */
-@media (min-width: 761px){
-  .occasions-section .occasion-word-garden-home {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    row-gap: 16px !important;
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 28px 0 12px !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item {
-    display: grid !important;
-    grid-template-columns: 100px minmax(0, 1fr) !important;
-    grid-template-rows: auto auto auto auto !important;
-    align-items: center !important;
-    column-gap: 22px !important;
-    width: 100% !important;
-    min-height: 150px !important;
-    margin: 0 !important;
-    padding: 24px 30px !important;
-    border: 1px solid rgba(181,138,75,.22) !important;
-    border-radius: 24px !important;
-    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
-    box-shadow: 0 10px 26px rgba(79,52,43,.06), inset 0 1px 0 rgba(255,255,255,.95) !important;
-    overflow: hidden;
-    transform: translateZ(0);
-    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    grid-column: 1 !important;
-    grid-row: 1 / span 4 !important;
-    align-self: center !important;
-    justify-self: start !important;
-    margin: 0 !important;
-    color: rgba(181,138,75,.72) !important;
-    font-size: 58px !important;
-    line-height: 1 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    margin: 0 0 5px !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-    margin: 0 0 7px !important;
-    font-size: clamp(25px, 2.3vw, 34px) !important;
-    line-height: 1.15 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
-    grid-column: 2 !important;
-    grid-row: 3 !important;
-    max-width: none !important;
-    margin: 0 0 10px !important;
-    line-height: 1.55 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
-    grid-column: 2 !important;
-    grid-row: 4 !important;
-    margin: 0 !important;
-  }
-  .occasions-section .occasion-word-garden-home > .occasion-word-item:hover {
-    transform: scale(1.01) !important;
-    border-color: rgba(181,138,75,.42) !important;
-    box-shadow: 0 14px 30px rgba(79,52,43,.10), inset 0 1px 0 rgba(255,255,255,.95) !important;
   }
 }
