@@ -44,7 +44,7 @@ const steps = [
 </script>
 
 <template>
-  <div class="site-shell home-page">
+  <div class="site-shell">
     <header class="site-header">
       <a class="brand" href="/" aria-label="C by C, accueil" @click="closeMenu">
         <img class="brand-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
@@ -172,11 +172,6 @@ const steps = [
       </section>
 
       <section id="histoire" class="story-section section-pad">
-        <div class="story-visual" aria-label="Détail d’une décoration de célébration élégante">
-          <div class="story-photo"></div>
-          <div class="story-photo-note"><span>LES PETITS DÉTAILS</span><strong>font les grands souvenirs.</strong></div>
-          <span class="story-photo-seal" aria-hidden="true">C</span>
-        </div>
         <div class="story-copy">
           <div class="section-eyebrow">LA PETITE HISTOIRE</div>
           <h2>Comment est né<br><span>C by C ?</span></h2>
@@ -189,13 +184,7 @@ const steps = [
       <section id="contact" class="contact-section section-pad">
         <div class="contact-panel">
           <div class="contact-copy"><div class="section-eyebrow">À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="/contact">Écrire à Chirel <span>↗</span></a></div>
-          <div class="home-contact-art" aria-label="Création C by C, imaginée avec cœur">
-            <span class="home-contact-art-kicker">CÉLÉBRATIONS BY CHIREL</span>
-            <span class="home-contact-art-monogram">C<span>by</span>C</span>
-            <span class="home-contact-art-rule"></span>
-            <span class="home-contact-art-script">Chaque moment<br>mérite son écrin.</span>
-            <span class="home-contact-art-foot">IMAGINÉ AVEC CŒUR · CRÉÉ POUR VOUS</span>
-          </div>
+          
         </div>
       </section>
     </main>
