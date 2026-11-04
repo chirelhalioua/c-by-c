@@ -1,6 +1,302 @@
+.option-item[open] .option-toggle {
+  transform: rotate(45deg);
+  background: var(--dark);
+  color: #fff;
+  border-color: var(--dark);
+}
+.option-item>p {
+  margin: 0;
+  padding: 0 52px 18px 60px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+  max-width: 760px;
+}
+@media(max-width:760px) {
+  .options-grid { max-width: none; }
+  .option-item summary { grid-template-columns: 32px minmax(0,1fr) 26px; gap: 10px; padding: 13px 2px; }
+  .option-item .option-symbol { width: 30px; height: 30px; font-size: 14px; }
+  .option-title { font-size: 13px; }
+  .option-toggle { width: 25px; height: 25px; font-size: 19px; }
+  .option-item>p { padding: 0 34px 15px 42px; font-size: 11px; line-height: 1.65; }
+}
+
+
+/* Formules : liste éditoriale compacte, détails au clic sur + */
+.offers-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: none;
+  padding: 20px clamp(20px, 8vw, 120px) 58px;
+  gap: 0;
+  background: var(--cream);
+}
+.offer-item {
+  width: 100%;
+  border-top: 1px solid #d8c6ab;
+}
+.offer-item:last-child { border-bottom: 1px solid #d8c6ab; }
+.offer-item>summary {
+  display: grid;
+  grid-template-columns: 104px minmax(0,1fr) 38px;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 6px;
+  cursor: pointer;
+  list-style: none;
+}
+.offer-item>summary::-webkit-details-marker { display: none; }
+.offer-thumb {
+  display: block;
+  width: 104px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.offer-summary-copy { display: flex; flex-direction: column; gap: 5px; }
+.offer-summary-copy .offer-label { font-size: 9px; }
+.offer-summary-title {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(20px, 2.5vw, 29px);
+  font-weight: 650;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+}
+.offer-toggle {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #c9ad7d;
+  border-radius: 50%;
+  color: var(--gold);
+  font-size: 25px;
+  line-height: 1;
+  transition: transform .2s, background .2s, color .2s;
+}
+.offer-item[open]>summary { padding-bottom: 12px; }
+.offer-item[open] .offer-toggle {
+  transform: rotate(45deg);
+  background: var(--dark);
+  border-color: var(--dark);
+  color: #fff;
+}
+.offer-expanded {
+  display: grid;
+  grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: clamp(22px, 4vw, 50px);
+  padding: 0 6px 28px 132px;
+}
+.offer-expanded-image {
+  width: 100%;
+  height: 220px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.offer-copy { padding: 0; min-width: 0; }
+.offer-copy>p { margin: 0 0 10px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.offer-copy ul { margin: 10px 0 16px; }
+.offer-copy li { padding: 6px 0 6px 20px; font-size: 12px; }
+@media(max-width:760px) {
+  .offers-list { padding: 12px 20px 42px; }
+  .offer-item>summary { grid-template-columns: 74px minmax(0,1fr) 28px; gap: 12px; padding: 13px 0; }
+  .offer-thumb { width: 74px; height: 60px; border-radius: 7px; }
+  .offer-summary-copy { gap: 3px; }
+  .offer-summary-copy .offer-label { font-size: 7px; letter-spacing: .12em; }
+  .offer-summary-title { font-size: 16px; }
+  .offer-toggle { width: 27px; height: 27px; font-size: 21px; }
+  .offer-expanded { grid-template-columns: 1fr; gap: 15px; padding: 0 0 22px; }
+  .offer-expanded-image { height: 165px; }
+  .offer-copy>p { font-size: 12px; }
+  .offer-copy li { font-size: 11px; }
+  .offer-copy .button { width: 100%; font-size: 10px; }
+}
+
+
+/* Corriger le cadrage vertical des images dans les formules ouvertes */
+.offer-expanded-image {
+  object-position: center 35%;
+}
+@media(max-width:760px) {
+  .offer-expanded-image {
+    object-position: center 25%;
+  }
+}
+
+
+/* Forcer le texte blanc des boutons de devis, y compris après clic/tap */
+.offers-page .button,
+.offers-page .button:link,
+.offers-page .button:visited,
+.offers-page .button:hover,
+.offers-page .button:active,
+.offers-page .button:focus,
+.offers-page .button:focus-visible,
+.offers-page .button-gold,
+.offers-page .button-gold:link,
+.offers-page .button-gold:visited,
+.offers-page .button-gold:hover,
+.offers-page .button-gold:active,
+.offers-page .button-gold:focus,
+.offers-page .button-gold:focus-visible {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+
+/* Boutons devis : texte blanc au toucher sur mobile (règles à haute priorité) */
+.offers-page a.button.button-gold,
+.offers-page a.button.button-gold span,
+.offers-page a.button.button-gold:visited,
+.offers-page a.button.button-gold:hover,
+.offers-page a.button.button-gold:active,
+.offers-page a.button.button-gold:focus,
+.offers-page a.button.button-gold:focus-visible,
+.offers-page a.button.button-gold:active span,
+.offers-page a.button.button-gold:focus span,
+.offers-page a.button.button-gold:focus-visible span {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.offers-page a.button.button-gold:active,
+.offers-page a.button.button-gold:focus,
+.offers-page a.button.button-gold:focus-visible {
+  background: #34251d !important;
+  border-color: #34251d !important;
+}
+
+
+/* Animations discrètes et légères — C by C */
+@keyframes cbc-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cbc-soft-float {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-8px) rotate(-3deg); }
+}
+@keyframes cbc-gold-glint {
+  0%, 100% { box-shadow: 0 0 0 rgba(217,184,120,0); }
+  50% { box-shadow: 0 0 22px rgba(217,184,120,.16); }
+}
+/* Entrée douce au chargement */
+.hero-content { animation: cbc-fade-up .7s ease-out both; }
+.hero-visual { animation: cbc-fade-up .85s .12s ease-out both; }
+.invite-stack { animation: cbc-soft-float 6s ease-in-out infinite; }
+.hero .button, .nav-cta, .offers-page .button {
+  transition: transform .22s ease, background-color .22s ease, color .18s ease, box-shadow .22s ease;
+}
+.hero .button:hover, .offers-page .button:hover, .nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(48,35,25,.12);
+}
+.offer-item, .option-item { transition: border-color .2s ease; }
+.offer-item[open], .option-item[open] { border-color: var(--gold); }
+.offer-item>summary, .option-item>summary {
+  transition: background-color .2s ease;
+}
+.offer-item>summary:hover, .option-item>summary:hover {
+  background-color: rgba(181,138,75,.07);
+}
+.offer-thumb, .offer-expanded-image {
+  transition: transform .45s ease;
+}
+.offer-item>summary:hover .offer-thumb { transform: scale(1.035); }
+.option-toggle, .offer-toggle { transition: transform .25s ease, background-color .2s ease, color .2s ease; }
+.offer-label, .section-eyebrow { transition: color .25s ease; }
+.offer-item[open] .offer-summary-title { color: var(--bronze); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+
+/* Animations plus visibles, tout en gardant un rendu élégant */
+@keyframes cbc-hero-reveal {
+  0% { opacity: 0; transform: translateY(32px) scale(.985); filter: blur(4px); }
+  70% { filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes cbc-card-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cbc-invite-float {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-13px) rotate(-1deg); }
+}
+@keyframes cbc-orbit-spin {
+  from { transform: rotate(-22deg); }
+  to { transform: rotate(338deg); }
+}
+@keyframes cbc-gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217,184,120,0); }
+  50% { box-shadow: 0 0 0 7px rgba(217,184,120,.13); }
+}
+.hero-content { animation: cbc-hero-reveal .95s cubic-bezier(.2,.75,.25,1) both; }
+.hero-visual { animation: cbc-hero-reveal 1.05s .15s cubic-bezier(.2,.75,.25,1) both; }
+.invite-stack { animation: cbc-invite-float 5s ease-in-out infinite; }
+.orbit-two { animation: cbc-orbit-spin 36s linear infinite; }
+.kicker-dot { animation: cbc-gold-pulse 2.8s ease-in-out infinite; }
+.hero-actions .button, .hero-actions a {
+  transition: transform .28s cubic-bezier(.2,.75,.25,1), box-shadow .28s ease, background-color .2s ease;
+}
+.hero-actions .button:hover, .hero-actions a:hover {
+  transform: translateY(-4px) scale(1.025);
+  box-shadow: 0 12px 28px rgba(0,0,0,.2);
+}
+.offer-item>summary:hover .offer-thumb {
+  transform: scale(1.07) rotate(-1deg);
+}
+.offer-item>summary:hover .offer-toggle,
+.option-item>summary:hover .option-toggle {
+  background: var(--gold);
+  color: #fff;
+  transform: rotate(90deg);
+}
+.offer-item[open] .offer-toggle,
+.option-item[open] .option-toggle { transform: rotate(45deg); }
+.offer-expanded-image { animation: cbc-card-enter .45s ease-out both; }
+.offer-item[open] .offer-expanded .offer-copy { animation: cbc-card-enter .55s .06s ease-out both; }
+.options-heading { animation: cbc-card-enter .7s ease-out both; }
+.options-footnote + .button:hover { animation: cbc-gold-pulse 1.2s ease-in-out; }
+@media (max-width:760px) {
+  .invite-stack { animation-duration: 6s; }
+  .orbit-two { animation-duration: 48s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-content, .hero-visual, .invite-stack, .orbit-two, .kicker-dot,
+  .offer-expanded-image, .offer-item[open] .offer-expanded .offer-copy {
+    animation: none !important;
+  }
+}
+
+
+/* Mobile : placer la signature sous l'invitation, sans chevauchement */
+@media (max-width:760px) {
+  .hero-visual { padding-bottom: 42px; }
+  .visual-caption {
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+  }
+}
+
 
 /* Mobile hero: garder l'étiquette à l'écart du texte « AVEC TOUT NOTRE AMOUR » */
-@media (max-width:760px){
+@media (max-width:760px) {
   .invite-front { overflow: hidden; }
   .invite-tag {
     right: -8px;
@@ -11,6 +307,7 @@
   .invite-divider-bottom { margin-bottom: 9px; }
 }
 
+
 /* Identité plus festive : champagne, rose poudré et ivoire */
 .hero {
   background: radial-gradient(ellipse at 78% 30%, #815e57 0%, #674a45 43%, #563d39 100%);
@@ -19,14 +316,15 @@
   background: radial-gradient(circle, #b58b79 0%, #946e61 43%, #674a45 76%);
 }
 .invite-back { background: linear-gradient(135deg,#e8c8a0,#d8b77c); }
-
-@media(max-width:760px){
+.statement-band { background: linear-gradient(120deg,#f0d9d2,#e8c8a0 55%,#f6e8df); }
+@media(max-width:760px) {
   .hero { background: radial-gradient(ellipse at 50% 30%, #815e57 0%, #674a45 58%, #563d39 100%); }
 }
 
+
 /* Harmoniser les fonds entre les sections : palette ivoire, blush et champagne */
-body, .site-shell 
-.site-header, .site-footer 
+body, .site-shell { background: #fff8f2; }
+.site-header, .site-footer { background: #fffdfb; }
 .occasions-section, .process-section, .about-section, .offers-note {
   background: #fff8f2;
 }
@@ -34,19 +332,26 @@ body, .site-shell
   background: #f8e9e5;
 }
 .offers-hero { background: #fff8f2; }
-.offers-list 
+.offers-list { background: #fffdfb; }
 .hero {
   background: linear-gradient(135deg, #805d59 0%, #704e4a 48%, #634744 100%);
 }
 .hero-visual:before {
   background: radial-gradient(circle, #a98075 0%, #8a645b 46%, #704e4a 78%);
 }
-
-.contact-panel { background: #fffdfb; }
-@media(max-width:760px){
-  .hero { background: linear-gradient(160deg, #805d59 0%, #704e4a 56%, #634744 100%); }
-
+.statement-band {
+  background: linear-gradient(110deg, #f2ddd7 0%, #f4e2cc 50%, #f9eee7 100%);
 }
+.occasion-card, .step-card {
+  background: #fffdfb;
+  border-color: #ead8d2;
+}
+.contact-panel { background: #fffdfb; }
+@media(max-width:760px) {
+  .hero { background: linear-gradient(160deg, #805d59 0%, #704e4a 56%, #634744 100%); }
+  .statement-band { background: linear-gradient(145deg, #f2ddd7, #f4e2cc); }
+}
+
 
 /* Rééquilibrage doux des fonds : limiter les contrastes entre sections */
 :root {
@@ -59,11 +364,11 @@ body, .site-shell
   --dark-2: #785750;
   --line: #eaded8;
 }
-body, .site-shell 
-.site-header, .site-footer, .offers-list 
+body, .site-shell { background: #fbf7f2 !important; }
+.site-header, .site-footer, .offers-list { background: #fffdfb !important; }
 .occasions-section, .process-section, .about-section, .offers-note,
-.offers-hero 
-.story-section, .options-section, .contact-section 
+.offers-hero { background: #fbf7f2 !important; }
+.story-section, .options-section, .contact-section { background: #f5e9e5 !important; }
 .occasion-card, .step-card, .contact-panel { background: #fffdfb !important; border-color: #eaded8 !important; }
 .hero {
   background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important;
@@ -71,11 +376,14 @@ body, .site-shell
 .hero-visual:before {
   background: radial-gradient(circle, #b99588 0%, #9a756b 52%, #785750 100%) !important;
 }
-
-@media (max-width:760px){
-  .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
-
+.statement-band {
+  background: #f2e0d8 !important;
 }
+@media (max-width:760px) {
+  .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
+  .statement-band { background: #f2e0d8 !important; }
+}
+
 
 /* Pied de page intégré à la palette : ivoire chaud, sans blanc froid */
 .site-footer {
@@ -83,7 +391,9 @@ body, .site-shell
   border-top: 1px solid #ead8d2 !important;
 }
 .site-footer .footer-inner,
-.site-footer .footer-bottom 
+.site-footer .footer-bottom {
+  background: transparent !important;
+}
 .site-footer,
 .site-footer p,
 .site-footer a,
@@ -95,36 +405,40 @@ body, .site-shell
 .site-footer .footer-logo {
   background: transparent !important;
 }
-@media (max-width:760px){
+@media (max-width:760px) {
   .site-footer { background: #f5e9e5 !important; }
 }
 
-/* Alternance explicite des fonds : aucune section voisine de même teinte */
-.site-header 
-.hero { background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important; }
-.occasions-section 
-.story-section 
-.process-section 
 
-.contact-section 
+/* Alternance explicite des fonds : aucune section voisine de même teinte */
+.site-header { background: #fffdfb !important; }
+.hero { background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important; }
+.occasions-section { background: #fbf7f2 !important; }
+.story-section { background: #f5e9e5 !important; }
+.process-section { background: #f2e4d3 !important; }
+.about-section { background: #fbf7f2 !important; }
+.statement-band { background: #e8cfc2 !important; }
+.contact-section { background: #f5e9e5 !important; }
 .site-footer { background: #e7d6ca !important; border-top: 1px solid #d8c1b3 !important; }
-.offers-hero 
-.offers-list 
-.options-section 
+.offers-hero { background: #fbf7f2 !important; }
+.offers-list { background: #f5e9e5 !important; }
+.options-section { background: #f2e4d3 !important; }
 .offers-note { background: #fbf7f2 !important; }
 .site-footer .footer-inner,
 .site-footer .footer-bottom { background: transparent !important; }
 .site-footer, .site-footer p, .site-footer a,
 .site-footer .footer-tagline, .site-footer .footer-bottom { color: #6d5148 !important; }
-@media (max-width:760px){
+@media (max-width:760px) {
   .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
   .occasions-section { background: #fbf7f2 !important; }
   .story-section { background: #f5e9e5 !important; }
   .process-section { background: #f2e4d3 !important; }
-
+  .about-section { background: #fbf7f2 !important; }
+  .statement-band { background: #e8cfc2 !important; }
   .contact-section { background: #f5e9e5 !important; }
   .site-footer { background: #e7d6ca !important; }
 }
+
 
 /* Lisibilité de la section « Derrière C by C » sur son fond clair */
 .story-section .story-copy h2 {
@@ -140,21 +454,62 @@ body, .site-shell
   color: #756455 !important;
 }
 
+
 /* Correctif ciblé : forcer le texte de « Derrière C by C » en brun lisible */
 .story-section .story-copy h2,
 .story-section .story-copy h2 span,
 .story-section .story-copy .story-lead,
 .story-section .story-copy p,
 .story-section .story-copy p:not(.story-lead),
-.story-section .story-copy strong 
-.story-section .story-copy h2 span 
+.story-section .story-copy strong {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+  opacity: 1 !important;
+}
+.story-section .story-copy h2 span {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
 .story-section .story-copy .story-lead {
   color: #765148 !important;
   -webkit-text-fill-color: #765148 !important;
 }
-.story-section .story-copy p:not(.story-lead) 
+.story-section .story-copy p:not(.story-lead) {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+}
+
 
 /* Correctif réel : le bloc « Derrière C by C » est .about-section */
+.about-section .about-copy h2,
+.about-section .about-copy h2 span,
+.about-section .about-copy .about-lead,
+.about-section .about-copy p,
+.about-section .about-copy p:not(.about-lead),
+.about-section .about-copy strong {
+  opacity: 1 !important;
+}
+.about-section .about-copy h2 {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
+.about-section .about-copy h2 span {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
+.about-section .about-copy .about-lead {
+  color: #765148 !important;
+  -webkit-text-fill-color: #765148 !important;
+}
+.about-section .about-copy p:not(.about-lead) {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+}
+.about-section .about-copy strong {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
+
 
 /* Lisibilité de la section « Un projet particulier ? » dans les formules */
 .offers-note h2,
@@ -175,7 +530,11 @@ body, .site-shell
   color: #59483e !important;
   -webkit-text-fill-color: #59483e !important;
 }
-.offers-note h2 span 
+.offers-note h2 span {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
+
 
 /* Lisibilité de la section « Un projet particulier ? » sur la page Formules */
 .offers-page .offers-note {
@@ -196,37 +555,57 @@ body, .site-shell
   -webkit-text-fill-color: #a97935 !important;
 }
 
+
 /* Distinguer les sections consécutives de la page d'accueil */
 .details-section { background: #f2e4d3 !important; }
 .story-section { background: #f5e9e5 !important; }
 .process-section { background: #fffdfb !important; }
-
-@media (max-width:760px){
+.about-section { background: #fbf7f2 !important; }
+@media (max-width:760px) {
   .details-section { background: #f2e4d3 !important; }
   .story-section { background: #f5e9e5 !important; }
   .process-section { background: #fffdfb !important; }
-
+  .about-section { background: #fbf7f2 !important; }
 }
+
 
 /* Cartes du concept : rose poudré très léger pour les distinguer du fond ivoire */
 .process-section .step-card {
   background: #f8e9e5 !important;
   border-color: #ead8d2 !important;
 }
-@media (max-width:760px){
+@media (max-width:760px) {
   .process-section .step-card { background: #f8e9e5 !important; }
 }
 
+
 /* Harmoniser les grands titres des pages Formules et Contact avec l'accueil */
 .offers-page .offers-hero h1,
-.contact-page .contact-form-intro h1 
+.contact-page .contact-form-intro h1 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
 .offers-page .offers-hero h1 em,
-.contact-page .contact-form-intro h1 em 
+.contact-page .contact-form-intro h1 em {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+}
+
 
 /* Harmoniser aussi les sous-titres des pages Formules et Contact */
 .offers-page .options-heading h2,
 .offers-page .offers-note h2,
-.contact-page .contact-form-intro h1 
+.contact-page .contact-form-intro h1 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
 .offers-page .options-heading h2 em,
 .offers-page .offers-note h2 em,
 .contact-page .contact-form-intro h1 em {
@@ -236,10 +615,13 @@ body, .site-shell
   color: var(--gold) !important;
   -webkit-text-fill-color: var(--gold) !important;
 }
-.offers-page .options-heading h2 
+.offers-page .options-heading h2 {
+  font-size: clamp(38px, 4.7vw, 60px) !important;
+}
 .offers-page .offers-note h2 {
   font-size: clamp(38px, 4.7vw, 60px) !important;
 }
+
 
 /* Champs select et calendrier : finition assortie à l'identité C by C */
 .project-form select {
@@ -278,7 +660,7 @@ body, .site-shell
   border-color: #b58a4b !important;
   box-shadow: 0 0 0 3px rgba(181,138,75,.16) !important;
 }
-@media(max-width:760px){
+@media(max-width:760px) {
   .project-form select,
   .project-form input[type="date"] {
     min-height: 50px;
@@ -286,8 +668,10 @@ body, .site-shell
   }
 }
 
-/* Menus déroulants et calendrier personnalisés — C by C */
 
+/* Menus déroulants et calendrier personnalisés — C by C */
+.project-form-grid .custom-field { min-width: 0; }
+.custom-select-wrap, .custom-calendar-wrap { position: relative; width: 100%; }
 .project-form .custom-select-trigger {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   width: 100%; min-height: 49px; padding: 12px 15px;
@@ -301,16 +685,51 @@ body, .site-shell
   border-color: #b58a4b; background: #fffdfb;
   box-shadow: 0 0 0 3px rgba(181,138,75,.12);
 }
-
+.custom-chevron { color: #a97935; font-size: 19px; line-height: 1; }
+.calendar-trigger-icon { color: #a97935; font-size: 20px; }
+.custom-select-menu, .custom-calendar {
+  position: absolute; z-index: 50; top: calc(100% + 8px); left: 0; width: 100%;
+  padding: 7px; background: #fffdfb; border: 1px solid #ead8d2; border-radius: 12px;
+  box-shadow: 0 16px 38px rgba(56,41,30,.16);
+  animation: cbc-card-enter .16s ease-out both;
+}
+.custom-select-menu { max-height: 250px; overflow-y: auto; }
+.custom-select-option {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  width: 100%; padding: 11px 12px; border: 0; border-radius: 7px;
+  background: transparent; color: #59483e; text-align: left; font: inherit; font-size: 13px; cursor: pointer;
+}
+.custom-select-option:hover { background: #f8e9e5; }
 .custom-select-option.is-selected { background: #f2e4d3; color: #674a45; font-weight: 700; }
-
+.custom-select-option span { color: #a97935; font-weight: 700; }
+.custom-calendar { padding: 14px; }
+.calendar-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 13px; }
+.calendar-heading strong { color: #674a45; font-family: var(--display); font-size: 14px; text-transform: capitalize; }
+.calendar-heading button {
+  display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #ead8d2;
+  border-radius: 50%; background: #fbf7f2; color: #89645b; font-size: 22px; cursor: pointer;
+}
+.calendar-heading button:hover { background: #f2e4d3; border-color: #b58a4b; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.calendar-weekdays { margin-bottom: 6px; }
+.calendar-weekdays span { text-align: center; padding: 5px 0; color: #9b8778; font-size: 10px; font-weight: 700; }
+.calendar-day, .calendar-empty { min-width: 0; aspect-ratio: 1; }
+.calendar-day {
+  border: 1px solid transparent; border-radius: 8px; background: transparent;
+  color: #59483e; font: inherit; font-size: 12px; cursor: pointer;
+}
+.calendar-day:hover { background: #f8e9e5; border-color: #ead8d2; }
 .calendar-day.is-today { border-color: #b58a4b; color: #89612c; font-weight: 700; }
 .calendar-day.is-selected { background: #785750; border-color: #785750; color: #fffdfb; font-weight: 700; }
-
-@media(max-width:760px){
+.calendar-clear { width: 100%; margin-top: 12px; padding: 9px; border: 0; border-top: 1px solid #eee2dc; background: transparent; color: #89645b; font: inherit; font-size: 12px; cursor: pointer; }
+.calendar-clear:hover { color: #38291e; }
+@media(max-width:760px) {
   .project-form .custom-select-trigger { min-height: 50px; font-size: 16px; }
-
+  .custom-calendar { padding: 12px; }
+  .calendar-grid { gap: 3px; }
+  .calendar-day { font-size: 13px; }
 }
+
 
 /* Calendar icon and month navigation alignment refinement */
 .project-form .calendar-trigger-icon {
@@ -320,8 +739,48 @@ body, .site-shell
   height: 21px;
   color: #a97935;
 }
+.calendar-heading {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  margin-bottom: 13px;
+}
+.calendar-heading strong {
+  display: block;
+  text-align: center;
+  line-height: 1.35;
+  margin: 0;
+}
+.calendar-heading .calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 0;
+}
+.calendar-heading .calendar-nav svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 
 /* Fine-tune calendar month arrows: center precisely on the month label */
+.calendar-heading {
+  align-items: center !important;
+}
+.calendar-heading .calendar-nav {
+  align-self: center !important;
+  transform: translateY(-3px);
+}
+
 
 /* Contraste des boutons au survol et au clic */
 .button-gold,
@@ -338,8 +797,46 @@ body, .site-shell
   color: #fffdfb !important;
 }
 
-/* Bouton flottant de retour en haut */
 
+/* Bouton flottant de retour en haut */
+.back-to-top {
+  position: fixed;
+  right: clamp(16px, 3vw, 30px);
+  bottom: clamp(18px, 3vw, 30px);
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(232, 200, 160, .75);
+  border-radius: 50%;
+  background: #785750;
+  color: #fffdfb;
+  box-shadow: 0 8px 24px rgba(56, 41, 30, .2);
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.back-to-top svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: #b58a4b;
+  color: #fffdfb;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(56, 41, 30, .25);
+}
+.back-to-top:focus-visible {
+  outline: 2px solid #b58a4b;
+  outline-offset: 3px;
+}
 .back-to-top-enter-active,
 .back-to-top-leave-active {
   transition: opacity .2s ease, transform .2s ease;
@@ -349,6 +846,15 @@ body, .site-shell
   opacity: 0;
   transform: translateY(8px);
 }
+@media (max-width: 760px) {
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    right: 16px;
+    bottom: 18px;
+  }
+}
+
 
 /* Hero plus lumineux : garder le contraste sans l'ambiance trop sombre */
 .hero {
@@ -366,6 +872,7 @@ body, .site-shell
 .hero-kicker {
   color: #f7dfb9 !important;
 }
+
 
 /* Hero harmonisé : fond uni brun rosé avec une photo très discrète en transparence */
 .hero {
@@ -389,427 +896,5 @@ body, .site-shell
   background: radial-gradient(circle, rgba(217,182,154,.78) 0%, rgba(185,141,119,.5) 48%, rgba(146,107,98,.15) 74%) !important;
 }
 
+
 /* Photo d'ambiance plus légère dans le hero */
-.hero::before {
-  background:
-    linear-gradient(rgba(117, 82, 75, .93), rgba(117, 82, 75, .93)),
-    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
-  opacity: .24;
-}
-
-/* Photo du hero davantage visible : voile coloré moins opaque */
-.hero::before {
-  background:
-    linear-gradient(rgba(117, 82, 75, .58), rgba(117, 82, 75, .58)),
-    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
-  opacity: .72;
-}
-
-/* Ajustement subtil du voile photo dans le hero */
-.hero::before {
-  background:
-    linear-gradient(rgba(117, 82, 75, .53), rgba(117, 82, 75, .53)),
-    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
-  opacity: .76;
-}
-
-/* Bouton secondaire du hero : bordure plus visible sur le fond photo */
-.hero .button-quiet {
-  border: 1px solid rgba(255, 248, 242, .78) !important;
-  color: #fff8f2 !important;
-  background: rgba(255, 248, 242, .06) !important;
-  box-shadow: 0 0 0 1px rgba(56, 41, 30, .08);
-}
-.hero .button-quiet:hover,
-.hero .button-quiet:focus-visible {
-  border-color: #f7dfb9 !important;
-  background: rgba(255, 248, 242, .14) !important;
-  color: #fffdfb !important;
-}
-
-/* Section histoire harmonisée : laisser respirer après la grande photo précédente */
-.story-section {
-  display: block !important;
-  padding-top: clamp(64px, 8vw, 110px);
-  padding-bottom: clamp(64px, 8vw, 110px);
-  background: #f5e9e5 !important;
-}
-.story-section .story-copy {
-  width: min(100%, 850px);
-  margin: 0 auto;
-  text-align: center;
-}
-.story-section .section-eyebrow {
-  justify-content: center;
-  margin-bottom: 18px;
-}
-.story-section .story-copy h2 {
-  margin-bottom: 22px;
-}
-.story-section .story-lead,
-.story-section .story-copy > p:not(.story-lead) {
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.story-section .story-lead {
-  font-size: clamp(19px, 2.2vw, 23px);
-}
-.story-section .story-copy > p:not(.story-lead) {
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-/* Alignement à droite du texte de présentation sur la section histoire */
-.story-section .story-copy {
-  text-align: right !important;
-}
-.story-section .section-eyebrow {
-  justify-content: flex-end !important;
-}
-.story-section .story-lead,
-.story-section .story-copy > p:not(.story-lead) {
-  margin-left: auto !important;
-  margin-right: 0 !important;
-}
-
-/* Alignement à gauche du texte de présentation sur la section histoire */
-.story-section .story-copy {
-  text-align: left !important;
-}
-.story-section .section-eyebrow {
-  justify-content: flex-start !important;
-}
-.story-section .story-lead,
-.story-section .story-copy > p:not(.story-lead) {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
-
-/* Interaction tactile : léger zoom des cartes étapes au clic */
-.process-section .step-card {
-  cursor: pointer;
-  transform: scale(1);
-  transform-origin: center;
-  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-.process-section .step-card:active {
-  transform: scale(1.025);
-  border-color: #d7b7a8 !important;
-  box-shadow: 0 12px 28px rgba(103, 74, 69, .12);
-}
-@media (hover: hover) and (pointer: fine){
-  .process-section .step-card:hover {
-    transform: scale(1.018);
-    border-color: #d7b7a8 !important;
-    box-shadow: 0 12px 28px rgba(103, 74, 69, .1);
-  }
-}
-@media (prefers-reduced-motion: reduce){
-  .process-section .step-card { transition: none; }
-}
-
-/* Pied de page mobile : logo et signature alignés à gauche sur une même ligne */
-@media (max-width: 760px){
-  .site-footer .footer-main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-    text-align: left;
-  }
-  .site-footer .footer-brand {
-    width: 92px;
-    flex: 0 0 92px;
-  }
-  .site-footer .footer-brand img {
-    display: block;
-    width: 100%;
-    max-height: 56px;
-  }
-  .site-footer .footer-main > p {
-    flex: 1;
-    min-width: 0;
-    font-size: 14px;
-    line-height: 1.45;
-  }
-  .site-footer .footer-main > p span {
-    display: inline-block;
-    margin-top: 4px;
-    font-size: 10px;
-  }
-  .site-footer .footer-bottom {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 12px;
-  }
-  .site-footer .footer-bottom nav {
-    order: 2;
-    width: 100%;
-    justify-content: flex-start;
-    gap: 20px;
-  }
-  .site-footer .footer-bottom > span:last-child {
-    margin-left: auto;
-  }
-}
-
-/* Footer : logo correctement centré sur sa ligne et aligné au texte sur mobile */
-.site-footer .footer-main {
-  align-items: center;
-}
-.site-footer .footer-brand {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  align-self: center;
-  line-height: 0;
-}
-.site-footer .footer-brand img {
-  display: block;
-  object-position: left center;
-  margin: 0;
-}
-@media (max-width: 760px){
-  .site-footer .footer-main {
-    align-items: center !important;
-  }
-  .site-footer .footer-brand {
-    align-self: center !important;
-    justify-content: flex-start !important;
-    margin: 0 !important;
-  }
-  .site-footer .footer-brand img {
-    object-position: left center !important;
-  }
-}
-
-/* Desktop: garder les paragraphes de la section histoire alignés sur la même colonne */
-@media (min-width: 761px){
-  .story-section .story-copy {
-    width: 100%;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left !important;
-  }
-  .story-section .story-copy h2,
-  .story-section .story-copy .section-eyebrow,
-  .story-section .story-copy .story-lead,
-  .story-section .story-copy > p:not(.story-lead) {
-    text-align: left !important;
-  }
-  .story-section .story-copy .section-eyebrow {
-    justify-content: flex-start !important;
-  }
-  .story-section .story-copy .story-lead,
-  .story-section .story-copy > p:not(.story-lead) {
-    width: 100%;
-    max-width: 850px;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
-}
-
-/* Mobile footer: center the navigation links */
-@media (max-width: 760px){
-  .site-footer .footer-bottom nav {
-    justify-content: center !important;
-    text-align: center;
-  }
-}
-
-/* Voile chaud et fondu subtil sur les photos, sauf le hero */
-
-.occasion-card:hover .occasion-image img,
-.details-photo:hover img,
-.offer-card:hover .offer-image img,
-.offer-item:hover .offer-card-image img {
-  transform: scale(1.025);
-}
-
-/* Fondu réellement visible sur les images éditoriales (hors hero et logo) */
-
-.occasion-image img,
-.details-photo img,
-.offer-expanded-image {
-  filter: saturate(.82) contrast(.96) sepia(.06) !important;
-}
-.offer-expanded-image {
-  border-radius: 10px;
-}
-
-/* Fondu plus perceptible sur les cartes d'occasions : voile crème visible mais doux */
-
-.details-photo img,
-.story-visual img,
-.about-photo img,
-.offer-expanded-image {
-  filter: saturate(.80) brightness(1.03) sepia(.04) !important;
-}
-
-/* Accueil plus fluide : réduire les espaces verticaux sans perdre le rythme premium */
-@media (min-width: 761px){
-  .occasions-section,
-  .details-section,
-  .process-section,
-  .story-section,
-  .contact-section {
-    padding-top: clamp(58px, 6vw, 84px);
-    padding-bottom: clamp(58px, 6vw, 84px);
-  }
-  .story-section .story-copy {
-    max-width: 820px;
-  }
-}
-@media (max-width: 760px){
-  .occasions-section,
-  .details-section,
-  .process-section,
-  .story-section,
-  .contact-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .occasions-heading {
-    margin-bottom: 24px;
-  }
-  .occasion-grid {
-    gap: 18px;
-  }
-  .details-editorial-head {
-    margin-bottom: 26px;
-  }
-
-  .process-heading {
-    margin-bottom: 24px;
-  }
-
-  .process-section .step-card {
-    padding: 24px;
-  }
-  .story-section .story-copy h2 {
-    margin-bottom: 16px;
-  }
-  .story-section .story-lead {
-    margin-bottom: 16px;
-  }
-  .story-section .story-copy > p:not(.story-lead) {
-    margin-bottom: 14px;
-  }
-}
-
-/* Chevron net et régulier pour les listes déroulantes du formulaire */
-.project-form .custom-chevron {
-  display: inline-block;
-  flex: 0 0 10px;
-  width: 10px;
-  height: 10px;
-  margin: -5px 3px 0 0;
-  border-right: 2px solid #a97935;
-  border-bottom: 2px solid #a97935;
-  transform: rotate(45deg);
-  transition: transform .2s ease, margin .2s ease;
-  font-size: 0;
-  line-height: 0;
-}
-.project-form .custom-select-trigger[aria-expanded="true"] .custom-chevron {
-  margin-top: 5px;
-  transform: rotate(225deg);
-}
-
-/* Page Les occasions : présentation éditoriale cohérente avec C by C */
-.occasions-page-hero {
-  padding: clamp(72px, 10vw, 132px) clamp(24px, 8vw, 120px) clamp(52px, 7vw, 88px);
-  text-align: center;
-  background: #f5e9e5;
-}
-.occasions-page-hero .section-eyebrow,
-.occasion-page-cta .section-eyebrow {
-  display: block;
-  margin-bottom: 22px;
-  color: #a77d42;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .18em;
-}
-.occasions-page-hero h1,
-.occasion-page-cta h2 {
-  margin: 0 auto 22px;
-  color: #38291e;
-  font-family: var(--display);
-  font-size: clamp(36px, 5.6vw, 66px);
-  font-weight: 500;
-  letter-spacing: -.055em;
-  line-height: 1.12;
-}
-.occasions-page-hero h1 em,
-.occasion-page-cta h2 em {
-  color: #b58a4b;
-  font-family: var(--serif);
-  font-weight: 500;
-  letter-spacing: -.04em;
-}
-.occasions-page-hero p,
-.occasion-page-cta p {
-  max-width: 660px;
-  margin: 0 auto;
-  color: #7e7063;
-  font-size: clamp(15px, 1.5vw, 18px);
-  line-height: 1.85;
-}
-.occasion-collections {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(22px, 4vw, 48px);
-  background: #fbf7f2;
-}
-
-.occasion-collection-copy .section-eyebrow {
-  margin-bottom: 12px;
-  color: #a77d42;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .16em;
-}
-
-.occasion-page-cta {
-  padding: clamp(64px, 8vw, 104px) 24px;
-  text-align: center;
-  background: #f2e4d3;
-}
-.occasion-page-cta h2 {
-  font-size: clamp(34px, 4.5vw, 54px);
-}
-.occasion-page-cta p {
-  margin-bottom: 28px;
-}
-.occasion-page-cta .button {
-  display: inline-flex;
-  margin-top: 2px;
-}
-@media (max-width: 760px){
-  .occasions-page-hero {
-    padding: 62px 24px 44px;
-  }
-  .occasions-page-hero h1 {
-    font-size: clamp(34px, 9vw, 46px);
-    line-height: 1.13;
-  }
-  .occasions-page-hero p {
-    font-size: 15px;
-  }
-  .occasion-collections {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding-top: 28px;
-    padding-bottom: 48px;
-  }
-
-  .occasion-page-cta {
-    padding: 58px 24px 64px;
-  }
-}
