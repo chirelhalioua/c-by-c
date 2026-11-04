@@ -1,0 +1,815 @@
+@media (max-width: 390px){
+  #accueil.hero {
+    padding: 22px 18px 52px !important;
+  }
+  #accueil.hero h1 {
+    font-size: clamp(36px, 9.5vw, 44px) !important;
+  }
+}
+
+/* Mobile accueil : réafficher la carte d’invitation en version compacte */
+@media (max-width: 760px){
+  #accueil.hero .hero-visual {
+    display: grid !important;
+    position: relative !important;
+    min-height: 0 !important;
+    height: 215px !important;
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+  }
+  #accueil.hero .hero-visual:before {
+    width: 190px !important;
+    max-width: 72% !important;
+    background: radial-gradient(circle, #74563a 0%, #4a3525 48%, #302319 72%) !important;
+  }
+  #accueil.hero .visual-orbit {
+    width: 178px !important;
+    max-width: 68% !important;
+  }
+  #accueil.hero .orbit-two {
+    width: 205px !important;
+    max-width: 78% !important;
+  }
+  #accueil.hero .invite-stack {
+    width: 160px !important;
+    height: 215px !important;
+    transform: scale(.82) rotate(-4deg) !important;
+    transform-origin: center center !important;
+  }
+  #accueil.hero .invite-back {
+    inset: 8px -8px -8px 8px !important;
+  }
+  #accueil.hero .invite-tag {
+    right: -12px !important;
+    bottom: 18px !important;
+    transform: scale(.78) !important;
+    transform-origin: bottom right !important;
+  }
+  #accueil.hero .visual-caption {
+    bottom: 2px !important;
+    left: 0 !important;
+    right: 0 !important;
+    font-size: 7px !important;
+    text-align: center !important;
+  }
+  #accueil.hero .visual-spark {
+    font-size: 18px !important;
+  }
+  #accueil.hero .hero-bottom {
+    bottom: 10px !important;
+  }
+}
+@media (max-width: 390px){
+  #accueil.hero .hero-visual {
+    height: 190px !important;
+    margin-top: 8px !important;
+  }
+  #accueil.hero .invite-stack {
+    width: 145px !important;
+    height: 195px !important;
+    transform: scale(.78) rotate(-4deg) !important;
+  }
+  #accueil.hero .invite-tag {
+    right: -8px !important;
+    transform: scale(.68) !important;
+  }
+}
+
+/* Retour à la version mobile compacte du hero : carte masquée, composition épurée */
+@media (max-width: 760px){
+  #accueil.hero .hero-visual {
+    display: none !important;
+  }
+}
+
+/* Mobile : descendre légèrement le libellé « Célébrations by Chirel » */
+@media (max-width: 760px){
+  #accueil.hero .hero-kicker {
+    margin-top: 8px !important;
+  }
+}
+
+/* Mobile : rapprocher la section contact de la présentation « La petite histoire » */
+@media (max-width: 760px){
+  .story-section.section-pad {
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+  }
+  .contact-section.section-pad {
+    padding-top: 24px !important;
+    margin-top: 0 !important;
+  }
+  .story-section .story-copy > p:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Formulaire contact : options facultatives multiples */
+
+.project-field-label { color: var(--dark); font-size: 13px; font-weight: 600; }
+
+/* Liste déroulante à choix multiples pour les options du formulaire */
+
+.project-option-checkbox.is-checked { border-color: var(--bronze, #a77d42); background: var(--bronze, #a77d42); }
+
+/* Expérience signature C by C : une invitation qui se dévoile au clic */
+.signature-moment {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 100px);
+  overflow: hidden;
+  padding: 92px clamp(24px, 8vw, 120px);
+  background: #f4e9e3;
+  color: #35251f;
+}
+.signature-copy { position: relative; z-index: 2; max-width: 500px; }
+.signature-copy .section-eyebrow { display: inline-block; margin-bottom: 22px; color: #a77d42; }
+.signature-copy h2 { margin: 0; font-family: var(--display); font-size: clamp(34px, 4.2vw, 56px); font-weight: 600; letter-spacing: -.06em; line-height: 1.04; }
+.signature-copy h2 em { color: #a77d42; font-family: var(--serif); font-weight: 500; letter-spacing: -.035em; }
+.signature-copy p { max-width: 420px; margin: 22px 0 0; color: #756158; font-size: 14px; line-height: 1.8; }
+.signature-reveal-button { display: inline-flex; align-items: center; gap: 22px; margin-top: 26px; padding: 14px 18px; border: 1px solid #a77d42; border-radius: 2px; background: transparent; color: #62483d; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: background .25s ease, color .25s ease, transform .25s ease; }
+.signature-reveal-button:hover { transform: translateY(-2px); background: #a77d42; color: #fffaf5; }
+.signature-reveal-button span { font-size: 17px; }
+.signature-stage { position: relative; display: grid; place-items: center; min-height: 390px; perspective: 1100px; }
+.signature-glow { position: absolute; width: min(82%, 380px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(196,155,111,.22), rgba(196,155,111,0) 70%); }
+.signature-envelope { position: relative; width: min(100%, 370px); height: 250px; transform: rotate(-3deg); filter: drop-shadow(0 22px 25px rgba(72,48,36,.14)); transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.signature-stage.is-revealed .signature-envelope { transform: translateY(8px) rotate(0deg); }
+.signature-envelope-back { position: absolute; inset: 0; background: #c9a77e; border: 1px solid #b99468; }
+.signature-letter { position: absolute; z-index: 1; left: 8%; right: 8%; top: 8%; height: 92%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px; border: 1px solid #d9c6aa; background: #fffaf2; color: #5e453b; text-align: center; transform: translateY(0); transition: transform .7s cubic-bezier(.2,.75,.25,1); }
+.signature-stage.is-revealed .signature-letter { transform: translateY(-105px); }
+.signature-letter-kicker, .signature-letter-date { color: #a77d42; font-size: 7px; font-weight: 700; letter-spacing: .2em; }
+.signature-letter-script { color: #927168; font-family: var(--serif); font-size: 23px; font-style: italic; }
+.signature-letter-title { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: -.04em; line-height: 1.12; }
+.signature-letter-rule { width: 42px; height: 1px; background: #c4a16e; }
+.signature-envelope-front { position: absolute; z-index: 2; inset: 0; background: #e5d1b8; clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%); }
+.signature-envelope-flap { position: absolute; z-index: 3; inset: 0; background: #f0dfcb; clip-path: polygon(0 0, 100% 0, 50% 65%); transform-origin: top center; transition: transform .6s ease, opacity .3s ease; }
+.signature-stage.is-revealed .signature-envelope-flap { transform: rotateX(180deg); opacity: .15; }
+.signature-seal { position: absolute; z-index: 4; left: 50%; top: 58%; display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #b58a4b; border-radius: 50%; background: #a77d42; color: #fff4df; font-family: var(--serif); font-size: 21px; font-style: italic; transform: translate(-50%, -50%); transition: opacity .25s ease, transform .35s ease; }
+.signature-stage.is-revealed .signature-seal { opacity: 0; transform: translate(-50%, -50%) scale(.7); }
+.signature-stage-caption { position: absolute; bottom: 4px; color: #a18876; font-size: 8px; font-weight: 700; letter-spacing: .17em; text-align: center; }
+@media (max-width: 760px){
+  .signature-moment { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 58px 22px 48px; }
+  .signature-copy .section-eyebrow { margin-bottom: 16px; }
+  .signature-copy h2 { font-size: clamp(32px, 8vw, 42px); }
+  .signature-copy p { margin-top: 15px; font-size: 13px; }
+  .signature-reveal-button { margin-top: 18px; }
+  .signature-stage { min-height: 300px; margin-top: 8px; }
+  .signature-envelope { width: min(86%, 330px); height: 218px; }
+  .signature-stage.is-revealed .signature-letter { transform: translateY(-82px); }
+  .signature-letter-script { font-size: 20px; }
+  .signature-letter-title { font-size: 20px; }
+  .signature-stage-caption { bottom: 0; font-size: 7px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .signature-envelope, .signature-letter, .signature-envelope-flap, .signature-seal, .signature-reveal-button { transition: none !important; }
+}
+
+/* Invitation signature : logo discret et typographie plus raffinée */
+.signature-letter 
+.signature-letter-logo {
+  display: block;
+  width: 42px;
+  max-height: 26px;
+  object-fit: contain;
+  opacity: .82;
+  margin-bottom: 1px;
+}
+.signature-letter-script {
+  font-family: 'Cormorant Garamond', var(--serif) !important;
+  font-size: 26px !important;
+  font-weight: 500;
+  letter-spacing: -.015em;
+}
+.signature-letter-title {
+  font-family: 'Cormorant Garamond', var(--serif) !important;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  letter-spacing: -.025em !important;
+  line-height: .98 !important;
+}
+.signature-letter-kicker,
+.signature-letter-date {
+  font-size: 6px !important;
+  letter-spacing: .22em !important;
+}
+@media (max-width: 760px){
+  .signature-letter { gap: 7px !important; padding: 12px 14px !important; }
+  .signature-letter-logo { width: 36px; max-height: 22px; }
+  .signature-letter-script { font-size: 23px !important; }
+  .signature-letter-title { font-size: 25px !important; }
+}
+
+/* Carte signature : logo discret et typographie d’invitation plus raffinée */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+.signature-letter {
+  gap: 9px !important;
+  padding: 14px 18px !important;
+}
+.signature-letter-logo {
+  display: block;
+  width: 42px;
+  max-height: 25px;
+  object-fit: contain;
+  opacity: .72;
+  margin-bottom: 1px;
+}
+.signature-letter-kicker,
+.signature-letter-date {
+  font-family: var(--sans);
+  font-size: 6px !important;
+  letter-spacing: .19em !important;
+}
+.signature-letter-script {
+  font-family: 'Allura', 'Cormorant Garamond', cursive !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  color: #9b7569 !important;
+}
+.signature-letter-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 27px !important;
+  font-weight: 500 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.02 !important;
+}
+.signature-letter-rule { margin-top: 1px; }
+@media (max-width: 760px){
+  .signature-letter-logo { width: 36px; max-height: 21px; }
+  .signature-letter-script { font-size: 27px !important; }
+  .signature-letter-title { font-size: 24px !important; }
+}
+
+/* Invitation signature plus ornée, et enveloppe cliquable pour ouvrir/fermer */
+.signature-envelope {
+  display: block;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.signature-envelope:focus-visible {
+  outline: 2px solid #a77d42;
+  outline-offset: 8px;
+}
+.signature-letter {
+  overflow: hidden;
+  outline: 1px solid rgba(167,125,66,.35);
+  outline-offset: -7px;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "✦  ❧  ✦";
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #b89460;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px;
+  letter-spacing: .32em;
+  text-align: center;
+  opacity: .85;
+  pointer-events: none;
+}
+.signature-letter::before 
+.signature-letter::after { bottom: 8px; transform: rotate(180deg); }
+.signature-letter-logo {
+  width: 39px !important;
+  max-height: 23px !important;
+  margin-top: 5px;
+  margin-bottom: 0 !important;
+}
+.signature-letter-script {
+  font-size: 32px !important;
+  text-shadow: 0 .3px 0 rgba(155,117,105,.12);
+}
+.signature-letter-title {
+  position: relative;
+  padding: 10px 0;
+  font-size: 29px !important;
+}
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: "❧";
+  position: absolute;
+  top: 50%;
+  color: #b89460;
+  font-size: 14px;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+.signature-letter-title::before { right: calc(100% + 9px); }
+.signature-letter-title::after { left: calc(100% + 9px); transform: translateY(-50%) scaleX(-1); }
+.signature-letter-rule {
+  position: relative;
+  width: 60px !important;
+}
+.signature-letter-rule::before,
+.signature-letter-rule::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  color: #b89460;
+  font-size: 9px;
+  transform: translateY(-50%);
+}
+.signature-letter-rule::before { left: -12px; }
+.signature-letter-rule::after { right: -12px; }
+.signature-envelope-front {
+  box-shadow: inset 0 0 0 1px rgba(155,111,72,.22);
+}
+.signature-envelope-flap {
+  backface-visibility: hidden;
+}
+.signature-seal {
+  box-shadow: 0 2px 8px rgba(85,53,30,.18), inset 0 0 0 2px rgba(255,244,223,.18);
+}
+@media (max-width: 760px){
+  .signature-letter-logo { width: 34px !important; max-height: 20px !important; }
+  .signature-letter-script { font-size: 28px !important; }
+  .signature-letter-title { font-size: 24px !important; }
+  .signature-letter::before,
+  .signature-letter::after { font-size: 14px; }
+}
+
+/* Ajustements demandés : motifs sur le papier intérieur, sans bordure décorative */
+.signature-letter {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 1px solid #eadbc5 !important;
+  background:
+    radial-gradient(ellipse at 12% 14%, rgba(190,151,94,.15) 0 2px, transparent 3px),
+    radial-gradient(ellipse at 88% 86%, rgba(190,151,94,.15) 0 2px, transparent 3px),
+    linear-gradient(135deg, rgba(255,255,255,.75), transparent 48%),
+    #fffaf2 !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "❦  ✦  ❦" !important;
+  left: 14px !important;
+  right: 14px !important;
+  font-size: 15px !important;
+  letter-spacing: .24em !important;
+  color: #b89460 !important;
+  opacity: .9 !important;
+}
+.signature-letter::before { top: 12px !important; }
+.signature-letter::after { bottom: 12px !important; }
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: none !important;
+}
+.signature-letter-logo 
+.signature-letter-script,
+.signature-letter-title,
+.signature-letter-kicker,
+.signature-letter-date,
+.signature-letter-rule 
+/* Agrandir légèrement le bloc signature pour donner plus de présence à l'expérience */
+.signature-moment {
+  padding-top: 104px !important;
+  padding-bottom: 104px !important;
+}
+.signature-stage {
+  min-height: 420px !important;
+}
+.signature-envelope {
+  width: min(100%, 395px) !important;
+  height: 266px !important;
+}
+.signature-stage.is-revealed .signature-letter {
+  transform: translateY(-112px) !important;
+}
+@media (max-width: 760px){
+  .signature-moment {
+    padding-top: 66px !important;
+    padding-bottom: 58px !important;
+  }
+  .signature-stage {
+    min-height: 320px !important;
+  }
+  .signature-envelope {
+    width: min(88%, 350px) !important;
+    height: 228px !important;
+  }
+  .signature-stage.is-revealed .signature-letter {
+    transform: translateY(-86px) !important;
+  }
+}
+
+/* Affiner les ornements : motifs sur la carte intérieure, sans bordure encadrée */
+.signature-letter {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background:
+    radial-gradient(ellipse at 12% 15%, rgba(190,151,99,.12), transparent 28%),
+    radial-gradient(ellipse at 88% 84%, rgba(190,151,99,.12), transparent 28%),
+    #fffaf2 !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "✦  ❧  ✦  ❧  ✦" !important;
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  color: #b89460;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  letter-spacing: .22em;
+  text-align: center;
+  opacity: .9;
+  pointer-events: none;
+}
+.signature-letter::before { top: 9px; }
+.signature-letter::after { bottom: 8px; transform: none !important; }
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: "❧" !important;
+  color: #b89460;
+  font-size: 15px;
+}
+.signature-envelope-front { box-shadow: none !important; }
+/* Un peu plus de présence pour la section signature */
+.signature-moment { padding-top: 104px !important; padding-bottom: 104px !important; }
+.signature-stage { min-height: 420px !important; }
+.signature-envelope { width: min(100%, 390px) !important; height: 265px !important; }
+.signature-stage.is-revealed .signature-letter { transform: translateY(-112px) !important; }
+@media (max-width: 760px){
+  .signature-moment { padding-top: 64px !important; padding-bottom: 58px !important; }
+  .signature-stage { min-height: 320px !important; }
+  .signature-envelope { width: min(90%, 350px) !important; height: 228px !important; }
+  .signature-stage.is-revealed .signature-letter { transform: translateY(-86px) !important; }
+}
+
+/* Carte d’invitation : papier ivoire texturé, sans motifs décoratifs répétitifs */
+.signature-letter {
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: #fbf6ec !important;
+  background-image:
+    radial-gradient(ellipse at 20% 18%, rgba(156,126,91,.055) 0, transparent 38%),
+    radial-gradient(ellipse at 78% 72%, rgba(174,143,106,.045) 0, transparent 42%),
+    repeating-linear-gradient(0deg, rgba(125,101,72,.018) 0px, rgba(125,101,72,.018) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(91deg, rgba(255,255,255,.22) 0px, rgba(255,255,255,.22) 1px, transparent 1px, transparent 5px) !important;
+}
+.signature-letter::before,
+.signature-letter::after 
+.signature-letter-title::before,
+.signature-letter-title::after 
+.signature-letter-logo { opacity: .62 !important; }
+.signature-letter-script { color: #96776a !important; }
+.signature-letter-rule { background: rgba(177,142,94,.7) !important; }
+
+/* Papier d’invitation haut de gamme : ivoire satiné avec un léger éclat */
+.signature-letter {
+  background-color: #fffaf0 !important;
+  background-image:
+    linear-gradient(118deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.30) 22%, transparent 43%, rgba(218,194,155,.10) 68%, rgba(255,255,255,.72) 100%),
+    radial-gradient(ellipse at 22% 12%, rgba(255,255,255,.75) 0, transparent 48%),
+    repeating-linear-gradient(0deg, rgba(126,101,72,.025) 0px, rgba(126,101,72,.025) 1px, transparent 1px, transparent 4px) !important;
+  box-shadow: inset 0 0 0 1px rgba(190,157,108,.20), inset 0 1px 8px rgba(255,255,255,.78), 0 2px 9px rgba(100,75,48,.08) !important;
+}
+
+/* Typographie de la carte : titre plus net et raffiné, sans effet trop classique */
+.signature-letter-title {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  letter-spacing: .075em !important;
+  line-height: 1.45 !important;
+  text-transform: uppercase;
+  color: #5e453b !important;
+}
+
+/* Typographie élégante pour le titre de la carte d’invitation */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+.signature-letter-title {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 21px !important;
+  font-weight: 400 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.18 !important;
+  text-transform: none !important;
+  color: #5e453b !important;
+}
+
+/* Accueil mobile : donner un peu plus d’ampleur au hero sans le rendre trop long */
+@media (max-width: 760px){
+  #accueil.hero {
+    padding-top: 60px !important;
+    padding-bottom: 88px !important;
+  }
+}
+@media (max-width: 390px){
+  #accueil.hero {
+    padding-top: 27px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+/* Accueil mobile : hauteur minimale légèrement augmentée pour que le changement soit visible */
+@media (max-width: 760px){
+  #accueil.hero {
+    min-height: 500px !important;
+    padding-top: 60px !important;
+    padding-bottom: 88px !important;
+    box-sizing: border-box !important;
+  }
+}
+@media (max-width: 390px){
+  #accueil.hero {
+    min-height: 490px !important;
+    padding-top: 27px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+/* Hero mobile : aérer la composition et les espaces entre chaque élément */
+@media (max-width: 760px){
+  #accueil.hero {
+    min-height: 0 !important;
+    padding: 48px 24px 82px !important;
+  }
+  #accueil.hero .hero-kicker {
+    margin-top: 12px !important;
+    margin-bottom: 30px !important;
+  }
+  #accueil.hero h1 {
+    line-height: 1.13 !important;
+    margin-bottom: 0 !important;
+  }
+  #accueil.hero .hero-description {
+    margin-top: 28px !important;
+    line-height: 1.9 !important;
+    font-size: 14px !important;
+  }
+  #accueil.hero .hero-actions {
+    margin-top: 32px !important;
+    gap: 14px !important;
+  }
+  #accueil.hero .hero-actions .button {
+    min-height: 58px !important;
+    padding: 17px 16px !important;
+    line-height: 1.5 !important;
+  }
+  #accueil.hero .hero-proof {
+    margin-top: 34px !important;
+    line-height: 1.7 !important;
+  }
+  #accueil.hero .hero-bottom {
+    bottom: 16px !important;
+    padding-top: 16px !important;
+  }
+}
+@media (max-width: 390px){
+  #accueil.hero {
+    padding: 28px 18px 74px !important;
+  }
+  #accueil.hero .hero-kicker {
+    margin-bottom: 25px !important;
+  }
+  #accueil.hero .hero-description {
+    margin-top: 24px !important;
+  }
+  #accueil.hero .hero-actions {
+    margin-top: 27px !important;
+  }
+  #accueil.hero .hero-proof {
+    margin-top: 28px !important;
+  }
+}
+
+/* Desktop : retirer la carte d’invitation du hero, conserver la composition sur mobile */
+@media (min-width: 761px){
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 760px;
+    margin-left: 0;
+  }
+  .hero-visual {
+    display: none !important;
+  }
+}
+
+/* C by C — reliefs subtils et blocs arrondis, dans la continuité de Chirel Dev */
+:root {
+  --cbc-card-radius: 22px;
+  --cbc-card-shadow: 0 10px 28px rgba(79, 52, 43, .065), 0 2px 6px rgba(79, 52, 43, .035);
+  --cbc-card-border: 1px solid rgba(181, 138, 75, .17);
+}
+
+/* Des surfaces légèrement distinctes pour donner du rythme aux sections */
+.occasions-section,
+.process-section {
+  position: relative;
+}
+.occasions-section::before,
+.details-section::before,
+.process-section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 207, 200, .24), rgba(232, 207, 200, 0) 72%);
+}
+.occasions-section::before { top: 7%; right: -55px; }
+.details-section::before { top: 12%; left: -75px; }
+.process-section::before { bottom: 3%; right: -65px; }
+.occasions-section > *,
+.details-section > *,
+.process-section > * 
+
+/* Cartes d’occasions : effet papier, bord fin et survol discret */
+.occasion-word-item {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: var(--cbc-card-border) !important;
+  border-radius: var(--cbc-card-radius) !important;
+  background: linear-gradient(145deg, rgba(255,253,251,.98), rgba(248,233,229,.56)) !important;
+  box-shadow: var(--cbc-card-shadow), inset 0 1px 0 rgba(255,255,255,.88) !important;
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
+}
+.occasion-word-item::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -28px;
+  bottom: -38px;
+  width: 118px;
+  height: 118px;
+  border: 1px solid rgba(181,138,75,.15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px rgba(181,138,75,.035), 0 0 0 25px rgba(181,138,75,.025);
+  pointer-events: none;
+}
+.occasion-word-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181,138,75,.34) !important;
+  box-shadow: 0 16px 34px rgba(79,52,43,.10), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+/* Étapes : relief doux sans alourdir la lecture */
+
+/* Liste des attentions : chaque point devient une petite surface lisible */
+.details-simple-list {
+  gap: 12px !important;
+}
+.details-simple-list li {
+  padding: 18px 20px !important;
+  border: 1px solid rgba(181,138,75,.15) !important;
+  border-radius: 17px !important;
+  background: rgba(255,253,251,.72) !important;
+  box-shadow: 0 5px 16px rgba(79,52,43,.035), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+/* Contact : un panneau principal plus enveloppant */
+.contact-panel {
+  overflow: hidden;
+  border: 1px solid rgba(181,138,75,.24) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 18px 42px rgba(79,52,43,.085), inset 0 1px 0 rgba(255,255,255,.45) !important;
+}
+
+/* Boutons et champs : cohérence avec les surfaces arrondies */
+.button {
+  border-radius: 999px;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease !important;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+input,
+select,
+textarea {
+  border-radius: 14px;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(181,138,75,.55);
+  outline-offset: 2px;
+}
+
+/* Respecter les préférences de mouvement */
+@media (prefers-reduced-motion: reduce){
+  .occasion-word-item,
+  .step-card,
+  .button {
+    transition: none !important;
+  }
+  .occasion-word-item:hover,
+  .step-card:hover,
+  .button:hover {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 760px){
+  .occasion-word-item { border-radius: 19px !important; }
+  .details-simple-list li { padding: 16px !important; }
+  .contact-panel { border-radius: 22px !important; }
+}
+
+/* Mobile : espace net entre les cartes de la section « L’art du détail » */
+@media (max-width: 760px){
+  .details-simple-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    row-gap: 16px !important;
+  }
+  .details-simple-list li {
+    margin: 0 !important;
+  }
+}
+
+/* Correction renforcée : l'espacement est porté par chaque carte, même si le layout parent est surchargé */
+@media (max-width: 760px){
+  #details .details-simple-list {
+    display: block !important;
+    gap: 0 !important;
+    row-gap: 0 !important;
+  }
+  #details .details-simple-list > li {
+    display: flex !important;
+    margin: 0 0 18px !important;
+  }
+  #details .details-simple-list > li:last-child {
+    margin-bottom: 0 !important;
+  }
+  #details .details-simple-list > li + li {
+    margin-top: 0 !important;
+  }
+}
+
+/* Occasions sur mobile : de vraies cartes indépendantes, espacées et arrondies */
+@media (max-width: 760px){
+  .occasions-section .occasion-word-garden-home {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    row-gap: 18px !important;
+    padding: 0 4px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    display: grid !important;
+    grid-template-columns: 86px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 16px !important;
+    width: 100% !important;
+    min-height: 190px !important;
+    margin: 0 !important;
+    padding: 24px 20px !important;
+    border: 1px solid rgba(181,138,75,.22) !important;
+    border-radius: 22px !important;
+    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
+    box-shadow: 0 10px 26px rgba(79,52,43,.075), inset 0 1px 0 rgba(255,255,255,.95) !important;
+    box-sizing: border-box !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: center;
+    font-size: clamp(32px, 10vw, 48px) !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p,
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2;
+    min-width: 0;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    margin-top: 4px !important;
+    margin-bottom: 8px !important;
+    font-size: clamp(22px, 6vw, 29px) !important;
+    line-height: 1.18 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
+    margin: 0 0 12px !important;
+    line-height: 1.5 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    margin-top: 2px !important;
+  }
+}
