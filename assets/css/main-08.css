@@ -1,3 +1,642 @@
+
+
+/* Pages occasions — épuration complète de la composition des points forts */
+.occasion-detail-page .occasion-detail-features {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(22px, 4vw, 54px) !important;
+  max-width: 1120px;
+  margin: 18px auto 0;
+  align-items: start;
+}
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  display: block !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 20px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(181,138,75,.55) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  position: relative;
+}
+.occasion-detail-page .occasion-detail-feature::before,
+.occasion-detail-page .occasion-detail-feature::after {
+  content: none !important;
+  display: none !important;
+}
+.occasion-detail-page .occasion-detail-feature h3 {
+  max-width: 290px;
+  margin: 0 0 12px !important;
+  color: #674a45 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(23px, 2.5vw, 32px) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.025em !important;
+  line-height: 1.12 !important;
+}
+.occasion-detail-page .occasion-detail-feature p {
+  max-width: 300px;
+  margin: 0 !important;
+  color: #81766c !important;
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+}
+.occasion-detail-page .occasion-detail-closing {
+  max-width: 680px !important;
+  margin: 50px auto 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #89645b !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(23px, 3vw, 32px) !important;
+  font-style: italic !important;
+  line-height: 1.3 !important;
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-heading {
+    margin-bottom: 34px !important;
+  }
+  .occasion-detail-page .occasion-detail-heading h2 {
+    font-size: 38px !important;
+  }
+  .occasion-detail-page .occasion-detail-heading > p {
+    max-width: 100%;
+    margin: 14px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+  .occasion-detail-page .occasion-detail-features {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    margin-top: 0;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 14px 0 0 !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3 {
+    max-width: none;
+    margin: 0 0 5px !important;
+    font-size: 23px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature p {
+    max-width: 100%;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+  .occasion-detail-page .occasion-detail-closing {
+    margin: 36px auto 0 !important;
+    padding: 0 8px !important;
+    font-size: 23px !important;
+  }
+}
+
+
+/* Pages occasions — composition créative façon éditorial de studio */
+.occasion-detail-page .occasion-detail-content {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 92% 18%, rgba(232,210,184,.22), transparent 34%),
+    #fffdfb !important;
+}
+.occasion-detail-page .occasion-detail-heading {
+  position: relative;
+  max-width: 850px !important;
+  margin: 0 auto 58px !important;
+  text-align: center;
+}
+.occasion-detail-page .occasion-detail-heading .section-eyebrow {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid rgba(181,138,75,.4);
+  border-radius: 100px;
+  color: #9b7945 !important;
+  font-size: 9px;
+  letter-spacing: .2em;
+}
+.occasion-detail-page .occasion-detail-heading .section-eyebrow::after { content: none !important; }
+.occasion-detail-page .occasion-detail-heading h2 {
+  max-width: 760px;
+  margin: 22px auto 0 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(42px, 6vw, 72px) !important;
+  font-weight: 400 !important;
+  line-height: .98 !important;
+  letter-spacing: -.055em !important;
+}
+.occasion-detail-page .occasion-detail-heading > p {
+  max-width: 510px !important;
+  margin: 20px auto 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #82766c !important;
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+}
+.occasion-detail-page .occasion-detail-features {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px 9%;
+  max-width: 980px;
+  margin: 0 auto !important;
+  padding: 0 4%;
+  border: 0 !important;
+}
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  position: relative;
+  display: block !important;
+  width: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 24px 0 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 12px !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 108px !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 66% !important;
+  margin: 10px auto 0 !important;
+  text-align: center;
+}
+.occasion-detail-page .occasion-detail-feature::before {
+  content: "✳";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  display: block;
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2)::before {
+  content: "✧";
+  left: auto;
+  right: 4px;
+  top: -4px;
+  font-size: 28px;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(3)::before {
+  content: "—  ✦  —";
+  top: -14px;
+  left: 50%;
+  width: max-content;
+  transform: translateX(-50%);
+  font-size: 13px;
+  letter-spacing: .2em;
+}
+.occasion-detail-page .occasion-detail-feature h3 {
+  max-width: 390px;
+  margin: 0 0 10px !important;
+  color: #674a45 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(25px, 3.2vw, 38px) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(3) h3,
+.occasion-detail-page .occasion-detail-feature:nth-child(3) p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.occasion-detail-page .occasion-detail-feature p {
+  max-width: 390px;
+  margin: 0 !important;
+  color: #82766c !important;
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+}
+.occasion-detail-page .occasion-detail-closing {
+  position: relative;
+  max-width: 760px !important;
+  margin: 54px auto 0 !important;
+  padding: 22px 0 0 !important;
+  border: 0 !important;
+  color: #89645b !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(25px, 3.5vw, 40px) !important;
+  font-style: italic !important;
+  line-height: 1.18 !important;
+  text-align: center;
+}
+.occasion-detail-page .occasion-detail-closing::before {
+  content: "C by C  ·  LES DÉTAILS QUI FONT LA DIFFÉRENCE";
+  display: block;
+  margin-bottom: 14px;
+  color: #a7834c;
+  font-family: var(--sans);
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: .2em;
+}
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-content { padding: 54px 22px !important; }
+  .occasion-detail-page .occasion-detail-heading { margin-bottom: 42px !important; }
+  .occasion-detail-page .occasion-detail-heading h2 {
+    max-width: 340px;
+    font-size: 43px !important;
+    line-height: 1.02 !important;
+  }
+  .occasion-detail-page .occasion-detail-heading > p {
+    max-width: 330px !important;
+    font-size: 12px !important;
+  }
+  .occasion-detail-page .occasion-detail-features {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 36px 22px !important;
+    padding: 0 !important;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 19px 0 0 !important;
+    text-align: left !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .occasion-detail-page .occasion-detail-feature:nth-child(2) { grid-column: 2; grid-row: 1; margin-top: 48px !important; }
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 82% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .occasion-detail-page .occasion-detail-feature::before { top: -5px; font-size: 18px; }
+  .occasion-detail-page .occasion-detail-feature:nth-child(2)::before { top: -2px; font-size: 22px; }
+  .occasion-detail-page .occasion-detail-feature:nth-child(3)::before { top: -14px; }
+  .occasion-detail-page .occasion-detail-feature h3 {
+    margin: 0 0 8px !important;
+    font-size: 23px !important;
+    line-height: 1.08 !important;
+  }
+  .occasion-detail-page .occasion-detail-feature p {
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+  }
+  .occasion-detail-page .occasion-detail-closing {
+    margin-top: 42px !important;
+    padding-top: 17px !important;
+    font-size: 27px !important;
+  }
+  .occasion-detail-page .occasion-detail-closing::before { font-size: 7px; }
+}
+
+
+/* Correctif mobile — composition créative sans colonnes étroites */
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-features {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 18px 0 0 !important;
+    text-align: left !important;
+    border-top: 1px solid rgba(181,138,75,.38) !important;
+    box-sizing: border-box !important;
+  }
+  .occasion-detail-page .occasion-detail-feature::before {
+    content: "✦" !important;
+    display: block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 10px !important;
+    transform: none !important;
+    color: #b58a4b !important;
+    font-family: var(--serif) !important;
+    font-size: 15px !important;
+    letter-spacing: .15em !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(2)::before {
+    content: "✧" !important;
+    font-size: 19px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(3)::before {
+    content: "✳" !important;
+    font-size: 17px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3,
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) h3 {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 8px !important;
+    font-size: clamp(25px, 7vw, 31px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .occasion-detail-page .occasion-detail-feature p,
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .occasion-detail-page .occasion-detail-closing {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 38px auto 0 !important;
+    padding: 0 !important;
+    font-size: 25px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+}
+
+
+/* Relief subtil et profondeur pour les points forts des pages occasions */
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(1),
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  position: relative !important;
+  padding: 25px 28px 27px !important;
+  border: 1px solid rgba(181,138,75,.18) !important;
+  border-radius: 3px 22px 3px 22px !important;
+  background: linear-gradient(135deg, #fffefd 0%, #fbf5ed 100%) !important;
+  box-shadow: 0 12px 28px rgba(77,53,42,.07), 0 2px 5px rgba(77,53,42,.035) !important;
+  transition: transform .28s ease, box-shadow .28s ease !important;
+}
+.occasion-detail-page .occasion-detail-feature::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-top: 1px solid rgba(181,138,75,.45) !important;
+  border-right: 1px solid rgba(181,138,75,.45) !important;
+  border-radius: 0 20px 0 0 !important;
+  pointer-events: none !important;
+}
+.occasion-detail-page .occasion-detail-feature::before {
+  margin-bottom: 13px !important;
+}
+.occasion-detail-page .occasion-detail-feature h3 {
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
+@media (hover: hover) and (pointer: fine) {
+  .occasion-detail-page .occasion-detail-feature:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 19px 36px rgba(77,53,42,.11), 0 3px 8px rgba(77,53,42,.05) !important;
+  }
+}
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-features {
+    gap: 18px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    padding: 20px 19px 22px !important;
+    border-radius: 3px 18px 3px 18px !important;
+    box-shadow: 0 9px 22px rgba(77,53,42,.075), 0 2px 5px rgba(77,53,42,.035) !important;
+  }
+  .occasion-detail-page .occasion-detail-feature::after {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 0 16px 0 0 !important;
+  }
+}
+
+
+/* Refonte finale des blocs occasions : couleurs douces, relief et respiration */
+.occasion-detail-page .occasion-detail-features {
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(1),
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  min-height: 250px !important;
+  padding: 34px 30px 32px !important;
+  border: 1px solid rgba(104,74,69,.10) !important;
+  border-radius: 4px 28px 4px 28px !important;
+  background: #e8eee5 !important;
+  box-shadow: 0 16px 34px rgba(58,48,40,.09), inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2) {
+  background: #f2e3e4 !important;
+  transform: translateY(34px);
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  background: #e9e5ef !important;
+}
+.occasion-detail-page .occasion-detail-feature::before {
+  content: "✦" !important;
+  position: static !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0 22px !important;
+  color: #a7834c !important;
+  font-family: var(--serif) !important;
+  font-size: 19px !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2)::before { content: "✧" !important; }
+.occasion-detail-page .occasion-detail-feature:nth-child(3)::before { content: "✳" !important; }
+.occasion-detail-page .occasion-detail-feature::after {
+  content: none !important;
+  display: none !important;
+}
+.occasion-detail-page .occasion-detail-feature h3 {
+  margin: 0 0 14px !important;
+  color: #60443f !important;
+  font-size: clamp(25px, 2.7vw, 34px) !important;
+  line-height: 1.15 !important;
+}
+.occasion-detail-page .occasion-detail-feature p {
+  max-width: 430px !important;
+  color: #756c65 !important;
+  font-size: 13px !important;
+  line-height: 1.85 !important;
+}
+.occasion-detail-page .occasion-detail-closing {
+  margin-top: 76px !important;
+}
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-features {
+    gap: 22px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    min-height: 0 !important;
+    padding: 28px 24px 30px !important;
+    border-radius: 4px 24px 4px 24px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(2) {
+    transform: none !important;
+  }
+  .occasion-detail-page .occasion-detail-feature::before {
+    margin-bottom: 17px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3 {
+    margin-bottom: 10px !important;
+    font-size: 27px !important;
+    line-height: 1.16 !important;
+  }
+  .occasion-detail-page .occasion-detail-feature p {
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+  }
+  .occasion-detail-page .occasion-detail-closing {
+    margin-top: 44px !important;
+  }
+}
+
+
+/* Nouvelle direction artistique des pages occasions : composition en rubans éditoriaux */
+.occasion-detail-page .occasion-detail-content {
+  position: relative;
+  overflow: hidden;
+  background: #fffaf8 !important;
+}
+.occasion-detail-page .occasion-detail-heading {
+  max-width: 900px !important;
+  margin: 0 auto 64px !important;
+  text-align: left !important;
+}
+.occasion-detail-page .occasion-detail-heading .section-eyebrow {
+  display: inline-block;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #a7834c !important;
+  font-size: 10px !important;
+  letter-spacing: .22em !important;
+}
+.occasion-detail-page .occasion-detail-heading h2 {
+  max-width: 760px !important;
+  margin: 18px 0 0 !important;
+  color: #503a3b !important;
+  font-family: var(--display) !important;
+  font-size: clamp(42px, 6vw, 70px) !important;
+  font-weight: 500 !important;
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+}
+.occasion-detail-page .occasion-detail-heading > p {
+  max-width: 560px !important;
+  margin: 22px 0 0 auto !important;
+  padding: 0 0 0 20px !important;
+  border-left: 2px solid #b58a4b !important;
+  color: #796f6c !important;
+  font-size: 14px !important;
+  line-height: 1.85 !important;
+}
+.occasion-detail-page .occasion-detail-features {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(1),
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+  align-items: center !important;
+  gap: 30px !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 32px clamp(24px, 5vw, 64px) !important;
+  border: 0 !important;
+  border-radius: 2px 36px 2px 36px !important;
+  background: linear-gradient(110deg, #e6eee8 0%, #eff4ef 100%) !important;
+  box-shadow: 0 16px 32px rgba(53,69,58,.10), inset 0 1px 0 rgba(255,255,255,.8) !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2) {
+  width: 91% !important;
+  margin-left: auto !important;
+  background: linear-gradient(110deg, #f2e1e3 0%, #f8ecec 100%) !important;
+  box-shadow: 0 16px 32px rgba(104,66,74,.10), inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  width: 96% !important;
+  background: linear-gradient(110deg, #e7e5f0 0%, #f0eef6 100%) !important;
+  box-shadow: 0 16px 32px rgba(76,68,105,.10), inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+.occasion-detail-page .occasion-detail-feature::before {
+  content: "✳" !important;
+  position: static !important;
+  display: block !important;
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  color: rgba(165,126,70,.75) !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(64px, 10vw, 112px) !important;
+  line-height: .8 !important;
+  text-align: center !important;
+  transform: none !important;
+}
 .occasion-detail-page .occasion-detail-feature:nth-child(2)::before { content: "✧" !important; }
 .occasion-detail-page .occasion-detail-feature:nth-child(3)::before { content: "❋" !important; }
 .occasion-detail-page .occasion-detail-feature::after { content: none !important; display: none !important; }
@@ -34,8 +673,8 @@
   line-height: 1.2 !important;
   text-align: center !important;
 }
-.occasion-detail-page .occasion-detail-closing::before 
-@media (max-width: 760px){
+.occasion-detail-page .occasion-detail-closing::before { content: none !important; }
+@media (max-width: 760px) {
   .occasion-detail-page .occasion-detail-content { padding: 52px 20px !important; }
   .occasion-detail-page .occasion-detail-heading { margin-bottom: 38px !important; }
   .occasion-detail-page .occasion-detail-heading h2 {
@@ -84,6 +723,7 @@
     font-size: 27px !important;
   }
 }
+
 
 /* Direction 5 — typographie circulaire, médaillon central */
 .occasion-detail-page .occasion-detail-content {
@@ -221,10 +861,10 @@
   font-style: italic !important;
 }
 @keyframes occasion-orbit-turn { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce) {
  .occasion-detail-page .occasion-orbit svg { animation: none !important; }
 }
-@media (max-width:760px){
+@media (max-width:760px) {
  .occasion-detail-page .occasion-detail-content { padding: 48px 22px !important; }
  .occasion-detail-page .occasion-detail-heading { margin-bottom: 16px !important; }
  .occasion-detail-page .occasion-detail-heading h2 { font-size: 39px !important; }
@@ -247,6 +887,7 @@
  .occasion-detail-page .occasion-detail-closing { margin-top: 36px !important; font-size: 25px !important; }
 }
 
+
 /* Palette définitive : rose poudré, prune et doré — médaillon circulaire */
 .occasion-detail-page .occasion-detail-content {
   background:
@@ -256,559 +897,6 @@
 .occasion-detail-page .occasion-detail-heading .section-eyebrow {
   color: #a77b88 !important;
 }
-.occasion-detail-page .occasion-detail-heading h2 
-.occasion-detail-page .occasion-detail-heading > p 
-.occasion-detail-page .occasion-orbit {
-  filter: drop-shadow(0 16px 22px rgba(86,54,76,.10));
-}
-.occasion-detail-page .occasion-orbit-line {
-  stroke: rgba(167,123,136,.55) !important;
-  stroke-width: 1.1 !important;
-  stroke-dasharray: 1 4 !important;
-}
-.occasion-detail-page .occasion-orbit text {
-  fill: #795267 !important;
-  font-size: 10px !important;
-  letter-spacing: 3.2px !important;
-}
-.occasion-detail-page .occasion-orbit-center {
-  color: #fff9f8 !important;
-  background:
-    radial-gradient(circle at 30% 25%, #bd8f9d 0%, #87576f 48%, #56364c 100%) !important;
-  border: 1px solid rgba(255,239,229,.8) !important;
-  box-shadow:
-    0 15px 30px rgba(86,54,76,.25),
-    0 4px 9px rgba(86,54,76,.14),
-    inset 0 2px 3px rgba(255,255,255,.42),
-    inset 0 -5px 10px rgba(52,30,48,.18) !important;
-}
-.occasion-detail-page .occasion-orbit-spark {
-  color: #bd9858 !important;
-  text-shadow: 0 2px 8px rgba(189,152,88,.35) !important;
-}
-.occasion-detail-page .occasion-detail-feature,
-.occasion-detail-page .occasion-detail-feature:nth-child(1),
-.occasion-detail-page .occasion-detail-feature:nth-child(2),
-.occasion-detail-page .occasion-detail-feature:nth-child(3) {
-  border-top-color: rgba(167,123,136,.48) !important;
-}
-.occasion-detail-page .occasion-detail-feature h3 
-.occasion-detail-page .occasion-detail-feature p 
-.occasion-detail-page .occasion-detail-closing {
-  color: #795267 !important;
-}
-.occasion-detail-page .occasion-detail-cta {
-  background: linear-gradient(120deg, #f1dfe4 0%, #ead5df 52%, #e4d4e4 100%) !important;
-}
-.occasion-detail-page .occasion-detail-cta h2,
-.occasion-detail-page .occasion-detail-cta h2 em 
-.occasion-detail-page .occasion-detail-cta .section-eyebrow {
-  color: #a7834c !important;
-}
-.occasion-detail-page .occasion-detail-return {
-  color: #68445d !important;
-}
-.occasion-detail-page .occasion-detail-hero {
-  background: #f7e9ec !important;
-  color: #56364c !important;
-}
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-hero h1 em {
-  color: #56364c !important;
-}
-.occasion-detail-page .occasion-detail-hero > p {
-  color: #806f79 !important;
-}
-.occasion-detail-page .occasion-detail-hero .section-eyebrow,
-.occasion-detail-page .occasion-detail-back {
-  color: #9a7180 !important;
-}
-.occasion-detail-page .occasion-detail-hero::after {
-  color: rgba(167,123,136,.14) !important;
-}
-.occasion-detail-page .occasion-detail-hero .button,
-.occasion-detail-page .occasion-detail-cta .button {
-  background: linear-gradient(135deg, #8c5d76, #56364c) !important;
-  color: #fffaf8 !important;
-  border: 1px solid rgba(189,152,88,.55) !important;
-  box-shadow: 0 9px 22px rgba(86,54,76,.18) !important;
-}
-@media (max-width:760px){
-  .occasion-detail-page .occasion-detail-content {
-    padding: 46px 22px !important;
-  }
-  .occasion-detail-page .occasion-orbit {
-    width: min(72vw, 250px) !important;
-    margin: 8px auto 30px !important;
-  }
-  .occasion-detail-page .occasion-orbit-center {
-    width: 96px !important;
-    height: 96px !important;
-    font-size: 29px !important;
-  }
-  .occasion-detail-page .occasion-orbit text {
-    font-size: 11px !important;
-    letter-spacing: 2.6px !important;
-  }
-  .occasion-detail-page .occasion-detail-features {
-    gap: 19px !important;
-  }
-  .occasion-detail-page .occasion-detail-feature,
-  .occasion-detail-page .occasion-detail-feature:nth-child(1),
-  .occasion-detail-page .occasion-detail-feature:nth-child(2),
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
-    padding-top: 15px !important;
-    border-top: 1px solid rgba(167,123,136,.42) !important;
-  }
-  .occasion-detail-page .occasion-detail-feature h3 {
-    font-size: 24px !important;
-    line-height: 1.12 !important;
-  }
-  .occasion-detail-page .occasion-detail-feature p {
-    font-size: 12px !important;
-    line-height: 1.7 !important;
-  }
-  .occasion-detail-page .occasion-detail-closing {
-    color: #795267 !important;
-    font-size: 25px !important;
-  }
-  .occasion-detail-page .occasion-detail-hero {
-    background: #f7e9ec !important;
-  }
-  .occasion-detail-page .occasion-detail-cta {
-    background: linear-gradient(150deg, #f1dfe4, #e4d4e4) !important;
-  }
-}
-
-/* Ajustements validés : marron chaleureux, cercle sans étoiles, blocs discrets */
-.occasion-detail-page .occasion-detail-content {
-  background: #fffdfb !important;
-  background-image: radial-gradient(ellipse at 50% 45%, rgba(232,213,199,.18), transparent 48%) !important;
-}
-.occasion-detail-page .occasion-detail-heading h2,
-.occasion-detail-page .occasion-detail-feature h3,
-.occasion-detail-page .occasion-detail-closing 
-.occasion-detail-page .occasion-detail-heading .section-eyebrow 
-.occasion-detail-page .occasion-detail-heading > p,
-.occasion-detail-page .occasion-detail-feature p 
-.occasion-detail-page .occasion-orbit-line {
-  stroke: rgba(137,100,91,.36) !important;
-}
-.occasion-detail-page .occasion-orbit text {
-  fill: #76564e !important;
-}
-.occasion-detail-page .occasion-orbit-center {
-  color: #fffdfb !important;
-  background: radial-gradient(circle at 32% 25%, #a98273 0%, #79564d 54%, #563d36 100%) !important;
-  border-color: rgba(255,247,239,.9) !important;
-  box-shadow: 0 14px 30px rgba(73,52,46,.20), 0 4px 9px rgba(73,52,46,.12), inset 0 2px 3px rgba(255,255,255,.38), inset 0 -5px 10px rgba(52,30,25,.16) !important;
-}
-.occasion-detail-page .occasion-orbit-spark {
-  display: none !important;
-}
-.occasion-detail-page .occasion-detail-features {
-  gap: 18px !important;
-}
-.occasion-detail-page .occasion-detail-feature,
-.occasion-detail-page .occasion-detail-feature:nth-child(1),
-.occasion-detail-page .occasion-detail-feature:nth-child(2),
-.occasion-detail-page .occasion-detail-feature:nth-child(3) {
-  padding: 22px 25px 24px !important;
-  border: 1px solid rgba(137,100,91,.12) !important;
-  border-top: 1px solid rgba(137,100,91,.2) !important;
-  border-radius: 3px 16px 3px 16px !important;
-  background: rgba(248,241,235,.48) !important;
-  box-shadow: 0 5px 16px rgba(73,52,46,.035), inset 0 1px 0 rgba(255,255,255,.85) !important;
-}
-.occasion-detail-page .occasion-detail-feature h3 {
-  font-size: clamp(22px,2.4vw,28px) !important;
-}
-.occasion-detail-page .occasion-detail-hero,
-.occasion-detail-page .occasion-detail-cta {
-  background: #f3e8df !important;
-}
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-hero h1 em,
-.occasion-detail-page .occasion-detail-cta h2,
-.occasion-detail-page .occasion-detail-cta h2 em {
-  color: #49342e !important;
-}
-.occasion-detail-page .occasion-detail-hero .section-eyebrow,
-.occasion-detail-page .occasion-detail-back,
-.occasion-detail-page .occasion-detail-cta .section-eyebrow {
-  color: #987b70 !important;
-}
-.occasion-detail-page .occasion-detail-hero > p,
-.occasion-detail-page .occasion-detail-cta > p {
-  color: #81766c !important;
-}
-.occasion-detail-page .occasion-detail-hero .button,
-.occasion-detail-page .occasion-detail-cta .button {
-  background: linear-gradient(135deg, #9b7668, #674a40) !important;
-  border-color: rgba(181,138,75,.45) !important;
-  color: #fffdfb !important;
-}
-.occasion-detail-page .occasion-detail-return {
-  color: #674a40 !important;
-}
-@media (max-width:760px){
-  .occasion-detail-page .occasion-detail-features { gap: 14px !important; }
-  .occasion-detail-page .occasion-detail-feature,
-  .occasion-detail-page .occasion-detail-feature:nth-child(1),
-  .occasion-detail-page .occasion-detail-feature:nth-child(2),
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
-    padding: 18px 17px 19px !important;
-    background: rgba(248,241,235,.52) !important;
-    box-shadow: 0 4px 13px rgba(73,52,46,.035) !important;
-  }
-  .occasion-detail-page .occasion-detail-feature h3 { font-size: 23px !important; }
-}
-
-/* Monogramme C by C : centrage et proportions dans le médaillon */
-.occasion-detail-page .occasion-orbit-center {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0 !important;
-  padding: 12px !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-  line-height: 1 !important;
-}
-.occasion-detail-page .occasion-orbit-center .occasion-orbit-brand {
-  display: block !important;
-  font-family: var(--serif) !important;
-  font-size: 35px !important;
-  line-height: .88 !important;
-  font-weight: 400 !important;
-  letter-spacing: -.06em !important;
-  transform: none !important;
-}
-.occasion-detail-page .occasion-orbit-center .occasion-orbit-by {
-  display: block !important;
-  margin: 3px 0 2px !important;
-  font-family: var(--serif) !important;
-  font-size: 12px !important;
-  line-height: 1 !important;
-  font-style: italic !important;
-}
-@media (max-width:760px){
-  .occasion-detail-page .occasion-orbit-center {
-    width: 96px !important;
-    height: 96px !important;
-    padding: 10px !important;
-  }
-  .occasion-detail-page .occasion-orbit-center .occasion-orbit-brand {
-    font-size: 30px !important;
-  }
-  .occasion-detail-page .occasion-orbit-center .occasion-orbit-by {
-    font-size: 11px !important;
-    margin: 2px 0 !important;
-  }
-}
-
-/* Titres et boutons des pages occasions : reprendre exactement les codes du site */
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-cta h2 {
-  font-family: var(--display) !important;
-  font-size: clamp(42px, 6vw, 72px) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-  color: var(--paper) !important;
-}
-.occasion-detail-page .occasion-detail-hero h1 em,
-.occasion-detail-page .occasion-detail-cta h2 em {
-  font-family: var(--serif) !important;
-  font-weight: 500 !important;
-  font-style: italic !important;
-  color: var(--gold-bright) !important;
-}
-.occasion-detail-page a.button,
-.occasion-detail-page a.button.button-gold,
-.occasion-detail-page .occasion-detail-hero .button,
-.occasion-detail-page .occasion-detail-cta .button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 18px !important;
-  min-height: 0 !important;
-  padding: 13px 20px !important;
-  border: 0 !important;
-  border-radius: 3px !important;
-  background: var(--gold) !important;
-  color: #241a12 !important;
-  font-family: var(--sans) !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: .01em !important;
-  line-height: 1.4 !important;
-  box-shadow: none !important;
-  transform: none;
-  transition: transform .2s ease, background .2s ease !important;
-}
-.occasion-detail-page a.button:hover,
-.occasion-detail-page a.button:focus-visible {
-  background: var(--bronze) !important;
-  color: var(--paper) !important;
-  transform: translateY(-2px) !important;
-}
-.occasion-detail-page .occasion-detail-hero 
-.occasion-detail-page .occasion-detail-cta {
-  background: var(--dark) !important;
-  color: var(--paper) !important;
-}
-.occasion-detail-page .occasion-detail-hero .section-eyebrow,
-.occasion-detail-page .occasion-detail-cta .section-eyebrow {
-  color: var(--gold-bright) !important;
-}
-.occasion-detail-page .occasion-detail-hero > p,
-.occasion-detail-page .occasion-detail-cta > p {
-  color: #d1c3b3 !important;
-}
-@media (max-width:760px){
-  .occasion-detail-page .occasion-detail-hero h1,
-  .occasion-detail-page .occasion-detail-cta h2 {
-    font-size: clamp(39px, 10vw, 54px) !important;
-    line-height: 1.06 !important;
-  }
-  .occasion-detail-page a.button,
-  .occasion-detail-page a.button.button-gold,
-  .occasion-detail-page .occasion-detail-hero .button,
-  .occasion-detail-page .occasion-detail-cta .button {
-    padding: 13px 15px !important;
-    font-size: 11px !important;
-  }
-}
-
-/* Boutons pages occasions : reprendre l'arrondi des boutons du site */
-.occasion-detail-page a.button,
-.occasion-detail-page a.button.button-gold,
-.occasion-detail-page .occasion-detail-hero .button,
-.occasion-detail-page .occasion-detail-cta .button {
-  border-radius: 999px !important;
-}
-
-/* Centrer les titres principaux des pages occasions */
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-cta h2 {
-  width: 100% !important;
-  text-align: center !important;
-}
-.occasion-detail-page .occasion-detail-hero .section-eyebrow,
-.occasion-detail-page .occasion-detail-cta .section-eyebrow {
-  justify-content: center !important;
-}
-.occasion-detail-page .occasion-detail-hero > p,
-.occasion-detail-page .occasion-detail-cta > p {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-
-/* Harmonisation typographique des pages occasions avec les pages principales */
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-cta h2,
 .occasion-detail-page .occasion-detail-heading h2 {
-  font-family: var(--display) !important;
-  font-weight: 600 !important;
-  letter-spacing: -.065em !important;
-  line-height: 1.05 !important;
-}
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-cta h2 {
-  font-size: clamp(48px, 6vw, 82px) !important;
-}
-.occasion-detail-page .occasion-detail-heading h2 {
-  font-size: clamp(38px, 4.7vw, 60px) !important;
-  color: var(--ink) !important;
-}
-.occasion-detail-page .occasion-detail-hero h1 em,
-.occasion-detail-page .occasion-detail-cta h2 em,
-.occasion-detail-page .occasion-detail-heading h2 em {
-  font-family: var(--serif) !important;
-  font-weight: 500 !important;
-  font-style: italic !important;
-  letter-spacing: -.04em !important;
-}
-.occasion-detail-page .occasion-detail-feature h3 {
-  font-family: var(--display) !important;
-  font-size: 17px !important;
-  font-weight: 700 !important;
-  letter-spacing: -.03em !important;
-  line-height: 1.25 !important;
-}
-.occasion-detail-page .occasion-detail-hero > p,
-.occasion-detail-page .occasion-detail-cta > p,
-.occasion-detail-page .occasion-detail-heading > p,
-.occasion-detail-page .occasion-detail-feature p {
-  font-family: var(--sans) !important;
-  font-size: 13px !important;
-  line-height: 1.85 !important;
-}
-.occasion-detail-page .occasion-detail-hero .section-eyebrow,
-.occasion-detail-page .occasion-detail-cta .section-eyebrow,
-.occasion-detail-page .occasion-detail-heading .section-eyebrow {
-  font-family: var(--sans) !important;
-  font-size: 9px !important;
-  font-weight: 700 !important;
-  letter-spacing: .18em !important;
-}
-@media (max-width:760px){
-  .occasion-detail-page .occasion-detail-hero h1,
-  .occasion-detail-page .occasion-detail-cta h2 {
-    font-size: clamp(39px, 10vw, 54px) !important;
-  }
-  .occasion-detail-page .occasion-detail-heading h2 {
-    font-size: clamp(36px, 10vw, 48px) !important;
-  }
-  .occasion-detail-page .occasion-detail-feature h3 {
-    font-size: 17px !important;
-  }
-}
-
-/* Pages occasions : bouton CTA centré et suppression du trait de soulignement */
-.occasion-detail-page .occasion-detail-cta > a.button {
-  display: flex !important;
-  width: fit-content !important;
-  margin: 26px auto 0 !important;
-}
-.occasion-detail-page .occasion-detail-cta .occasion-detail-return {
-  display: block !important;
-  width: fit-content !important;
-  margin: 18px auto 0 !important;
-  text-decoration: none !important;
-  color: #d1c3b3 !important;
-}
-
-/* Centrer également le bouton principal en haut des quatre pages occasions */
-.occasion-detail-page .occasion-detail-hero > a.button {
-  display: flex !important;
-  width: fit-content !important;
-  margin: 28px auto 0 !important;
-}
-
-/* Hero photographique des pages occasions : photo douce sous un voile brun */
-.occasion-detail-page .occasion-detail-hero {
-  position: relative !important;
-  isolation: isolate;
-  overflow: hidden;
-  background: #674a45 !important;
-  color: #fffdfb !important;
-}
-.occasion-detail-page .occasion-detail-hero-photo {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-size: cover;
-  background-position: center 48%;
-  opacity: .82;
-  filter: saturate(.82);
-  transform: scale(1.015);
-}
-.occasion-detail-page .occasion-detail-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(110deg, rgba(73,52,46,.58) 0%, rgba(73,52,46,.44) 52%, rgba(73,52,46,.32) 100%);
-  pointer-events: none;
-}
-.occasion-detail-page .occasion-detail-hero::after { content: none !important; }
-.occasion-detail-page .occasion-detail-hero > *:not(.occasion-detail-hero-photo) {
-  position: relative;
-  z-index: 1;
-}
-.occasion-detail-page .occasion-detail-hero .occasion-detail-back,
-.occasion-detail-page .occasion-detail-hero .section-eyebrow { color: #f0d8b7 !important; }
-.occasion-detail-page .occasion-detail-hero h1,
-.occasion-detail-page .occasion-detail-hero h1 em { color: #fffdfb !important; }
-.occasion-detail-page .occasion-detail-hero h1 em { color: #f0d2a8 !important; }
-.occasion-detail-page .occasion-detail-hero > p { color: #f1e5da !important; }
-@media (max-width:760px){
-  .occasion-detail-page .occasion-detail-hero-photo { background-position: center center; opacity: .78; }
-  .occasion-detail-page .occasion-detail-hero::before {
-    background: linear-gradient(180deg, rgba(73,52,46,.56), rgba(73,52,46,.44));
-  }
-}
-
-/* Ajustement mobile : hiérarchie cohérente et cartes mieux différenciées */
-@media (max-width: 760px){
-  .occasion-detail-page .occasion-detail-feature h3,
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) h3 {
-    font-family: var(--display) !important;
-    font-size: 19px !important;
-    line-height: 1.25 !important;
-    font-weight: 700 !important;
-    letter-spacing: -.03em !important;
-  }
-  .occasion-detail-page .occasion-detail-feature,
-  .occasion-detail-page .occasion-detail-feature:nth-child(1),
-  .occasion-detail-page .occasion-detail-feature:nth-child(2),
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
-    border: 1px solid rgba(137,100,91,.16) !important;
-    border-radius: 3px 18px 3px 18px !important;
-    box-shadow: 0 7px 18px rgba(73,52,46,.045) !important;
-  }
-  .occasion-detail-page .occasion-detail-feature:nth-child(1) { background: #fffdfb !important; }
-  .occasion-detail-page .occasion-detail-feature:nth-child(2) { background: #f3e8e5 !important; }
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) { background: #eee9df !important; }
-}
-
-/* Cartes des pages occasions : même ivoire sur les trois blocs, forme conservée */
-@media (max-width: 760px){
-  .occasion-detail-page .occasion-detail-feature,
-  .occasion-detail-page .occasion-detail-feature:nth-child(1),
-  .occasion-detail-page .occasion-detail-feature:nth-child(2),
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
-    background: #fffdfb !important;
-    border: 1px solid rgba(137,100,91,.16) !important;
-    border-radius: 3px 18px 3px 18px !important;
-  }
-}
-
-/* Cartes ivoire : contour plus doux et halo diffus */
-@media (max-width: 760px){
-  .occasion-detail-page .occasion-detail-feature,
-  .occasion-detail-page .occasion-detail-feature:nth-child(1),
-  .occasion-detail-page .occasion-detail-feature:nth-child(2),
-  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
-    border: 1px solid rgba(137,100,91,.10) !important;
-    box-shadow:
-      0 10px 28px rgba(73,52,46,.075),
-      0 2px 8px rgba(73,52,46,.035) !important;
-  }
-}
-
-/* Champ piège anti-robots du formulaire de contact */
-.contact-honeypot {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-/* Calendrier personnalisé et widget Turnstile — identité C by C */
-.contact-date-field { position: relative; }
-.contact-date-trigger {
-  width: 100%;
-  min-height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 17px;
-  border: 1px solid #e5d9cb;
-  border-radius: 12px;
-  background: #fffdfb;
-  color: #55443d;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  color: #56364c !important;
 }
