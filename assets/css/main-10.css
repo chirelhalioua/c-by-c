@@ -177,3 +177,42 @@
   align-self: center !important;
   margin: 0 auto !important;
 }
+
+
+/* Titres des sections : première partie noire, seconde partie dorée.
+   Les titres placés dans les héros conservent intégralement leur style. */
+.site-shell :is(h1, h2, h3):not([class*="hero"] *) {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
+
+.site-shell :is(h1, h2, h3):not([class*="hero"] *) :is(em, span) {
+  color: #b58a4b !important;
+  -webkit-text-fill-color: #b58a4b !important;
+}
+
+/* Boutons dorés : texte blanc et fond plus foncé à l'interaction. */
+.site-shell .button-gold,
+.site-shell a.button-gold,
+.site-shell button.button-gold {
+  background: #b58a4b !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: #b58a4b !important;
+}
+
+.site-shell .button-gold *,
+.site-shell a.button-gold *,
+.site-shell button.button-gold * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.site-shell .button-gold:hover,
+.site-shell .button-gold:focus-visible,
+.site-shell .button-gold:active {
+  background: #8f6838 !important;
+  border-color: #8f6838 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
