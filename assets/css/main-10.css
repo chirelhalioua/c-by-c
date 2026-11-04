@@ -1,0 +1,179 @@
+
+
+/* Bouton Contact du menu : texte blanc sur le fond brun */
+.main-nav .nav-cta,
+.main-nav .nav-cta span,
+.main-nav .nav-cta svg {
+  color:#fffdfb !important;
+  -webkit-text-fill-color:#fffdfb !important;
+}
+.main-nav .nav-cta:active,
+.main-nav .nav-cta:focus,
+.main-nav .nav-cta:focus-visible {
+  background:#fffdfb !important;
+  border-color:#fffdfb !important;
+  color:#38291e !important;
+  -webkit-text-fill-color:#38291e !important;
+}
+
+
+/* Mariages — trois cartes alignées sur une seule ligne sur ordinateur */
+@media (min-width: 761px) {
+  .occasion-mariages-page .occasion-detail-features {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: clamp(16px, 2vw, 28px) !important;
+    width: 100% !important;
+    max-width: 1120px !important;
+    margin: 18px auto 0 !important;
+    padding: 0 !important;
+  }
+
+  .occasion-mariages-page .occasion-detail-feature,
+  .occasion-mariages-page .occasion-detail-feature:nth-child(1),
+  .occasion-mariages-page .occasion-detail-feature:nth-child(2),
+  .occasion-mariages-page .occasion-detail-feature:nth-child(3) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 210px !important;
+    margin: 0 !important;
+    padding: 25px 22px !important;
+    border: 1px solid rgba(137,100,91,.16) !important;
+    border-radius: 3px 18px 3px 18px !important;
+    background: #fffdfb !important;
+    box-shadow: 0 10px 28px rgba(73,52,46,.075), 0 2px 8px rgba(73,52,46,.035) !important;
+    text-align: left !important;
+  }
+
+  .occasion-mariages-page .occasion-detail-feature h3 {
+    max-width: none !important;
+    font-size: clamp(19px, 1.65vw, 24px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .occasion-mariages-page .occasion-detail-feature p {
+    max-width: none !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+
+/* Toutes les pages occasions — trois cartes sur une ligne sur ordinateur */
+@media (min-width: 761px) {
+  .occasion-detail-page .occasion-detail-features {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: clamp(16px, 2vw, 28px) !important;
+    width: 100% !important;
+    max-width: 1120px !important;
+    margin: 18px auto 0 !important;
+    padding: 0 !important;
+  }
+
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 210px !important;
+    margin: 0 !important;
+    padding: 25px 22px !important;
+    border: 1px solid rgba(137,100,91,.16) !important;
+    border-radius: 3px 18px 3px 18px !important;
+    background: #fffdfb !important;
+    box-shadow: 0 10px 28px rgba(73,52,46,.075), 0 2px 8px rgba(73,52,46,.035) !important;
+    text-align: left !important;
+  }
+
+  .occasion-detail-page .occasion-detail-feature h3 {
+    max-width: none !important;
+    font-size: clamp(19px, 1.65vw, 24px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .occasion-detail-page .occasion-detail-feature p {
+    max-width: none !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+/* Correctif prioritaire : alignement desktop des trois blocs sur chaque page occasion */
+@media screen and (min-width: 761px) {
+  .occasion-detail-page .occasion-detail-content .occasion-detail-features,
+  .occasion-mariages-page .occasion-detail-features,
+  .occasion-anniversaires-page .occasion-detail-features,
+  .occasion-naissances-page .occasion-detail-features,
+  .occasion-ceremonies-page .occasion-detail-features {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    gap: 22px !important;
+    width: 100% !important;
+    max-width: 1120px !important;
+    margin: 24px auto 0 !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
+  .occasion-detail-page .occasion-detail-content .occasion-detail-features > .occasion-detail-feature,
+  .occasion-mariages-page .occasion-detail-features > .occasion-detail-feature,
+  .occasion-anniversaires-page .occasion-detail-features > .occasion-detail-feature,
+  .occasion-naissances-page .occasion-detail-features > .occasion-detail-feature,
+  .occasion-ceremonies-page .occasion-detail-features > .occasion-detail-feature {
+    display: block !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 210px !important;
+    margin: 0 !important;
+    padding: 25px 22px !important;
+    border: 1px solid rgba(137,100,91,.16) !important;
+    border-radius: 3px 18px 3px 18px !important;
+    background: #fffdfb !important;
+    box-shadow: 0 10px 28px rgba(73,52,46,.075), 0 2px 8px rgba(73,52,46,.035) !important;
+    text-align: left !important;
+  }
+  .occasion-detail-page .occasion-detail-content .occasion-detail-features > .occasion-detail-feature h3,
+  .occasion-detail-page .occasion-detail-content .occasion-detail-features > .occasion-detail-feature p {
+    max-width: none !important;
+  }
+}
+
+
+/* Centrage réel des titres des quatre héros : le h1 est centré dans sa largeur maximale */
+.occasion-detail-page .occasion-detail-hero h1 {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  align-self: center !important;
+}
+.occasion-detail-page .occasion-detail-hero .section-eyebrow {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+.occasion-detail-page .occasion-detail-hero > p {
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 26px auto 28px !important;
+  text-align: center !important;
+}
+.occasion-detail-page .occasion-detail-hero > a.button {
+  align-self: center !important;
+  margin: 0 auto !important;
+}
