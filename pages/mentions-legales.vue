@@ -30,7 +30,6 @@ const closeMenu = () => { menuOpen.value = false }
           <ul>
             <li>Nom commercial : C by C</li>
             <li>Forme juridique : Entrepreneur individuel</li>
-            <li>Adresse : Paris, France</li>
             <li>SIREN : 132 222 050</li>
             <li>SIRET : 132 222 050 00016</li>
             <li>Immatriculation au RCS de Paris : 132 222 050 R.C.S. Paris, depuis le 4 novembre 2026</li>
