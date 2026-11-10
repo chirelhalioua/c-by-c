@@ -21,17 +21,40 @@ const closeMenu = () => { menuOpen.value = false }
       <header class="legal-heading">
         <span class="section-eyebrow">INFORMATIONS LÉGALES</span>
         <h1>Mentions légales</h1>
-        <p> C by C — Célébrations by Chirel </p>
+        <p>C by C — Célébrations by Chirel</p>
       </header>
       <article class="legal-content">
-
-        <section><h2>Éditeur du site</h2><p>Le site C by C — Célébrations by Chirel est édité par <strong>Chirel Halioua</strong>, exerçant sous le nom commercial C by C.</p><ul><li>Statut : projet en cours de création, activité non immatriculée à ce jour</li><li>Adresse : Paris, France</li><li>SIREN / SIRET : non attribué à ce jour</li><li>Immatriculation : aucune à ce jour</li><li>TVA : situation à préciser avant le début de toute activité commerciale</li><li>Adresse de contact : <a href="mailto:contact@chirelhalioua.fr">contact@chirelhalioua.fr</a></li><li>Directrice de la publication : Chirel Halioua</li></ul></section>
-        <section><h2>Hébergement</h2><p>Le site est hébergé par Vercel Inc. Les coordonnées complètes de l’hébergeur devront être vérifiées et ajoutées avant la mise en ligne définitive.</p></section>
-        <section><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, les contenus, textes, éléments graphiques, identités visuelles et créations présentés sur ce site sont protégés par les règles applicables en matière de propriété intellectuelle. Toute reproduction ou réutilisation non autorisée est interdite.</p><p>Les conditions d’utilisation des créations livrées aux clients sont précisées dans les conditions contractuelles applicables à la commande.</p></section>
-        <section><h2>Contact</h2><p>Pour toute question relative au site, vous pouvez écrire à <a href="mailto:contact@chirelhalioua.fr">contact@chirelhalioua.fr</a>.</p></section>
-
+        <section>
+          <h2>Éditeur du site</h2>
+          <p>Le site C by C — Célébrations by Chirel est édité par <strong>Chirel Halioua</strong>, exerçant en entreprise individuelle sous le régime de la micro-entreprise.</p>
+          <ul>
+            <li>Nom commercial : C by C</li>
+            <li>Forme juridique : Entrepreneur individuel</li>
+            <li>Adresse : Paris, France</li>
+            <li>SIREN : 132 222 050</li>
+            <li>SIRET : 132 222 050 00016</li>
+            <li>Immatriculation au RCS de Paris : 132 222 050 R.C.S. Paris, depuis le 4 novembre 2026</li>
+            <li>Inscription au Registre national des entreprises (RNE) : 4 novembre 2026</li>
+            <li>Numéro EUID : FR7501.132222050</li>
+            <li>Adresse e-mail : <a href="mailto:contact@chirelhalioua.fr">contact@chirelhalioua.fr</a></li>
+            <li>Directrice de la publication : Chirel Halioua</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Hébergement</h2>
+          <p>Le site est hébergé par Vercel Inc. Les coordonnées postales et téléphoniques complètes de l’hébergeur sont à compléter afin de satisfaire aux obligations légales applicables.</p>
+        </section>
+        <section>
+          <h2>Propriété intellectuelle</h2>
+          <p>Sauf mention contraire, les contenus, textes, éléments graphiques, identités visuelles et créations présentés sur ce site sont protégés par les règles applicables en matière de propriété intellectuelle. Toute reproduction ou réutilisation non autorisée est interdite.</p>
+          <p>Les conditions d’utilisation des créations livrées aux clients sont précisées dans les conditions contractuelles applicables à la commande.</p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <p>Pour toute question relative au site, vous pouvez écrire à <a href="mailto:contact@chirelhalioua.fr">contact@chirelhalioua.fr</a>.</p>
+        </section>
       </article>
-      <p class="legal-updated">Projet en préparation : les informations et obligations applicables doivent être vérifiées avant la mise en ligne définitive.</p>
+      <p class="legal-updated">Dernière mise à jour : novembre 2026.</p>
     </main>
     <footer class="site-footer">
       <div class="footer-main"><a class="footer-brand" href="/"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel"></a><p>Les moments qui nous unissent.<br><span>Invitations digitales imaginées avec cœur.</span></p></div>
