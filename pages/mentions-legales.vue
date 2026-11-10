@@ -42,7 +42,12 @@ const closeMenu = () => { menuOpen.value = false }
         </section>
         <section>
           <h2>Hébergement</h2>
-          <p>Le site est hébergé par Vercel Inc. Les coordonnées postales et téléphoniques complètes de l’hébergeur sont à compléter afin de satisfaire aux obligations légales applicables.</p>
+          <p>Le site est hébergé par <strong>Vercel Inc.</strong>, dont le siège social est situé à l’adresse suivante :</p>
+          <ul>
+            <li>Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</li>
+            <li>Adresse e-mail : <a href="mailto:privacy@vercel.com">privacy@vercel.com</a></li>
+            <li>Site internet : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a></li>
+          </ul>
         </section>
         <section>
           <h2>Propriété intellectuelle</h2>
