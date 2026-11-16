@@ -73,56 +73,79 @@ const offers = [
       </section>
 
       <section class="options-section section-pad">
-        <div class="options-heading">
-          <span class="section-eyebrow">POUR ALLER PLUS LOIN</span>
-          <h2>Les petits plus qui font <em>la différence.</em></h2>
-          <p>Ajoutez une attention particulière à votre invitation ou à votre site. Les options sont proposées selon votre événement, vos envies et la faisabilité du projet.</p>
-        </div>
-        <div class="options-grid">
-          <details class="option-item">
+  <div class="options-heading">
+    <span class="section-eyebrow">POUR ALLER PLUS LOIN</span>
+    <h2>Les petits plus qui font <em>la différence.</em></h2>
+    <p>Ajoutez une attention particulière à votre invitation ou à votre site. Les options sont proposées selon votre événement, vos envies et la faisabilité du projet.</p>
+  </div>
+  <div class="option-category">
+  <div class="option-category-heading"><span class="option-category-kicker">PARTAGER, ÉCHANGER ET PARTICIPER</span><h3>L’expérience de vos invités</h3></div>
+  <div class="options-grid"><details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="13" height="15" rx="2"/><path d="m6.5 11 2.2 2.2 4-4.2M16.5 15.5H21m-3-3 3 3-3 3"/></svg></span><span class="option-title">Réponse des invités</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un bouton « Je confirme ma présence » renvoie vers un formulaire de réponse. Il peut être proposé avec l’invitation numérique ou intégré au site de célébration, selon le projet.</p>
           </details>
-          <details class="option-item">
-            <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v6M8 3v6M5 6h3M6.5 9v12M16 3c-2 2-2.5 5-2.5 8h4V3M15.5 11v10"/></svg></span><span class="option-title">Plan de table</span><span class="option-toggle" aria-hidden="true">+</span></summary>
-            <p>Si cette option est incluse dans votre invitation, vos invités ayant confirmé leur présence pourront retrouver leur table. Le placement reste masqué pendant la préparation et n’apparaît qu’au moment où vous publiez le plan finalisé.</p>
-          </details>
-          <details class="option-item">
-            <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 2 4-2 3 5-3 2-1.5-2L17 21H7l2.5-13L8 10 5 8l3-5Z"/><path d="M9.5 8h5"/></svg></span><span class="option-title">Dress code</span><span class="option-toggle" aria-hidden="true">+</span></summary>
-            <p>Précisez le thème vestimentaire ou les couleurs souhaitées pour aider vos invités à se préparer, dans une présentation assortie à votre invitation.</p>
-          </details>
-          <details class="option-item">
+<details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-2.5-2-5.5-2-9-1v14c3.5-1 6.5-1 9 1 2.5-2 5.5-2 9-1V5c-3.5-1-6.5-1-9 1Z"/><path d="M12 6v14M5.5 8.5c1.5-.3 3-.2 4.5.5M14 9c1.5-.7 3-.8 4.5-.5"/></svg></span><span class="option-title">Livre d’or numérique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un espace pour recevoir les vœux, petits mots et souvenirs de vos proches.</p>
           </details>
-          <details class="option-item">
+<details class="option-item">
+            <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 2 4-2 3 5-3 2-1.5-2L17 21H7l2.5-13L8 10 5 8l3-5Z"/><path d="M9.5 8h5"/></svg></span><span class="option-title">Dress code</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <p>Précisez le thème vestimentaire ou les couleurs souhaitées pour aider vos invités à se préparer, dans une présentation assortie à votre invitation.</p>
+          </details>
+<details class="option-item">
+  <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M7 9h10M7 13h7M7 16h5"/></svg></span><span class="option-title">Menu et préférences alimentaires</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+  <p>Présentez le menu de votre réception et permettez à vos invités de préciser leurs choix de plats, allergies ou régimes alimentaires au moment de leur réponse.</p>
+</details>
+<details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v11H3zM2 7h20v3H2zM12 7v14"/><path d="M12 7H7.5a2.5 2.5 0 1 1 2.2-3.7L12 7Zm0 0h4.5a2.5 2.5 0 1 0-2.2-3.7L12 7Z"/></svg></span><span class="option-title">Liste de cadeaux</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Partagez avec vos invités une sélection d’idées cadeaux ou un lien vers votre liste de souhaits. Ils peuvent ainsi découvrir ce qui vous ferait plaisir et choisir un cadeau qui vous correspond. Les modalités (liens externes, liste personnalisée ou participation) sont définies ensemble selon votre projet.</p>
-          </details>
-          <details class="option-item">
-            <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4v16M5 6h3M5 12h3M5 18h3"/><circle cx="13" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="13" cy="18" r="2"/><path d="M15 6h4M18 12h2M15 18h4"/></svg></span><span class="option-title">Programme détaillé</span><span class="option-toggle" aria-hidden="true">+</span></summary>
-            <p>Un déroulé personnalisé de la célébration : accueil des invités, cérémonie, cocktail, repas, animations et horaires des différents temps forts.</p>
-          </details>
-          <details class="option-item">
+          </details></div>
+</div>
+  <div class="option-category">
+  <div class="option-category-heading"><span class="option-category-kicker">UNE AMBIANCE QUI VOUS RESSEMBLE</span><h3>L’univers de votre événement</h3></div>
+  <div class="options-grid"><details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6 9.5 3.5h5L16 6"/><circle cx="12" cy="13" r="4"/><circle cx="12" cy="13" r="1.3"/></svg></span><span class="option-title">Galerie de photos</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un espace pour rassembler et partager les souvenirs de votre célébration.</p>
           </details>
-          <details class="option-item">
+<details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M9 2h6M12 5V3M12 13l4-2M18 7l1.5-1.5"/></svg></span><span class="option-title">Compte à rebours</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un compte à rebours personnalisé pour faire patienter vos invités jusqu’au grand jour.</p>
           </details>
-          <details class="option-item">
+<details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.7 6.3L21 11l-6.3 2.7L12 20l-2.7-6.3L3 11l6.3-2.7L12 2Z"/><path d="m19 16 1.2 2.8L23 20l-2.8 1.2L19 24l-1.2-2.8L15 20l2.8-1.2L19 16Z" transform="translate(-1 -2) scale(.9)"/></svg></span><span class="option-title">Invitation animée</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Des animations délicates pour donner vie à votre invitation numérique.</p>
           </details>
-          <details class="option-item">
+<details class="option-item">
+  <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><span class="option-title">Musique d’ambiance</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+  <p>Associez une musique à votre invitation ou à votre site pour prolonger l’ambiance de votre événement. La lecture reste activée à l’initiative de chaque visiteur.</p>
+</details>
+<details class="option-item">
             <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 16-.8 4.8L8 20l11.5-11.5a2.5 2.5 0 0 0-3.5-3.5L4 16Z"/><path d="m14.5 7.5 3.5 3.5M3 22h18"/></svg></span><span class="option-title">Signature graphique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Initiales, monogramme ou motif personnalisé, assorti à l’univers de votre événement.</p>
+          </details></div>
+</div>
+  <div class="option-category">
+  <div class="option-category-heading"><span class="option-category-kicker">TOUTES LES INFORMATIONS AU MÊME ENDROIT</span><h3>L’organisation pratique</h3></div>
+  <div class="options-grid"><details class="option-item">
+            <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v6M8 3v6M5 6h3M6.5 9v12M16 3c-2 2-2.5 5-2.5 8h4V3M15.5 11v10"/></svg></span><span class="option-title">Plan de table</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <p>Si cette option est incluse dans votre invitation, vos invités ayant confirmé leur présence pourront retrouver leur table. Le placement reste masqué pendant la préparation et n’apparaît qu’au moment où vous publiez le plan finalisé.</p>
           </details>
-        </div>
-        <p class="options-footnote">Chaque option est étudiée ensemble et peut faire l’objet d’un supplément au devis.</p>
-        <a class="button button-gold" href="/contact">Imaginer mes options <span>↗</span></a>
-      </section>
+<details class="option-item">
+            <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4v16M5 6h3M5 12h3M5 18h3"/><circle cx="13" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="13" cy="18" r="2"/><path d="M15 6h4M18 12h2M15 18h4"/></svg></span><span class="option-title">Programme détaillé</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <p>Un déroulé personnalisé de la célébration : accueil des invités, cérémonie, cocktail, repas, animations et horaires des différents temps forts.</p>
+          </details>
+<details class="option-item">
+  <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V8l9-5 9 5v12"/><path d="M7 20v-7h10v7M9 9h.01M15 9h.01"/></svg></span><span class="option-title">Hébergement et transports</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+  <p>Rassemblez les informations utiles pour vos invités : hébergements conseillés, transports, navettes, parkings et conseils pour rejoindre les différents lieux.</p>
+</details>
+<details class="option-item">
+  <summary><span class="option-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/><path d="M12 8a2 2 0 1 0 0 4c1.1 0 2-1 2-2s-.9-2-2-2Z"/></svg></span><span class="option-title">Carte interactive des lieux</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+  <p>Facilitez les déplacements grâce à une carte indiquant les lieux importants de votre événement : cérémonie, réception, hébergement ou parking.</p>
+</details></div>
+</div>
+  <p class="options-footnote">Chaque option est étudiée ensemble et peut faire l’objet d’un supplément au devis.</p>
+  <a class="button button-gold" href="/contact">Imaginer mes options <span>↗</span></a>
+</section>
 
       <section class="offers-note section-pad">
         <span class="section-eyebrow">UN PROJET PARTICULIER ?</span>
