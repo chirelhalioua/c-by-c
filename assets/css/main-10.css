@@ -454,3 +454,26 @@
 @media(max-width:600px){
   .model-live-preview{height:480px}
 }
+
+
+/* Typographie harmonisée de la page Nos modèles avec le reste du site */
+.models-page {
+  font-family: var(--sans), 'DM Sans', Arial, sans-serif !important;
+}
+.models-page :is(p, a, button, span, small, li, label) {
+  font-family: var(--sans), 'DM Sans', Arial, sans-serif;
+}
+.models-page :is(h1, h2, h3, h4) {
+  font-family: var(--display), 'Manrope', Arial, sans-serif;
+}
+.models-page :is(h1, h2, h3, h4) em,
+.models-page :is(h1, h2, h3, h4) i {
+  font-family: var(--serif), 'Playfair Display', Georgia, serif;
+  font-style: italic;
+}
+.models-page .models-filters button,
+.models-page .menu-toggle,
+.models-page .nav-cta,
+.models-page .button {
+  font-family: var(--sans), 'DM Sans', Arial, sans-serif !important;
+}
