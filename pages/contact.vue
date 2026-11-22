@@ -142,6 +142,25 @@ const form = reactive({
   website: ''
 })
 
+onMounted(() => {
+  const route = useRoute()
+  const selectedModel = typeof route.query.modele === 'string' ? route.query.modele : ''
+  const selectedOccasion = typeof route.query.occasion === 'string' ? route.query.occasion : ''
+  if (selectedModel) {
+    form.formule = 'L’invitation numérique'
+    form.message = `Je souhaite personnaliser le modèle « ${selectedModel} ».`
+  }
+  if (selectedOccasion) {
+    const occasionMap: Record<string, string> = {
+      'Mariage': 'Mariage',
+      'Naissance & baptême': 'Naissance',
+      'Anniversaire': 'Anniversaire',
+      'Cérémonie': 'Cérémonie ou tradition'
+    }
+    form.occasion = occasionMap[selectedOccasion] || ''
+  }
+})
+
 const toggleOption = (option: string) => {
   const index = form.options.indexOf(option)
   if (index >= 0) form.options.splice(index, 1)
