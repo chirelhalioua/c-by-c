@@ -6,9 +6,9 @@ const closeMenu = () => { menuOpen.value = false }
 const activeFilter = ref('Tous')
 const filters = ['Tous', 'Mariage', 'Naissance & baptême', 'Anniversaire', 'Cérémonie']
 const models = [
-  { id:'elegance', name:'Élégance', category:'Mariage', style:'Romantique · rose poudré & ivoire', description:'Le modèle Sarah & David : une ambiance douce et florale, des typographies raffinées et des détails délicats.', tone:'rose', initials:'Sarah & David', date:'SAMEDI 12 JUIN 2027 · PARIS', label:'UNE INVITATION À CÉLÉBRER' },
-  { id:'sauge', name:'Vert sauge', category:'Mariage', style:'Naturel · sauge & tons doux', description:'Un univers végétal et apaisant, pensé autour du vert sauge, avec une invitation complète et un espace de partage.', tone:'olive', initials:'Les mariés', date:'18 SEPTEMBRE 2027', label:'NOTRE HISTOIRE COMMENCE' },
-  { id:'editorial', name:'Éditorial', category:'Mariage', style:'Photographique · moderne & épuré', description:'Le modèle Clara & Mathis : une couverture photo immersive, une ouverture animée et une présentation élégante des informations.', tone:'sand', initials:'Clara & Mathis', date:'18 SEPTEMBRE 2027 · PROVENCE', label:'VOIR L’INVITATION' }
+  { id:'elegance', name:'Élégance', url:'https://cbyc-mariage-elegance.vercel.app', category:'Mariage', style:'Romantique · rose poudré & ivoire', description:'Le modèle Sarah & David : une ambiance douce et florale, des typographies raffinées et des détails délicats.', tone:'rose', initials:'Sarah & David', date:'SAMEDI 12 JUIN 2027 · PARIS', label:'UNE INVITATION À CÉLÉBRER' },
+  { id:'sauge', name:'Vert sauge', url:'https://cbyc-mariage-sauge.vercel.app', category:'Mariage', style:'Naturel · sauge & tons doux', description:'Un univers végétal et apaisant, pensé autour du vert sauge, avec une invitation complète et un espace de partage.', tone:'olive', initials:'Les mariés', date:'18 SEPTEMBRE 2027', label:'NOTRE HISTOIRE COMMENCE' },
+  { id:'editorial', name:'Éditorial', url:'https://cbyc-mariage-editorial.vercel.app', category:'Mariage', style:'Photographique · moderne & épuré', description:'Le modèle Clara & Mathis : une couverture photo immersive, une ouverture animée et une présentation élégante des informations.', tone:'sand', initials:'Clara & Mathis', date:'18 SEPTEMBRE 2027 · PROVENCE', label:'VOIR L’INVITATION' }
 ]
 const visibleModels = computed(() => activeFilter.value === 'Tous' ? models : models.filter(model => model.category === activeFilter.value))
 const contactHref = (model: typeof models[number]) => `/contact?modele=${encodeURIComponent(model.name)}&occasion=${encodeURIComponent(model.category)}`
@@ -46,24 +46,14 @@ const contactHref = (model: typeof models[number]) => `/contact?modele=${encodeU
 
         <div class="models-grid">
           <article v-for="(model, index) in visibleModels" :key="model.id" class="model-card">
-            <div class="model-preview" :class="'tone-' + model.tone">
-              <span class="model-preview-index">C BY C · {{ String(index + 1).padStart(2, '0') }}</span>
-              <div class="model-paper">
-                <span class="model-paper-label">{{ model.label }}</span>
-                <span class="model-paper-rule"></span>
-                <span class="model-paper-script">{{ model.initials }}</span>
-                <span class="model-paper-title">{{ model.name }}</span>
-                <span class="model-paper-rule model-paper-rule-short"></span>
-                <span class="model-paper-date">{{ model.date }}</span>
-                <span class="model-paper-footer">AVEC JOIE · CÉLÉBRONS ENSEMBLE</span>
-              </div>
-              <span class="model-preview-caption">APERÇU DU MODÈLE</span>
+            <div class="model-live-preview">
+              <iframe :src="model.url" :title="'Aperçu du site ' + model.name" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
             <div class="model-card-copy">
               <div class="model-card-heading"><div><span class="model-category">{{ model.category }}</span><h3>{{ model.name }}</h3></div><span class="model-card-number">0{{ index + 1 }}</span></div>
               <p class="model-style">{{ model.style }}</p>
               <p class="model-description">{{ model.description }}</p>
-              <a class="model-customize" :href="contactHref(model)">Personnaliser ce modèle <span aria-hidden="true">↗</span></a>
+              <div class="model-card-links"><a class="model-site-link" :href="model.url" target="_blank" rel="noopener noreferrer">Voir le site complet <span aria-hidden="true">↗</span></a><a class="model-customize" :href="contactHref(model)">Personnaliser ce modèle <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
         </div>
