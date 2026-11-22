@@ -142,10 +142,10 @@ const form = reactive({
   website: ''
 })
 
+const contactRoute = useRoute()
 onMounted(() => {
-  const route = useRoute()
-  const selectedModel = typeof route.query.modele === 'string' ? route.query.modele : ''
-  const selectedOccasion = typeof route.query.occasion === 'string' ? route.query.occasion : ''
+  const selectedModel = typeof contactRoute.query.modele === 'string' ? contactRoute.query.modele : ''
+  const selectedOccasion = typeof contactRoute.query.occasion === 'string' ? contactRoute.query.occasion : ''
   if (selectedModel) {
     form.formule = 'L’invitation numérique'
     form.message = `Je souhaite personnaliser le modèle « ${selectedModel} ».`
