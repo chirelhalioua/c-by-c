@@ -477,3 +477,12 @@
 .models-page .button {
   font-family: var(--sans), 'DM Sans', Arial, sans-serif !important;
 }
+
+
+/* Renforce le poids des titres foncés de la page Nos modèles */
+.models-page .models-hero h1,
+.models-page .models-toolbar h2,
+.models-page .model-card h3,
+.models-page .models-cta h2 {
+  font-weight: 700 !important;
+}
