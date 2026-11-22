@@ -538,15 +538,24 @@
   gap: 10px;
 }
 .models-page .model-site-link {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   gap: 14px;
-  padding: 14px 18px;
-  border: 1px solid #eee5dc;
-  border-radius: 9px;
-  background: #f5f0e9;
-  color: #38291e;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--gold);
+  color: var(--dark);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: .01em;
+  transition: transform .2s ease, background .2s ease;
+}
+.models-page .model-site-link:hover {
+  background: var(--bronze);
+  color: var(--dark);
+  transform: translateY(-2px);
 }
 .models-page .model-site-link span {
   font-size: 18px;
