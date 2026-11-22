@@ -486,3 +486,91 @@
 .models-page .models-cta h2 {
   font-weight: 500 !important;
 }
+
+
+/* Présentation éditoriale des modèles : aperçu immersif et fiche douce */
+.models-page .models-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+}
+.models-page .model-card {
+  overflow: hidden;
+  border: 1px solid rgba(137,100,91,.16);
+  border-radius: 22px;
+  background: #fffdfa;
+  box-shadow: 0 12px 34px rgba(48,35,29,.07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.models-page .model-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(48,35,29,.11);
+}
+.models-page .model-live-preview {
+  height: 360px;
+  border: 0;
+  border-bottom: 1px solid rgba(137,100,91,.13);
+  box-shadow: none;
+  background: #f4eee8;
+}
+.models-page .model-card-copy {
+  padding: 25px 27px 26px;
+}
+.models-page .model-card-heading h3 {
+  font-size: clamp(24px, 2.5vw, 31px);
+  font-weight: 500 !important;
+  letter-spacing: -.04em;
+}
+.models-page .model-category {
+  letter-spacing: .16em;
+}
+.models-page .model-style {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+}
+.models-page .model-description {
+  min-height: 0;
+  margin: 12px 0 18px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.models-page .model-card-links {
+  gap: 10px;
+}
+.models-page .model-site-link {
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 1px solid #eee5dc;
+  border-radius: 9px;
+  background: #f5f0e9;
+  color: #38291e;
+  font-size: 12px;
+  font-weight: 600;
+}
+.models-page .model-site-link span {
+  font-size: 18px;
+}
+.models-page .model-card-links .model-customize {
+  padding: 12px 2px 0;
+  border-top: 0;
+  border-bottom: 0;
+  font-size: 12px;
+}
+@media (max-width: 760px) {
+  .models-page .models-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .models-page .model-live-preview {
+    height: 300px;
+  }
+  .models-page .model-card-copy {
+    padding: 22px 21px 23px;
+  }
+}
+@media (max-width: 390px) {
+  .models-page .model-live-preview {
+    height: 260px;
+  }
+}
