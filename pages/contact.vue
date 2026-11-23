@@ -238,6 +238,7 @@ const submitForm = async () => {
       <nav class="main-nav contact-page-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
         <a href="/" @click="closeMenu">Accueil</a>
         <a href="/occasions" @click="closeMenu">Les occasions</a>
+        <a href="/modeles" @click="closeMenu">Nos modèles</a>
         <a href="/formules" @click="closeMenu">Nos formules</a>
         <a class="nav-cta" href="/contact" aria-current="page" @click="closeMenu">Contact <span>↗</span></a>
       </nav>
