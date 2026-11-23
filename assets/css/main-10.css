@@ -594,3 +594,35 @@
     height: 260px;
   }
 }
+
+
+/* Séparation visuelle entre l’introduction et la galerie de la page Nos modèles */
+.models-page .models-hero {
+  position: relative;
+  padding-bottom: 82px;
+}
+.models-page .models-catalogue {
+  position: relative;
+  isolation: isolate;
+  padding-top: 76px;
+  background: #f5eee8;
+  border-top: 1px solid rgba(181,138,75,.16);
+}
+.models-page .models-catalogue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 64px;
+  height: 2px;
+  background: #b58a4b;
+  transform: translateX(-50%);
+}
+@media (max-width: 600px) {
+  .models-page .models-hero {
+    padding-bottom: 66px;
+  }
+  .models-page .models-catalogue {
+    padding-top: 58px;
+  }
+}
