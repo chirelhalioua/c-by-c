@@ -764,3 +764,79 @@
     height: 270px;
   }
 }
+
+
+/* Galerie mobile compacte : deux vignettes par ligne, sans fiches interminables */
+@media (max-width: 600px) {
+  .models-page .models-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .models-page .model-card {
+    border-radius: 15px;
+    box-shadow: 0 7px 20px rgba(48,35,29,.06);
+  }
+  .models-page .model-card:hover {
+    transform: none;
+  }
+  .models-page .model-live-preview {
+    height: 155px;
+  }
+  .models-page .model-card-copy {
+    padding: 13px 12px 14px;
+  }
+  .models-page .model-card-heading {
+    gap: 4px;
+  }
+  .models-page .model-card-heading h3 {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .models-page .model-category {
+    font-size: 7px;
+    letter-spacing: .11em;
+  }
+  .models-page .model-card-number {
+    font-size: 13px;
+  }
+  .models-page .model-style {
+    margin-top: 6px;
+    font-size: 9px;
+    line-height: 1.4;
+  }
+  .models-page .model-description {
+    display: none;
+  }
+  .models-page .model-card-links {
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .models-page .model-site-link {
+    gap: 5px;
+    padding: 9px 7px;
+    border-radius: 999px;
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .models-page .model-site-link span {
+    font-size: 14px;
+  }
+  .models-page .model-card-links .model-customize {
+    padding: 2px 0 0;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+}
+@media (max-width: 360px) {
+  .models-page .models-grid {
+    gap: 10px;
+  }
+  .models-page .model-live-preview {
+    height: 135px;
+  }
+  .models-page .model-card-copy {
+    padding: 11px 10px 12px;
+  }
+}
