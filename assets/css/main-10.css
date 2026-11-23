@@ -714,3 +714,53 @@
     height: 250px;
   }
 }
+
+
+/* Ajustement mobile de la galerie : préserver la lisibilité des aperçus */
+@media (max-width: 600px) {
+  .models-page .models-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .models-page .model-card {
+    border-radius: 20px;
+  }
+  .models-page .model-live-preview {
+    height: 300px;
+  }
+  .models-page .model-card-copy {
+    padding: 19px 20px 20px;
+  }
+  .models-page .model-card-heading h3 {
+    font-size: 25px;
+  }
+  .models-page .model-category {
+    font-size: 9px;
+    letter-spacing: .16em;
+  }
+  .models-page .model-card-number {
+    font-size: 18px;
+  }
+  .models-page .model-style {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .models-page .model-description {
+    margin: 10px 0 15px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .models-page .model-site-link {
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 11px;
+  }
+  .models-page .model-card-links .model-customize {
+    font-size: 11px;
+  }
+}
+@media (max-width: 390px) {
+  .models-page .model-live-preview {
+    height: 270px;
+  }
+}
